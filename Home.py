@@ -12,8 +12,6 @@ st.set_page_config(
     page_icon="🌏",
     layout="wide",
 )
-<meta name="google-site-verification" content="Ece2qBvMQmE8UNnCbMciBVPciJCcsyNtOBb6MF0QDIo" />
-)
 # ---------------------------------------------------------------
 # Custom styling
 # Palette: deep monsoon-sky navy + slate teal + ochre (dried-wheat
