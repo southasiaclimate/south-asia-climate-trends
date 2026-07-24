@@ -12,9 +12,7 @@ st.set_page_config(
     page_icon="🌏",
     layout="wide",
 )
-st.markdown(
-    '<meta name="google-site-verification" content="Ece2qBvMQmE8UNnCbMciBVPciJCcsyNtOBb6MF0QDIo" />',
-    unsafe_allow_html=True,
+<meta name="google-site-verification" content="Ece2qBvMQmE8UNnCbMciBVPciJCcsyNtOBb6MF0QDIo" />
 )
 # ---------------------------------------------------------------
 # Custom styling
