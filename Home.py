@@ -19,6 +19,19 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+st.markdown(
+    """
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GD8FJCBENG');
+    </script>
+    """,
+    unsafe_allow_html=True,
+)
+
 # ---------------------------------------------------------------
 # Custom styling
 # Palette: deep monsoon-sky navy + slate teal + ochre (dried-wheat
