@@ -258,7 +258,9 @@ else:
                         """,
                         unsafe_allow_html=True,
                     )
-                    if st.button("Read article", key=f"read_{post['filename']}", use_container_width=True):
+                    if post.get("external_url"):
+                        st.link_button("Read article ↗", post["external_url"], use_container_width=True)
+                    elif st.button("Read article", key=f"read_{post['filename']}", use_container_width=True):
                         st.session_state["selected_post_slug"] = post["slug"]
                         st.query_params["post"] = post["slug"]
                         st.rerun()
