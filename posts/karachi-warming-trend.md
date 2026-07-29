@@ -4,6 +4,7 @@ date: 2026-07-23
 city: Karachi
 country: Pakistan
 tags: heatwave, temperature, monsoon, Sindh, climate change
+external_url: https://southasiaclimate.github.io/south-asia-climate-trends/karachi-warming-trend.html
 ---
 
 # Karachi's Warming Trend: What 30 Years of Data Show
