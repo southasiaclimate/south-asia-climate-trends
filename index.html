@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>South Asia Climate Trends — 30+ Years of Temperature & Monsoon Data</title>
+    <meta name="description" content="Interactive climate trend dashboard and data-driven articles tracking 30+ years of temperature, rainfall, and monsoon patterns across South Asia — Pakistan, India, Bangladesh, and more." />
+    <meta name="google-site-verification" content="Ece2qBvMQmE8UNnCbMciBVPciJCcsyNtOBb6MF0QDIo" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GD8FJCBENG');
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            background: #F6F4EF;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+        .hero {
+            background: linear-gradient(160deg, #101B2D 0%, #2E5A5E 100%);
+            color: #F6F4EF;
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+        }
+        .hero h1 {
+            font-size: 2rem;
+            margin: 0 0 1rem 0;
+        }
+        .hero p {
+            color: #D8DEE0;
+            font-size: 1.05rem;
+        }
+        .cta {
+            display: inline-block;
+            background: #D9A441;
+            color: #101B2D;
+            font-weight: 700;
+            padding: 0.9rem 1.6rem;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 1.2rem;
+        }
+        h2 { color: #101B2D; margin-top: 2rem; }
+        .topic-list { columns: 2; gap: 2rem; }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #8A8A8A; }
+        a { color: #2E5A5E; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>South Asia Climate Trends</h1>
+            <p>
+                30+ years of temperature, rainfall, and monsoon data, city by city,
+                across Pakistan, India, Bangladesh, and the wider South Asia region —
+                built and analyzed by a meteorologist with an MPhil in Environmental
+                Sciences.
+            </p>
+            <a class="cta" href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">
+                Open the Interactive Dashboard →
+            </a>
+        </div>
+
+        <h2>What this site covers</h2>
+        <p>
+            Using historical reanalysis climate data (ERA5/ERA5-Land, via Copernicus/ECMWF),
+            this project tracks how South Asia's climate has shifted since 1995 — annual
+            temperature trends, precipitation patterns, extreme heat days, and a full
+            seasonal breakdown following the region's monsoon calendar: Winter,
+            Pre-Monsoon, Monsoon, and Post-Monsoon.
+        </p>
+
+        <h2>Featured reports</h2>
+        <ul class="topic-list">
+            <li><a href="karachi-warming-trend.html">Karachi's Warming Trend: What 30 Years of Data Show</a></li>
+            <li><a href="https://south-asia-climate-trends.streamlit.app/Blog" target="_blank">Is Pakistan's Monsoon Becoming More Erratic?</a></li>
+            <li><a href="https://south-asia-climate-trends.streamlit.app/Blog" target="_blank">Delhi's Rising Heat — A Three-Decade Look</a></li>
+        </ul>
+
+        <h2>Explore any city</h2>
+        <p>
+            The interactive dashboard lets you search any city in South Asia and see its
+            own temperature trend, rainfall pattern, and monsoon breakdown, built from three
+            decades of data.
+        </p>
+        <a class="cta" href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">
+            Search a City →
+        </a>
+
+        <footer>
+            Data source: Open-Meteo Historical Weather API (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF).
+        </footer>
+    </div>
+</body>
+</html>
