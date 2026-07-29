@@ -16,6 +16,8 @@ All figures below come from ERA5/ERA5-Land reanalysis data (Copernicus/ECMWF), c
 
 ## Annual Mean Temperature
 
+![Karachi annual mean temperature trend chart, 1995-2025](images/karachi-annual-mean-temperature.png)
+
 Karachi's annual mean temperature has been on a clear, if uneven, upward path over the past 30 years. In the mid-1990s, the city's average annual temperature sat close to **25.6–25.8°C**. By the early-to-mid 2020s, that average had climbed to a range regularly touching **26.2–26.8°C**, with the most recent years in the dataset showing some of the highest annual averages on record — approaching **26.8°C** at the peak, before easing slightly to around **26.6°C**.
 
 The year-to-year line is far from smooth. Karachi's annual mean temperature swings noticeably from year to year — dipping as low as roughly **25.6°C** in the late 1990s, then spiking above **26.4°C** within just a few years, only to dip again. This volatility is normal for any single city's climate record; short-term swings are driven by natural variability (like ENSO/La Niña-El Niño cycles, regional atmospheric patterns, and localized weather anomalies), while the **long-term trend line** is what reveals the underlying climate signal.
@@ -30,6 +32,8 @@ At first glance, 0.13°C per decade might sound small. But compounded over 30 ye
 
 #### Extreme Heat: Days Above 40°C
 
+![Karachi extreme heat days chart, days per year with max temp above 40C](images/karachi-extreme-heat-days.png)
+
 Beyond the average, what matters most for public health is the **frequency of extreme heat days** — days where the maximum temperature reaches or exceeds 40°C. Karachi's extreme-heat-day count, tracked year by year, tells its own story.
 
 Rather than a smooth, steadily rising line, the data shows **clustered spikes**: most years in the 1990s and early 2000s saw just 0–1 such days, with occasional years reaching 3. But starting around **2007–2008**, Karachi recorded a sharp jump — up to **5 days** in a single year with max temperatures at or above 40°C, followed by 3 the year after. Similar spikes reappear around **2015 and 2018**, each hitting **4 days** in a single year, before settling into a more moderate pattern of 1–2 days annually in the most recent years shown.
@@ -37,6 +41,8 @@ Rather than a smooth, steadily rising line, the data shows **clustered spikes**:
 This "clustered spike" pattern is itself an important climate signal. It suggests Karachi isn't necessarily experiencing a smooth, linear increase in extreme heat — it's experiencing **more frequent and more intense heatwave clusters**, punctuated by comparatively milder years. For public health planning, this matters: it means heat-health early warning systems need to be built for sudden, severe spikes, not just a gradual creeping baseline.
 
 ## Annual Total Precipitation
+
+![Karachi annual total precipitation trend chart, 1995-2025](images/karachi-annual-precipitation.png)
 
 If temperature tells one part of Karachi's climate story, rainfall tells an even more dramatic one. Karachi's annual precipitation record over the past 30 years is defined by extreme volatility layered on top of a strong upward trend.
 
@@ -60,6 +66,8 @@ Annual averages can hide a lot of important detail — a year can have a "normal
 
 ### Winter (Dec-Feb)
 
+![Karachi winter season temperature and precipitation trend charts](images/karachi-winter-trend.png)
+
 Karachi's winter season shows the **mildest warming signal** of all four seasons — and the data reveals something notable: for most of the 30-year record, winter mean temperatures oscillated in a fairly tight band, roughly **19.5°C to 21°C**, without a strong directional trend for much of the period. There's a striking spike to nearly **22°C** around 2015, an outlier year, followed by a return to the more typical range. Only in the final few years of the dataset — from around 2022 onward — does winter temperature show a clearer upward move, climbing toward **21.3°C**.
 
 #### Key Figures: Winter
@@ -71,6 +79,8 @@ Winter is the only season in Karachi's record showing a **declining precipitatio
 
 ### Pre-Monsoon / Hot (Mar-May)
 
+![Karachi pre-monsoon season temperature and precipitation trend charts](images/karachi-pre-monsoon-trend.png)
+
 The pre-monsoon season — Karachi's hottest stretch of the year, before monsoon rains arrive — shows a more consistent, if modest, warming pattern. Mean temperatures across this season have ranged from lows near **26.5°C** in the mid-1990s to a striking recent high approaching **28.5°C**, with the general trend line sitting in the **27–27.5°C** band for most of the three decades before pushing higher in the final years of the record.
 
 #### Key Figures: Pre-Monsoon
@@ -81,6 +91,8 @@ The pre-monsoon season — Karachi's hottest stretch of the year, before monsoon
 Precipitation during this hot, dry season is naturally minimal — Karachi doesn't expect meaningful rain in April or May in a typical year — but a handful of notably wet outlier years stand out sharply from the rest: totals near **24mm** around 1998 and again above **22mm** around 2007, dramatically higher than the sub-5mm totals seen in most other years of this season. The overall trend is essentially flat to marginally declining, meaning the pre-monsoon season remains reliably dry, punctuated by rare anomalous wet years rather than any systematic shift.
 
 ### Monsoon (Jun-Sep)
+
+![Karachi monsoon season temperature and precipitation trend charts](images/karachi-monsoon-trend.png)
 
 The monsoon season is where Karachi's climate shift shows up most clearly and most consequentially — both in temperature and, especially, in rainfall.
 
@@ -96,6 +108,8 @@ This is the **strongest warming rate of any season** — roughly five times stee
 This combination — a warming monsoon season paired with sharply intensifying rainfall extremes — is precisely the pattern climate scientists associate with a warming Arabian Sea and broader Indian Ocean warming trends, both of which fuel more energetic monsoon systems capable of dumping extreme rainfall in short windows. For a coastal city like Karachi, with aging drainage infrastructure and extensive impervious urban surface area, this trend has direct and serious implications for flood risk.
 
 ### Post-Monsoon (Oct-Nov)
+
+![Karachi post-monsoon season temperature and precipitation trend charts](images/karachi-post-monsoon-trend.png)
 
 The post-monsoon transition season shows a warming trend nearly as strong as the monsoon itself, alongside a more modest but still positive rainfall trend. Mean temperatures in this window have moved from roughly **25.8–26°C** in the mid-1990s to a sharp recent spike above **28°C**, the highest post-monsoon reading anywhere in the 30-year record, following what appears to be a period of relative stability in the **26–27°C** range through most of the 2000s and 2010s.
 
