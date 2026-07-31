@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhaka's Climate Trend: Warming Fast, Raining Less | South Asia Climate Trends</title>
+    <meta name="description" content="A data-driven look at 30 years of Dhaka climate data: Bangladesh's capital is warming faster than Karachi or Delhi — but its rainfall is trending down, not up. Full seasonal breakdown using ERA5 reanalysis data." />
+    <link rel="canonical" href="https://southasiaclimate.github.io/south-asia-climate-trends/dhaka-warming-trend.html" />
+
+    <meta property="og:title" content="Dhaka's Climate Trend: Warming Fast, Raining Less" />
+    <meta property="og:description" content="Bangladesh's capital is warming faster than Karachi or Delhi — but its rainfall is trending down, not up. A 30-year data breakdown." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="images/dhaka-annual-mean-temperature.png" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GD8FJCBENG');
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            background: #F6F4EF;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem 1.5rem; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .breadcrumb a { color: #2E5A5E; text-decoration: none; }
+        header.article-head { margin-bottom: 2rem; }
+        .tag-row { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #2E5A5E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+        h1 { font-size: 2.1rem; color: #101B2D; line-height: 1.2; margin: 0 0 0.8rem 0; }
+        .meta { color: #8A8A8A; font-size: 0.9rem; }
+        h2 { color: #101B2D; margin-top: 2.4rem; font-size: 1.5rem; border-bottom: 2px solid #D9A441; padding-bottom: 0.4rem; }
+        h3 { color: #101B2D; margin-top: 1.8rem; font-size: 1.2rem; }
+        h4 { color: #2E5A5E; margin-top: 1.4rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        p { margin: 0.9rem 0; }
+        img { max-width: 100%; border-radius: 10px; border: 1px solid #E6E2D8; margin: 1rem 0; }
+        .key-figure { font-size: 1.6rem; font-weight: 700; color: #101B2D; margin: 0.3rem 0 1rem 0; }
+        .key-figure.down { color: #3E7CA6; }
+        ul { padding-left: 1.3rem; }
+        li { margin-bottom: 0.5rem; }
+        .faq-q { font-weight: 600; margin-top: 1.2rem; }
+        .note {
+            background: #FBF4E4;
+            border-left: 3px solid #D9A441;
+            padding: 0.8rem 1rem;
+            font-size: 0.88rem;
+            color: #565656;
+            border-radius: 4px;
+            margin: 1.2rem 0;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: 0.92rem; }
+        th, td { text-align: left; padding: 0.5rem 0.7rem; border-bottom: 1px solid #E6E2D8; }
+        th { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; text-transform: uppercase; color: #2E5A5E; }
+        .cta-box {
+            background: linear-gradient(160deg, #101B2D 0%, #2E5A5E 100%);
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin: 2.5rem 0;
+            color: #F6F4EF;
+        }
+        .cta-box a {
+            display: inline-block;
+            background: #D9A441;
+            color: #101B2D;
+            font-weight: 700;
+            padding: 0.7rem 1.3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 0.8rem;
+        }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #8A8A8A; border-top: 1px solid #E6E2D8; padding-top: 1.2rem; }
+        footer a { color: #2E5A5E; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">South Asia Climate Trends</a> / Dhaka
+        </div>
+
+        <header class="article-head">
+            <div class="tag-row">Bangladesh &middot; Monsoon &middot; Rainfall &middot; South Asia</div>
+            <h1>Dhaka's Climate Trend: Warming Fast, Raining Less</h1>
+            <div class="meta">Published July 31, 2026 &middot; Dhaka, Dhaka Division, Bangladesh</div>
+        </header>
+
+        <article>
+            <p>Dhaka, Bangladesh's capital and one of the most densely populated cities on Earth, presents a genuinely different climate story than the other South Asian cities in this series. Using three decades of historical reanalysis weather data (1995–2025), the data reveals something that runs counter to what we found in both Karachi and Delhi: <strong>Dhaka is warming faster than either city — but its rainfall is trending downward, not up.</strong></p>
+
+            <p>This is a meaningful finding. Bangladesh is often discussed in global climate coverage primarily through the lens of flooding and excess water — yet the underlying long-term precipitation trend in its own capital tells a more complicated story.</p>
+
+            <p>All figures below come from ERA5/ERA5-Land reanalysis data (Copernicus/ECMWF), covering 1995 through 2025, visualized through our interactive Climate Trend Dashboard.</p>
+
+            <div class="note">
+                <strong>A note on precision:</strong> figures below are read directly from each chart's trend line. Where a precise decade-rate wasn't printed on the chart itself, we've given a closely reasoned estimate (marked "approximately") rather than a false level of precision.
+            </div>
+
+            <h2>Annual Mean Temperature</h2>
+            <img src="images/dhaka-annual-mean-temperature.png" alt="Dhaka annual mean temperature trend chart, 1995-2025" />
+            <p>Dhaka's annual mean temperature shows the clearest, steadiest warming trajectory of any city examined in this series so far. From a range around <strong>25.0–25.3°C</strong> in the mid-1990s, the trend climbs fairly consistently through the record, with notable warm years in 2006 (25.75°C), 2009 (25.85°C), and 2010 (nearly 26.0°C). The final year in the dataset, 2025, stands out sharply — spiking to approximately <strong>26.5°C</strong>, the highest point in the entire 30-year record.</p>
+
+            <h4>Key Figure: Warming Rate</h4>
+            <div class="key-figure">Approximately +0.30°C per decade</div>
+            <p>This is more than double Karachi's annual warming rate (0.13°C/decade) and roughly twice Delhi's (approximately 0.15°C/decade) — making Dhaka, by this measure, the fastest-warming of the three major South Asian cities examined in this series. Over 30 years, this represents nearly <strong>0.9°C of cumulative warming</strong> — a substantial shift for a low-lying delta city already grappling with sea-level and flooding pressures.</p>
+
+            <h4>Extreme Heat: Days Above 40°C</h4>
+            <img src="images/dhaka-extreme-heat-days.png" alt="Dhaka days per year with maximum temperature above 40 degrees Celsius" />
+            <p>Here Dhaka diverges sharply from both Karachi and Delhi: for essentially the entire 30-year record, Dhaka records <strong>zero days per year</strong> with maximum temperature reaching 40°C. The only exception in the entire dataset is a single recent year — around 2023 — which recorded approximately <strong>3 days</strong> above that threshold.</p>
+            <p>This makes sense given Dhaka's humid, delta climate, which behaves very differently from Karachi's coastal-desert exposure or Delhi's continental extremes. But the appearance of any 40°C+ days at all, in a city that essentially never saw them before, is itself notable — worth monitoring in coming years as a potential early signal, even though a single data point isn't yet a trend.</p>
+
+            <h2>Annual Total Precipitation</h2>
+            <img src="images/dhaka-annual-precipitation.png" alt="Dhaka annual total precipitation trend chart, 1995-2025" />
+            <p>This is where Dhaka's story becomes genuinely distinct from the rest of this series. Annual rainfall totals in the mid-1990s sat around <strong>2,100–2,200mm</strong> — already among the highest of any city in this series, reflecting Bangladesh's position deep in the monsoon belt. But rather than climbing further, as seen in Karachi and Delhi, the trend line declines steadily across the three decades, down to roughly <strong>1,700–1,750mm</strong> by 2025.</p>
+            <p>Individual years remain highly variable — a dramatic spike to over <strong>2,700mm</strong> appears around 2017, and another near <strong>2,550mm</strong> around 2007 — but these high-rainfall years become noticeably less frequent in the second half of the record, with several recent years (2014, 2019, 2020, 2025) falling to some of the lowest annual totals in the entire dataset, around <strong>1,300–1,600mm</strong>.</p>
+
+            <h4>Key Figure: Precipitation Trend</h4>
+            <div class="key-figure down">Approximately −140mm per decade</div>
+            <p>This is a substantial decline — and it runs directly counter to the pattern found in both Karachi (+88.7mm/decade) and Delhi (approximately +35mm/decade). Dhaka's declining precipitation trend is a genuinely important and somewhat counterintuitive finding, given Bangladesh's broader reputation for flood risk. It suggests that even as extreme individual flood events continue to occur, the underlying long-term rainfall baseline in the capital may actually be trending drier.</p>
+
+            <h2>Seasonal & Monsoon Trend</h2>
+            <p>Breaking the data down by season — Winter (December–February), Pre-Monsoon/Hot (March–May), Monsoon (June–September), and Post-Monsoon (October–November) — reveals where this overall rainfall decline is actually concentrated.</p>
+
+            <h3>Winter (Dec-Feb)</h3>
+            <img src="images/dhaka-winter-temp.png" alt="Dhaka winter season mean temperature trend chart" />
+            <img src="images/dhaka-winter-precip.png" alt="Dhaka winter season total precipitation trend chart" />
+            <p>Dhaka's winter temperatures stay relatively flat for most of the record, hovering around <strong>19.5–20°C</strong>, with a notable dip through 2017–2021 (as low as 18.7°C) before a sharp final-year spike to approximately <strong>21.6°C</strong> in 2025 — the warmest winter in the dataset by a wide margin.</p>
+
+            <h4>Key Figures: Winter</h4>
+            <p><strong>Warming rate: approximately +0.05°C per decade (nearly flat)</strong><br /><strong>Precipitation trend: approximately +9mm per decade</strong></p>
+            <p>Winter is the one season where Dhaka's precipitation trend actually runs positive, unlike the declining pattern seen annually and in most other seasons — though this is driven substantially by one dramatic outlier year around 2021, which spiked to roughly <strong>152mm</strong>, more than double any other winter in the record. Outside that single year, most winters bring between 0mm and 55mm.</p>
+
+            <h3>Pre-Monsoon / Hot (Mar-May)</h3>
+            <img src="images/dhaka-pre-monsoon-temp.png" alt="Dhaka pre-monsoon season mean temperature trend chart" />
+            <img src="images/dhaka-pre-monsoon-precip.png" alt="Dhaka pre-monsoon season total precipitation trend chart" />
+            <p>Pre-monsoon temperatures show a clear warming trend, rising from around <strong>27.0°C</strong> in the mid-1990s to roughly <strong>27.7°C</strong> by 2025, with a striking peak of nearly <strong>29°C</strong> in 2010 — the hottest pre-monsoon season in the entire record — and a low point of just under <strong>26°C</strong> in 1998.</p>
+
+            <h4>Key Figures: Pre-Monsoon</h4>
+            <p><strong>Warming rate: approximately +0.23°C per decade</strong><br /><strong>Precipitation trend: approximately −60mm per decade (declining)</strong></p>
+            <p>Pre-monsoon rainfall shows one of the steepest declines of any season — from a trend-line baseline near <strong>580mm</strong> in the mid-1990s down to roughly <strong>400mm</strong> by 2025. The record's most extreme outlier is a spike to nearly <strong>890mm</strong> around 1998, more than double a typical pre-monsoon season, alongside another notable peak near <strong>860mm</strong> around 2013 — but these high-rainfall pre-monsoon years become visibly less frequent in the record's later half.</p>
+
+            <h3>Monsoon (Jun-Sep)</h3>
+            <img src="images/dhaka-monsoon-temp.png" alt="Dhaka monsoon season mean temperature trend chart" />
+            <img src="images/dhaka-monsoon-precip.png" alt="Dhaka monsoon season total precipitation trend chart" />
+            <p>The monsoon season shows Dhaka's <strong>fastest warming trend of any season</strong> — climbing from around <strong>27.3°C</strong> in the mid-1990s to roughly <strong>28.5°C</strong> by 2025, with a sharp peak above <strong>29°C</strong> around 2023.</p>
+
+            <h4>Key Figures: Monsoon</h4>
+            <p><strong>Warming rate: approximately +0.40°C per decade</strong><br /><strong>Precipitation trend: approximately −117mm per decade (declining)</strong></p>
+            <p>This is the season carrying most of Dhaka's overall precipitation decline, and it's a genuinely striking finding: a warming monsoon paired with a substantially <em>declining</em> monsoon rainfall trend is the opposite pattern from what we found in both Karachi and Delhi, where the monsoon season showed the strongest rainfall <em>increases</em>. Monsoon totals fell from a trend-line baseline near <strong>1,400mm</strong> in the mid-1990s to roughly <strong>1,050mm</strong> by 2025 — even as individual peak years (around 2004 and 2007, both near 1,700mm) remain dramatic, they occur less frequently later in the record.</p>
+
+            <h3>Post-Monsoon (Oct-Nov)</h3>
+            <img src="images/dhaka-post-monsoon-temp.png" alt="Dhaka post-monsoon season mean temperature trend chart" />
+            <img src="images/dhaka-post-monsoon-precip.png" alt="Dhaka post-monsoon season total precipitation trend chart" />
+            <p>Post-monsoon temperatures show strong warming, rising from around <strong>24.6°C</strong> in the mid-1990s to roughly <strong>25.7°C</strong> by 2025, with the final recorded year spiking sharply to approximately <strong>27.2°C</strong> — by far the warmest post-monsoon period on record, echoing the same late-record temperature spike seen in the annual and winter charts.</p>
+
+            <h4>Key Figures: Post-Monsoon</h4>
+            <p><strong>Warming rate: approximately +0.37°C per decade</strong><br /><strong>Precipitation trend: approximately +23mm per decade</strong></p>
+            <p>Unlike most other seasons, post-monsoon precipitation trends slightly upward — driven substantially by an extreme outlier year around 2007, which spiked to roughly <strong>410mm</strong>, more than double any other year in this season's record. Outside that single spike, most post-monsoon periods bring between 50mm and 250mm, with a generally rising baseline in more recent years (2017–2024 show more consistently elevated totals than the 1995–2010 window).</p>
+
+            <h2>What This Means for Dhaka</h2>
+            <p>Taken together, Dhaka's data reveals a city warming faster than its regional neighbors, with a rainfall pattern that is genuinely more complex than the "wetter monsoon" story found elsewhere in South Asia:</p>
+            <ul>
+                <li><strong>Dhaka is the fastest-warming city in this series so far.</strong> Its annual warming rate (~0.30°C/decade) roughly doubles both Karachi's and Delhi's, with the monsoon and post-monsoon seasons warming fastest of all.</li>
+                <li><strong>Declining rainfall doesn't mean declining flood risk.</strong> A lower long-term rainfall trend can still coexist with severe individual flood events — Bangladesh's flood risk is driven as much by river systems, storm surge, and land subsidence as by local rainfall totals alone. This data speaks only to Dhaka's own precipitation trend, not the country's broader flood risk profile.</li>
+                <li><strong>The monsoon's changing character deserves attention.</strong> A monsoon season that is both warming quickly and delivering less rainfall over time is a very different water-planning challenge than the intensifying-but-increasing monsoon pattern found in Karachi and Delhi.</li>
+                <li><strong>The very recent (2023-2025) spike across multiple seasons is worth watching closely.</strong> Several charts show their single highest point in the entire 30-year record occurring in the final 1-3 years of data — too recent to call a confirmed new trend, but a pattern worth monitoring as more data accumulates.</li>
+            </ul>
+
+            <h2>Comparing Three South Asian Capitals</h2>
+            <p>With Karachi, Delhi, and now Dhaka analyzed using the same methodology, a direct comparison becomes possible — and each pairing tells a different story.</p>
+
+            <h3>Dhaka vs. Karachi: Delta Warming vs. Coastal Calm</h3>
+            <p>Of the two, Dhaka is warming more than twice as fast (~0.30°C/decade) as <a href="karachi-warming-trend.html">Karachi</a> (0.13°C/decade) — but Karachi's rainfall is intensifying dramatically (+88.7mm/decade) while Dhaka's is declining (~−140mm/decade). Karachi's coastal position moderates its temperature swings; Dhaka's inland delta exposure appears to be driving faster warming, even as its overall rainfall trend moves in the opposite direction from what a warming atmosphere might typically suggest. Read the full <a href="karachi-warming-trend.html">Karachi climate trend report</a> for the complete seasonal breakdown.</p>
+
+            <h3>Dhaka vs. Delhi: Two Very Different Rainfall Stories</h3>
+            <p>Dhaka and <a href="delhi-warming-trend.html">Delhi</a> warm at a broadly similar pace in some seasons — both show their fastest warming outside the core monsoon window (Dhaka's monsoon and post-monsoon seasons both warm around 0.37–0.40°C/decade, close to Delhi's post-monsoon rate of ~0.40°C/decade) — but their rainfall trends diverge sharply. Delhi's annual precipitation is rising modestly (~+35mm/decade), while Dhaka's is falling substantially (~−140mm/decade). Notably, Delhi records 20–50+ extreme-heat days above 40°C most years, while Dhaka records essentially none — a reflection of Delhi's continental exposure versus Dhaka's humid delta climate. See the full <a href="delhi-warming-trend.html">Delhi climate trend report</a> for the seasonal detail behind these numbers.</p>
+
+            <table>
+                <tr><th>Metric</th><th>Karachi</th><th>Delhi</th><th>Dhaka</th></tr>
+                <tr><td>Annual warming rate</td><td>+0.13°C/decade</td><td>~+0.15°C/decade</td><td>~+0.30°C/decade</td></tr>
+                <tr><td>Annual precipitation trend</td><td>+88.7mm/decade</td><td>~+35mm/decade</td><td>~−140mm/decade</td></tr>
+                <tr><td>Fastest-warming season</td><td>Monsoon (+0.20)</td><td>Post-Monsoon (~+0.40)</td><td>Monsoon (~+0.40)</td></tr>
+                <tr><td>Monsoon precipitation trend</td><td>+88.0mm/decade</td><td>~+25mm/decade</td><td>~−117mm/decade</td></tr>
+                <tr><td>Extreme heat days (≥40°C)</td><td>0-5 days/year</td><td>20-50+ days/year</td><td>~0 days/year</td></tr>
+            </table>
+            <p>The contrast is striking: three South Asian capitals, three genuinely different climate trajectories — coastal Karachi warming slowest but raining dramatically more; continental Delhi facing extreme and frequent heat; and delta-city Dhaka warming fastest of all while its rainfall trends the opposite direction from its neighbors.</p>
+
+            <div class="cta-box">
+                <strong>Explore any city yourself</strong>
+                <p style="color:#D8DEE0; margin-bottom:0;">Search any South Asian city and see its own temperature, rainfall, and monsoon trends, built from 30 years of data.</p>
+                <a href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">Open the Interactive Dashboard →</a>
+            </div>
+
+            <h2>Data Source &amp; Methodology</h2>
+            <p>All figures in this report are derived from the <strong>Open-Meteo Historical Weather API</strong>, built on <strong>ERA5 and ERA5-Land reanalysis data</strong> produced by the <strong>European Centre for Medium-Range Weather Forecasts (ECMWF)</strong> through the <strong>Copernicus Climate Change Service</strong>. Trend rates are estimated by reading the linear regression trend line plotted on each chart across the full 1995–2025 period; where a chart did not display a printed decade-rate figure, the value given here is a closely reasoned visual estimate, marked "approximately."</p>
+            <p>Seasonal boundaries follow the standard South Asian meteorological convention: Winter (December–February), Pre-Monsoon/Hot (March–May), Monsoon (June–September), and Post-Monsoon (October–November).</p>
+            <p>As with any reanalysis dataset, figures represent a grid-cell average (roughly 9–25km resolution) rather than a single-point station reading, and may differ from any individual weather station's direct measurements.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p class="faq-q">Is Dhaka warming faster than other South Asian capitals?</p>
+            <p>Based on this data, yes — Dhaka's estimated annual warming rate of approximately 0.30°C per decade is roughly double the rates found in both Karachi (0.13°C/decade) and Delhi (approximately 0.15°C/decade).</p>
+
+            <p class="faq-q">Is Dhaka getting more or less rain?</p>
+            <p>Less, according to the 30-year trend — annual precipitation shows an estimated decline of approximately 140mm per decade, driven substantially by a declining monsoon-season rainfall trend, which runs counter to the increasing monsoon rainfall pattern found in Karachi and Delhi.</p>
+
+            <p class="faq-q">Does declining rainfall mean Dhaka's flood risk is decreasing?</p>
+            <p>Not necessarily. This data reflects only Dhaka's own local precipitation trend. Bangladesh's broader flood risk is shaped significantly by river systems, storm surge, and land subsidence, factors not captured in a single city's rainfall trend alone.</p>
+
+            <p class="faq-q">Does Dhaka experience extreme heat above 40°C?</p>
+            <p>Historically, essentially never — the 30-year record shows zero days per year at or above 40°C for nearly the entire period, with a single exception of approximately 3 days recorded around 2023.</p>
+
+            <p class="faq-q">Which season is warming fastest in Dhaka?</p>
+            <p>The monsoon season (June-September) shows the fastest estimated warming rate, at approximately 0.40°C per decade, closely followed by the post-monsoon season at approximately 0.37°C per decade.</p>
+
+            <p class="faq-q">How does Dhaka's climate trend compare to Karachi and Delhi?</p>
+            <p>Dhaka is warming faster than both cities but shows a declining rainfall trend, while Karachi and Delhi both show increasing rainfall trends — making Dhaka's climate trajectory genuinely distinct within this three-city comparison.</p>
+        </article>
+
+        <footer>
+            Data source: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a> (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built by a meteorologist, MPhil Environmental Sciences.
+            <br /><br />
+            <a href="index.html">← Back to South Asia Climate Trends</a>
+        </footer>
+    </div>
+</body>
+</html>
