@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colombo's Climate Trend: South Asia's Wettest Capital | South Asia Climate Trends</title>
+    <meta name="description" content="A data-driven look at 30 years of Colombo climate data: Sri Lanka's capital is the wettest of four South Asian cities studied, with rising rainfall across every season and almost no extreme heat. Full seasonal breakdown using ERA5 reanalysis data." />
+    <link rel="canonical" href="https://southasiaclimate.github.io/south-asia-climate-trends/colombo-warming-trend.html" />
+
+    <meta property="og:title" content="Colombo's Climate Trend: South Asia's Wettest Capital" />
+    <meta property="og:description" content="Sri Lanka's capital is the wettest of four South Asian cities studied, with rising rainfall across every season and almost no extreme heat." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="images/colombo-annual-mean-temperature.png" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GD8FJCBENG');
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            background: #F6F4EF;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem 1.5rem; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .breadcrumb a { color: #2E5A5E; text-decoration: none; }
+        header.article-head { margin-bottom: 2rem; }
+        .tag-row { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #2E5A5E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+        h1 { font-size: 2.1rem; color: #101B2D; line-height: 1.2; margin: 0 0 0.8rem 0; }
+        .meta { color: #8A8A8A; font-size: 0.9rem; }
+        h2 { color: #101B2D; margin-top: 2.4rem; font-size: 1.5rem; border-bottom: 2px solid #D9A441; padding-bottom: 0.4rem; }
+        h3 { color: #101B2D; margin-top: 1.8rem; font-size: 1.2rem; }
+        h4 { color: #2E5A5E; margin-top: 1.4rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        p { margin: 0.9rem 0; }
+        img { max-width: 100%; border-radius: 10px; border: 1px solid #E6E2D8; margin: 1rem 0; }
+        .key-figure { font-size: 1.6rem; font-weight: 700; color: #101B2D; margin: 0.3rem 0 1rem 0; }
+        ul { padding-left: 1.3rem; }
+        li { margin-bottom: 0.5rem; }
+        .faq-q { font-weight: 600; margin-top: 1.2rem; }
+        .note {
+            background: #FBF4E4;
+            border-left: 3px solid #D9A441;
+            padding: 0.8rem 1rem;
+            font-size: 0.88rem;
+            color: #565656;
+            border-radius: 4px;
+            margin: 1.2rem 0;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: 0.88rem; }
+        th, td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid #E6E2D8; }
+        th { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; text-transform: uppercase; color: #2E5A5E; }
+        .cta-box {
+            background: linear-gradient(160deg, #101B2D 0%, #2E5A5E 100%);
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin: 2.5rem 0;
+            color: #F6F4EF;
+        }
+        .cta-box a {
+            display: inline-block;
+            background: #D9A441;
+            color: #101B2D;
+            font-weight: 700;
+            padding: 0.7rem 1.3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 0.8rem;
+        }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #8A8A8A; border-top: 1px solid #E6E2D8; padding-top: 1.2rem; }
+        footer a { color: #2E5A5E; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">South Asia Climate Trends</a> / Colombo
+        </div>
+
+        <header class="article-head">
+            <div class="tag-row">Sri Lanka &middot; Monsoon &middot; Rainfall &middot; South Asia</div>
+            <h1>Colombo's Climate Trend: South Asia's Wettest Capital</h1>
+            <div class="meta">Published August 3, 2026 &middot; Colombo, Western Province, Sri Lanka</div>
+        </header>
+
+        <article>
+            <p>Colombo, Sri Lanka's commercial capital, sits in a genuinely different climate zone from the other three South Asian cities covered in this series. Positioned on a tropical island exposed to both the southwest and northeast monsoons, Colombo receives dramatically more rainfall year-round than Karachi, Delhi, or Dhaka — and the 30-year data shows that rainfall trend is still climbing, across nearly every season.</p>
+
+            <p>Using the same methodology applied to <a href="karachi-warming-trend.html">Karachi</a>, <a href="delhi-warming-trend.html">Delhi</a>, and <a href="dhaka-warming-trend.html">Dhaka</a>, this report breaks down 30 years of historical reanalysis weather data (1995–2025) for Colombo, season by season.</p>
+
+            <p>All figures below come from ERA5/ERA5-Land reanalysis data (Copernicus/ECMWF), covering 1995 through 2025, visualized through our interactive Climate Trend Dashboard.</p>
+
+            <div class="note">
+                <strong>A note on precision:</strong> figures below are read directly from each chart's trend line. Where a precise decade-rate wasn't printed on the chart itself, we've given a closely reasoned estimate (marked "approximately") rather than a false level of precision.
+            </div>
+
+            <h2>Annual Mean Temperature</h2>
+            <img src="images/colombo-annual-mean-temperature.png" alt="Colombo annual mean temperature trend chart, 1995-2025" />
+            <p>Colombo's annual mean temperature record shows a moderate, fairly steady warming trend. Starting around <strong>26.3°C</strong> in the mid-1990s, the trend line climbs to roughly <strong>26.7–26.8°C</strong> by 2025. The record's single most dramatic point is an early outlier — a sharp spike to <strong>27.15°C</strong> in 1998 followed immediately by the coldest year in the entire dataset, just <strong>25.95°C</strong> in 1999. More recent years show a run of warm points: 2016 (27.2°C, the record high), 2019 (26.95°C), and 2024 (27.05°C).</p>
+
+            <h4>Key Figure: Warming Rate</h4>
+            <div class="key-figure">Approximately +0.15°C per decade</div>
+            <p>This places Colombo almost exactly in line with Delhi's annual warming rate (~0.15°C/decade), and noticeably faster than Karachi (0.13°C/decade) but well behind Dhaka's steep 0.30°C/decade. Colombo's island, coastal-tropical position appears to provide some of the same moderating effect seen in Karachi's coastal climate, tempering its warming relative to the two more continental/delta cities in this series.</p>
+
+            <h4>Extreme Heat: Days Above 40°C</h4>
+            <img src="images/colombo-extreme-heat-days.png" alt="Colombo days per year with maximum temperature above 40 degrees Celsius" />
+            <p>Across the entire 30-year record, Colombo shows <strong>zero days per year</strong> with maximum temperature reaching 40°C — not even the rare single-year exception found in Dhaka's record. This makes Colombo, alongside Dhaka, one of the two cities in this series essentially untouched by extreme 40°C+ heat, a reflection of its tropical maritime climate, which keeps temperature swings comparatively narrow year-round despite high humidity.</p>
+
+            <h2>Annual Total Precipitation</h2>
+            <img src="images/colombo-annual-precipitation.png" alt="Colombo annual total precipitation trend chart, 1995-2025" />
+            <p>This is where Colombo stands apart most dramatically from every other city in this series. Annual rainfall totals sit in the <strong>2,200–3,000mm</strong> range for nearly the entire record — roughly <strong>4 times Delhi's typical annual total</strong> and well above even Dhaka's substantial rainfall. The trend line climbs steadily from around <strong>2,500mm</strong> in the mid-1990s to roughly <strong>2,700mm</strong> by 2025, with the wettest years on record — above <strong>3,200mm</strong> — occurring in 2023 and 2024.</p>
+
+            <h4>Key Figure: Precipitation Trend</h4>
+            <div class="key-figure">Approximately +65mm per decade</div>
+            <p>Unlike Dhaka's declining rainfall trend, Colombo's precipitation is increasing — more in line with the pattern found in Karachi and Delhi, though starting from a vastly higher baseline. Combined with an already-high average, this rising trend reinforces Colombo's position as the consistently wettest of the four cities studied in this series.</p>
+
+            <h2>Seasonal &amp; Monsoon Trend</h2>
+            <p>Breaking the data down by season — Winter (December–February), Pre-Monsoon/Hot (March–May), Monsoon (June–September), and Post-Monsoon (October–November) — shows where Colombo's warming and rainfall trends are concentrated.</p>
+
+            <h3>Winter (Dec-Feb)</h3>
+            <img src="images/colombo-winter-temp.png" alt="Colombo winter season mean temperature trend chart" />
+            <img src="images/colombo-winter-precip.png" alt="Colombo winter season total precipitation trend chart" />
+            <p>Colombo's winter temperature is the most stable of any season in the record — the trend line stays almost perfectly flat around <strong>26.2°C</strong> across the full three decades. The record's low point is a sharp dip to <strong>25.3°C</strong> in 2011, while the high point reaches <strong>27.2°C</strong> in 2016.</p>
+
+            <h4>Key Figures: Winter</h4>
+            <p><strong>Warming rate: approximately +0.05°C per decade (essentially flat)</strong><br /><strong>Precipitation trend: approximately +10mm per decade</strong></p>
+            <p>Winter is Colombo's most climate-stable season by a clear margin — both temperature and precipitation trends stay close to flat, a contrast to the more dramatic seasonal shifts found in Karachi's and Delhi's winters. Winter rainfall itself is comparatively modest for Colombo, typically <strong>150–450mm</strong>, with a standout year above <strong>530mm</strong> around 2013.</p>
+
+            <h3>Pre-Monsoon / Hot (Mar-May)</h3>
+            <img src="images/colombo-pre-monsoon-temp.png" alt="Colombo pre-monsoon season mean temperature trend chart" />
+            <img src="images/colombo-pre-monsoon-precip.png" alt="Colombo pre-monsoon season total precipitation trend chart" />
+            <p>Pre-monsoon temperatures show mild warming, with the trend line rising from around <strong>27.2°C</strong> in the mid-1990s to roughly <strong>27.5°C</strong> by 2025. The record's most extreme point by far is 1998, spiking to nearly <strong>28.85°C</strong> — well above any other year — while 2008 stands out as the coolest pre-monsoon season, dipping to <strong>26.4°C</strong>.</p>
+
+            <h4>Key Figures: Pre-Monsoon</h4>
+            <p><strong>Warming rate: approximately +0.10°C per decade</strong><br /><strong>Precipitation trend: approximately +43mm per decade</strong></p>
+            <p>Pre-monsoon rainfall shows a clearer upward trend than temperature does in this season, rising from a baseline near <strong>520mm</strong> in the mid-1990s to roughly <strong>650mm</strong> by 2025 — notably wetter peak years appear around 2008 and 2016, both approaching <strong>930mm</strong>.</p>
+
+            <h3>Monsoon (Jun-Sep)</h3>
+            <img src="images/colombo-monsoon-temp.png" alt="Colombo monsoon season mean temperature trend chart" />
+            <img src="images/colombo-monsoon-precip.png" alt="Colombo monsoon season total precipitation trend chart" />
+            <p>The monsoon season shows Colombo's <strong>clearest and fastest warming trend</strong> of any season — climbing steadily from around <strong>26.2°C</strong> in the mid-1990s to roughly <strong>26.9°C</strong> by 2025, with the most recent years (2024–2025) recording the warmest monsoon temperatures in the entire record, just above <strong>27°C</strong>.</p>
+
+            <h4>Key Figures: Monsoon</h4>
+            <p><strong>Warming rate: approximately +0.22°C per decade</strong><br /><strong>Precipitation trend: approximately +17mm per decade</strong></p>
+            <p>This matches the broader regional pattern found in Karachi and Delhi, where the monsoon season consistently shows the fastest seasonal warming. Monsoon rainfall itself stays relatively steady around <strong>1,000–1,050mm</strong> across the whole record, though notable peak years — 2017, 2023, and 2024, all above <strong>1,250mm</strong> — suggest increasing variability even within a fairly stable long-term average.</p>
+
+            <h3>Post-Monsoon (Oct-Nov)</h3>
+            <img src="images/colombo-post-monsoon-temp.png" alt="Colombo post-monsoon season mean temperature trend chart" />
+            <img src="images/colombo-post-monsoon-precip.png" alt="Colombo post-monsoon season total precipitation trend chart" />
+            <p>Post-monsoon temperatures show Colombo's mildest seasonal warming trend — rising only slightly from around <strong>25.85°C</strong> in the mid-1990s to roughly <strong>26.1°C</strong> by 2025. The standout year is 2020, spiking to <strong>26.55°C</strong>, the warmest post-monsoon period on record, while 1999 recorded the coolest at <strong>25.47°C</strong>.</p>
+
+            <h4>Key Figures: Post-Monsoon</h4>
+            <p><strong>Warming rate: approximately +0.08°C per decade</strong><br /><strong>Precipitation trend: approximately +67mm per decade</strong></p>
+            <p>Despite the mildest temperature trend of any season, post-monsoon shows one of Colombo's <strong>strongest precipitation increases</strong> — driven substantially by a dramatic outlier year around 2006, which spiked to nearly <strong>1,450mm</strong>, by far the highest total in this season's entire record and roughly triple a typical year.</p>
+
+            <h2>What This Means for Colombo</h2>
+            <ul>
+                <li><strong>Colombo is, by a wide margin, the wettest city in this series.</strong> Its annual rainfall — 2,200-3,000mm — dwarfs Dhaka's already-substantial totals and vastly exceeds Delhi's and Karachi's, a reflection of its exposure to both major regional monsoon systems.</li>
+                <li><strong>Unlike Dhaka, Colombo's rainfall is trending up, not down</strong> — across every single season measured, precipitation shows a positive trend, aligning it more closely with the "wetter monsoon" pattern found in Karachi and Delhi than with Dhaka's declining trajectory.</li>
+                <li><strong>Extreme heat is essentially a non-issue.</strong> With zero days above 40°C across 30 years, Colombo's climate risk profile centers almost entirely on rainfall and flooding rather than heat stress — a very different public health planning priority than Delhi's.</li>
+                <li><strong>Winter stability stands out.</strong> Colombo's winter shows the flattest trend of any season across any city in this series, suggesting its tropical maritime position provides genuine year-round temperature moderation.</li>
+            </ul>
+
+            <h2>Comparing Four South Asian Capitals</h2>
+            <p>With Karachi, Delhi, Dhaka, and now Colombo analyzed using the same methodology, the full regional picture becomes clear — and no two cities tell quite the same story.</p>
+
+            <h3>Colombo vs. Karachi: Two Coastal Cities, Very Different Rainfall Scale</h3>
+            <p>Both <a href="karachi-warming-trend.html">Karachi</a> and Colombo are coastal cities with comparatively moderate warming rates, and both show rising precipitation trends. But the scale is worlds apart: Colombo's typical annual rainfall (2,200-3,000mm) is roughly 4-8 times Karachi's (200-800mm) in a normal year. Karachi's coastal-desert exposure and Colombo's tropical monsoon-convergence position produce fundamentally different climates despite sharing a "coastal" label. See the full <a href="karachi-warming-trend.html">Karachi climate trend report</a> for the complete picture.</p>
+
+            <h3>Colombo vs. Delhi: Similar Warming Rate, Opposite Heat Risk</h3>
+            <p>Colombo and <a href="delhi-warming-trend.html">Delhi</a> warm at nearly identical annual rates (~0.15°C/decade for both) — but their extreme-heat profiles couldn't be more different. Delhi records 20-50+ days per year above 40°C; Colombo records essentially none. This makes Delhi's primary climate risk heat-driven, while Colombo's is overwhelmingly rainfall-driven. Read the full <a href="delhi-warming-trend.html">Delhi climate trend report</a> for the seasonal detail.</p>
+
+            <h3>Colombo vs. Dhaka: Opposite Rainfall Trajectories</h3>
+            <p>This is the most striking contrast in the series. <a href="dhaka-warming-trend.html">Dhaka</a> warms roughly twice as fast as Colombo (~0.30°C/decade versus ~0.15°C/decade) but shows a declining rainfall trend (~−140mm/decade); Colombo warms more slowly but shows a rising trend across every season (~+65mm/decade annually). Two tropical, monsoon-exposed South Asian capitals, moving in genuinely opposite rainfall directions. See the full <a href="dhaka-warming-trend.html">Dhaka climate trend report</a> for the complete breakdown.</p>
+
+            <table>
+                <tr><th>Metric</th><th>Karachi</th><th>Delhi</th><th>Dhaka</th><th>Colombo</th></tr>
+                <tr><td>Annual warming rate</td><td>+0.13°C/dec</td><td>~+0.15°C/dec</td><td>~+0.30°C/dec</td><td>~+0.15°C/dec</td></tr>
+                <tr><td>Annual precipitation trend</td><td>+88.7mm/dec</td><td>~+35mm/dec</td><td>~−140mm/dec</td><td>~+65mm/dec</td></tr>
+                <tr><td>Typical annual rainfall</td><td>200-800mm</td><td>450-950mm</td><td>1,300-2,700mm</td><td>2,200-3,000mm</td></tr>
+                <tr><td>Fastest-warming season</td><td>Monsoon</td><td>Post-Monsoon</td><td>Monsoon</td><td>Monsoon</td></tr>
+                <tr><td>Extreme heat days (≥40°C)</td><td>0-5/year</td><td>20-50+/year</td><td>~0/year</td><td>0/year</td></tr>
+            </table>
+            <p>Four South Asian capitals, four distinct climate identities: Karachi's moderate coastal-desert warming with intensifying rare rainfall; Delhi's fast, extreme-heat-dominated continental climate; Dhaka's rapid warming paired with a surprising rainfall decline; and Colombo's steady tropical warming beneath consistently rising rainfall across every season. Together, they underline why "South Asia's climate" can't be treated as one single story.</p>
+
+            <div class="cta-box">
+                <strong>Explore any city yourself</strong>
+                <p style="color:#D8DEE0; margin-bottom:0;">Search any South Asian city and see its own temperature, rainfall, and monsoon trends, built from 30 years of data.</p>
+                <a href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">Open the Interactive Dashboard →</a>
+            </div>
+
+            <h2>Data Source &amp; Methodology</h2>
+            <p>All figures in this report are derived from the <strong>Open-Meteo Historical Weather API</strong>, built on <strong>ERA5 and ERA5-Land reanalysis data</strong> produced by the <strong>European Centre for Medium-Range Weather Forecasts (ECMWF)</strong> through the <strong>Copernicus Climate Change Service</strong>. Trend rates are estimated by reading the linear regression trend line plotted on each chart across the full 1995–2025 period; where a chart did not display a printed decade-rate figure, the value given here is a closely reasoned visual estimate, marked "approximately."</p>
+            <p>Seasonal boundaries follow the standard South Asian meteorological convention: Winter (December–February), Pre-Monsoon/Hot (March–May), Monsoon (June–September), and Post-Monsoon (October–November).</p>
+            <p>As with any reanalysis dataset, figures represent a grid-cell average (roughly 9–25km resolution) rather than a single-point station reading, and may differ from any individual weather station's direct measurements.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p class="faq-q">Is Colombo the wettest city in South Asia?</p>
+            <p>Among the four cities analyzed in this series — Karachi, Delhi, Dhaka, and Colombo — yes, by a wide margin. Colombo's typical annual rainfall of 2,200-3,000mm substantially exceeds even Dhaka's already-high totals.</p>
+
+            <p class="faq-q">Is Colombo warming?</p>
+            <p>Yes, at an estimated rate of approximately 0.15°C per decade — nearly identical to Delhi's rate, faster than Karachi, but notably slower than Dhaka's approximately 0.30°C per decade.</p>
+
+            <p class="faq-q">Does Colombo experience extreme heat above 40°C?</p>
+            <p>No — the 30-year record shows zero days per year at or above 40°C, making Colombo's climate risk profile centered almost entirely on rainfall rather than heat.</p>
+
+            <p class="faq-q">Is Colombo's rainfall increasing or decreasing?</p>
+            <p>Increasing — an estimated 65mm per decade at the annual level, with every individual season also showing a positive precipitation trend, unlike Dhaka's declining pattern.</p>
+
+            <p class="faq-q">Which season is warming fastest in Colombo?</p>
+            <p>The monsoon season (June-September), at an estimated 0.22°C per decade — consistent with the same pattern found in Karachi and Delhi, where the monsoon season warms fastest of the four.</p>
+
+            <p class="faq-q">How does Colombo compare to Dhaka?</p>
+            <p>The two cities move in opposite rainfall directions: Dhaka warms roughly twice as fast as Colombo but shows declining precipitation, while Colombo warms more slowly but shows rising rainfall across every season measured.</p>
+        </article>
+
+        <footer>
+            Data source: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a> (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built by a meteorologist, MPhil Environmental Sciences.
+            <br /><br />
+            <a href="index.html">← Back to South Asia Climate Trends</a>
+        </footer>
+    </div>
+</body>
+</html>
