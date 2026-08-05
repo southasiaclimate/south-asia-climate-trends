@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kathmandu's Climate Trend: The City That Isn't Warming Like Its Neighbors | South Asia Climate Trends</title>
+    <meta name="description" content="A data-driven look at 30 years of Kathmandu climate data: unlike Karachi and Dhaka, Kathmandu shows almost no annual warming trend — with winter and pre-monsoon seasons actually cooling. Full seasonal breakdown using ERA5 reanalysis data." />
+    <link rel="canonical" href="https://southasiaclimate.github.io/south-asia-climate-trends/kathmandu-warming-trend.html" />
+
+    <meta property="og:title" content="Kathmandu's Climate Trend: The City That Isn't Warming Like Its Neighbors" />
+    <meta property="og:description" content="Unlike Karachi and Dhaka, Kathmandu shows almost no annual warming trend — with winter and pre-monsoon seasons actually cooling." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="images/kathmandu-annual-mean-temperature.png" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GD8FJCBENG');
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            background: #F6F4EF;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem 1.5rem; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .breadcrumb a { color: #2E5A5E; text-decoration: none; }
+        header.article-head { margin-bottom: 2rem; }
+        .tag-row { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #2E5A5E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+        h1 { font-size: 2.1rem; color: #101B2D; line-height: 1.2; margin: 0 0 0.8rem 0; }
+        .meta { color: #8A8A8A; font-size: 0.9rem; }
+        h2 { color: #101B2D; margin-top: 2.4rem; font-size: 1.5rem; border-bottom: 2px solid #D9A441; padding-bottom: 0.4rem; }
+        h3 { color: #101B2D; margin-top: 1.8rem; font-size: 1.2rem; }
+        h4 { color: #2E5A5E; margin-top: 1.4rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        p { margin: 0.9rem 0; }
+        img { max-width: 100%; border-radius: 10px; border: 1px solid #E6E2D8; margin: 1rem 0; }
+        .key-figure { font-size: 1.6rem; font-weight: 700; color: #101B2D; margin: 0.3rem 0 1rem 0; }
+        .key-figure.flat { color: #565656; }
+        .key-figure.down { color: #3E7CA6; }
+        ul { padding-left: 1.3rem; }
+        li { margin-bottom: 0.5rem; }
+        .faq-q { font-weight: 600; margin-top: 1.2rem; }
+        .note {
+            background: #FBF4E4;
+            border-left: 3px solid #D9A441;
+            padding: 0.8rem 1rem;
+            font-size: 0.88rem;
+            color: #565656;
+            border-radius: 4px;
+            margin: 1.2rem 0;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: 0.9rem; }
+        th, td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid #E6E2D8; }
+        th { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; text-transform: uppercase; color: #2E5A5E; }
+        .cta-box {
+            background: linear-gradient(160deg, #101B2D 0%, #2E5A5E 100%);
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin: 2.5rem 0;
+            color: #F6F4EF;
+        }
+        .cta-box a {
+            display: inline-block;
+            background: #D9A441;
+            color: #101B2D;
+            font-weight: 700;
+            padding: 0.7rem 1.3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 0.8rem;
+        }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #8A8A8A; border-top: 1px solid #E6E2D8; padding-top: 1.2rem; }
+        footer a { color: #2E5A5E; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">South Asia Climate Trends</a> / Kathmandu
+        </div>
+
+        <header class="article-head">
+            <div class="tag-row">Nepal &middot; Himalayan Valley &middot; Monsoon &middot; South Asia</div>
+            <h1>Kathmandu's Climate Trend: The City That Isn't Warming Like Its Neighbors</h1>
+            <div class="meta">Published August 5, 2026 &middot; Kathmandu, Bagmati Province, Nepal</div>
+        </header>
+
+        <article>
+            <p>Kathmandu, Nepal's capital, sits in a high-altitude Himalayan valley — a fundamentally different setting from the coastal, delta, and continental-plain cities covered elsewhere in this series. And the 30-year data reveals something genuinely unexpected: <strong>unlike every other South Asian capital studied so far, Kathmandu shows almost no annual warming trend at all — and two of its four seasons are actually trending cooler.</strong></p>
+
+            <p>This is a significant finding worth taking seriously rather than dismissing. Using the same methodology applied to <a href="karachi-warming-trend.html">Karachi</a> and <a href="dhaka-warming-trend.html">Dhaka</a>, this report breaks down 30 years of historical reanalysis weather data (1995–2025) for Kathmandu, season by season, with a direct comparison to both cities.</p>
+
+            <p>All figures below come from ERA5/ERA5-Land reanalysis data (Copernicus/ECMWF), covering 1995 through 2025, visualized through our interactive Climate Trend Dashboard.</p>
+
+            <div class="note">
+                <strong>A note on precision and interpretation:</strong> figures below are read directly from each chart's trend line, marked "approximately" where no exact rate was printed. Kathmandu's complex mountain-valley terrain is also worth flagging specifically: reanalysis datasets like ERA5 operate at roughly 9–25km grid resolution, which can struggle to fully capture valley-specific microclimate effects (like cold-air pooling) in a way that matters more here than in the flatter cities studied elsewhere in this series.
+            </div>
+
+            <h2>Annual Mean Temperature</h2>
+            <img src="images/kathmandu-annual-mean-temperature.png" alt="Kathmandu annual mean temperature trend chart, 1995-2025" />
+            <p>Kathmandu's annual mean temperature record is volatile but strikingly directionless. The record's coldest year is 1997, dropping to just <strong>17.15°C</strong> — a sharp outlier — while the warmest year, 2010, reaches <strong>19.0°C</strong>. In between, the data oscillates without a clear long-term climb: a notably cool stretch appears from 2017–2021 (as low as 17.35°C), followed by a recovery back toward 18.4°C in the final two years.</p>
+
+            <h4>Key Figure: Annual Warming Rate</h4>
+            <div class="key-figure flat">Approximately −0.04°C per decade (essentially flat)</div>
+            <p>This is a genuinely striking contrast to every other city in this series. Karachi warms at +0.13°C/decade, Dhaka at roughly +0.30°C/decade — Kathmandu, by comparison, shows no meaningful annual warming signal at all, and if anything, a very slight cooling lean. This doesn't mean Kathmandu is somehow immune to regional climate shifts; as the seasonal breakdown below shows, the picture is more complicated than a single flat annual number suggests.</p>
+
+            <h4>Extreme Heat: Days Above 40°C</h4>
+            <img src="images/kathmandu-extreme-heat-days.png" alt="Kathmandu days per year with maximum temperature above 40 degrees Celsius" />
+            <p>Across the entire 30-year record, Kathmandu shows <strong>zero days per year</strong> with maximum temperature reaching 40°C — unsurprising given its elevation (roughly 1,400m), which keeps it firmly out of range of the extreme heat seen in low-lying continental cities like Delhi.</p>
+
+            <h2>Annual Total Precipitation</h2>
+            <img src="images/kathmandu-annual-precipitation.png" alt="Kathmandu annual total precipitation trend chart, 1995-2025" />
+            <p>Annual rainfall in Kathmandu typically falls in the <strong>2,000–3,200mm</strong> range for most of the record, with the trend line rising modestly from around <strong>2,800mm</strong> in the mid-1990s to roughly <strong>2,950mm</strong> by 2025. A notably wet cluster of years stands out from 2017–2021, including an extraordinary spike to nearly <strong>4,200mm</strong> around 2021 — by far the highest annual total in the entire record.</p>
+
+            <h4>Key Figure: Precipitation Trend</h4>
+            <div class="key-figure">Approximately +50mm per decade</div>
+            <p>A modest upward trend, well below Karachi's steep +88.7mm/decade increase but moving in the same general direction — more rain overall, concentrated disproportionately in a handful of extreme recent years rather than spread evenly across the record.</p>
+
+            <h2>Seasonal Trend Breakdown</h2>
+            <p>The annual figures hide a genuinely important story: Kathmandu's seasons are not moving in the same direction. Breaking the data down — Winter (December–February), Pre-Monsoon/Hot (March–May), Monsoon (June–September), and Post-Monsoon (October–November) — reveals a mixed, even divergent, seasonal picture.</p>
+
+            <h3>Winter (Dec-Feb)</h3>
+            <img src="images/kathmandu-winter-temp.png" alt="Kathmandu winter season mean temperature trend chart" />
+            <img src="images/kathmandu-winter-precip.png" alt="Kathmandu winter season total precipitation trend chart" />
+            <p>Winter temperatures show a genuine decline — from a trend-line baseline near <strong>12.3°C</strong> in the mid-1990s down to roughly <strong>11.9°C</strong> by 2025. A particularly cold cluster appears from 2018–2022, with 2022 recording the coldest winter in the entire record at just <strong>10.4°C</strong>, well below the mid-1990s baseline.</p>
+
+            <h4>Key Figures: Winter</h4>
+            <p><strong>Warming rate: approximately −0.13°C per decade (cooling)</strong><br /><strong>Precipitation trend: approximately −30mm per decade (declining)</strong></p>
+            <p>This is a real cooling trend, not just statistical noise around zero — and it's paired with a substantial decline in winter rainfall, from a trend-line baseline near <strong>140mm</strong> in the mid-1990s down to roughly <strong>50mm</strong> by 2025. Kathmandu's winters, in other words, appear to be growing both colder and drier over this 30-year window — a combination worth watching closely given its implications for regional water availability heading into the dry season.</p>
+
+            <h3>Pre-Monsoon / Hot (Mar-May)</h3>
+            <img src="images/kathmandu-pre-monsoon-temp.png" alt="Kathmandu pre-monsoon season mean temperature trend chart" />
+            <img src="images/kathmandu-pre-monsoon-precip.png" alt="Kathmandu pre-monsoon season total precipitation trend chart" />
+            <p>Pre-monsoon temperatures also show a cooling trend, sliding from around <strong>19.3°C</strong> in the mid-1990s to roughly <strong>18.9°C</strong> by 2025. The record's most extreme point is 2020, dropping to just <strong>17.3°C</strong> — the coldest pre-monsoon season on record — while 2010 stands out as the warmest, reaching <strong>21.1°C</strong>.</p>
+
+            <h4>Key Figures: Pre-Monsoon</h4>
+            <p><strong>Warming rate: approximately −0.13°C per decade (cooling)</strong><br /><strong>Precipitation trend: approximately flat (no clear trend)</strong></p>
+            <p>This is the second of two seasons showing genuine cooling in Kathmandu — matching winter's rate almost exactly. Pre-monsoon rainfall, meanwhile, stays fairly stable around <strong>340–350mm</strong> across the full record, with notable wet outliers around 2000 (630mm) and 2007 (570mm) but no clear directional trend.</p>
+
+            <h3>Monsoon (Jun-Sep)</h3>
+            <img src="images/kathmandu-monsoon-temp.png" alt="Kathmandu monsoon season mean temperature trend chart" />
+            <img src="images/kathmandu-monsoon-precip.png" alt="Kathmandu monsoon season total precipitation trend chart" />
+            <p>The monsoon season tells a completely different story from the rest of the year — this is where Kathmandu's warming actually shows up. The trend line climbs steadily from around <strong>22.15°C</strong> in the mid-1990s to roughly <strong>22.75°C</strong> by 2025, with the two most recent years (2023–2024) recording the warmest monsoon temperatures in the entire record, close to <strong>23°C</strong>.</p>
+
+            <h4>Key Figures: Monsoon</h4>
+            <p><strong>Warming rate: approximately +0.20°C per decade</strong><br /><strong>Precipitation trend: approximately +100mm per decade</strong></p>
+            <p>This single season essentially carries all of Kathmandu's warming signal — its rate here (+0.20°C/decade) matches Karachi's monsoon warming almost exactly. Monsoon rainfall also shows a real increase, driven substantially by an extraordinary run of wet years from 2017–2021, several exceeding <strong>3,000mm</strong>, with 2021 peaking near <strong>3,400mm</strong> — nearly double a typical monsoon season just two decades earlier.</p>
+
+            <h3>Post-Monsoon (Oct-Nov)</h3>
+            <img src="images/kathmandu-post-monsoon-temp.png" alt="Kathmandu post-monsoon season mean temperature trend chart" />
+            <img src="images/kathmandu-post-monsoon-precip.png" alt="Kathmandu post-monsoon season total precipitation trend chart" />
+            <p>Post-monsoon temperatures stay close to flat across the record, hovering around <strong>17.3–17.4°C</strong> with no strong directional movement. The record's low point is a sharp dip to <strong>15.95°C</strong> in 1997, while 1998 immediately follows with the warmest post-monsoon reading, nearly <strong>18.75°C</strong> — an unusually dramatic single-year swing.</p>
+
+            <h4>Key Figures: Post-Monsoon</h4>
+            <p><strong>Warming rate: approximately +0.05°C per decade (essentially flat)</strong><br /><strong>Precipitation trend: approximately −7mm per decade (slight decline)</strong></p>
+            <p>Post-monsoon rainfall is dominated by a handful of extreme spikes — 1999 (~237mm), 2013 (~257mm, the record high), and 2022 (~252mm) — against a backdrop of otherwise modest totals typically under 130mm, producing a mild overall decline once those outlier years are accounted for in the trend line.</p>
+
+            <h2>What This Means for Kathmandu</h2>
+            <ul>
+                <li><strong>Kathmandu's climate change signal is real but season-specific, not uniform.</strong> Unlike Karachi and Dhaka, where warming shows up across nearly every season, Kathmandu's warming is concentrated almost entirely in the monsoon — while winter and pre-monsoon are actually cooling.</li>
+                <li><strong>Winter cooling plus declining winter rainfall is a combination worth monitoring.</strong> If sustained, this pattern has direct implications for dry-season water availability in a region already dependent on winter precipitation and snowpack for river flow later in the year.</li>
+                <li><strong>The monsoon is intensifying much like it is elsewhere in the region.</strong> Kathmandu's monsoon warming rate (+0.20°C/decade) and rainfall increase mirror patterns found in Karachi and Dhaka, suggesting this specific seasonal shift may be a broader regional signal rather than a Kathmandu-specific anomaly.</li>
+                <li><strong>Mountain-valley climates don't necessarily track the same trajectory as lowland cities.</strong> This is a useful caution against assuming any single "South Asia is warming" narrative applies uniformly — geography and elevation clearly matter as much as regional climate drivers.</li>
+            </ul>
+
+            <h2>Kathmandu vs. Karachi and Dhaka</h2>
+            <p>With <a href="karachi-warming-trend.html">Karachi</a>, <a href="dhaka-warming-trend.html">Dhaka</a>, and now Kathmandu analyzed using the same methodology, the contrast is sharp.</p>
+
+            <h3>Kathmandu vs. Karachi: No Warming vs. Steady Coastal Warming</h3>
+            <p>Karachi warms steadily across nearly every season (+0.13°C/decade annually); Kathmandu shows essentially no annual warming trend at all, with two seasons actually cooling. Where the two cities do align is the monsoon: both show their fastest seasonal warming there, at nearly identical rates (Karachi +0.20°C/decade, Kathmandu +0.20°C/decade) — suggesting the monsoon-season warming signal may be a genuinely regional pattern that persists even where the annual trend does not. On rainfall, both cities are getting wetter overall, though Karachi's coastal exposure produces far more volatile year-to-year swings. Read the full <a href="karachi-warming-trend.html">Karachi climate trend report</a> for the complete picture.</p>
+
+            <h3>Kathmandu vs. Dhaka: Flat vs. the Fastest-Warming City in the Series</h3>
+            <p>This is the starkest contrast in the entire series so far. <a href="dhaka-warming-trend.html">Dhaka</a> is the fastest-warming city studied (~0.30°C/decade); Kathmandu is, for practical purposes, not warming annually at all. Both cities, however, share a common thread worth noting: each has at least one season moving in an unexpected direction — Dhaka's declining rainfall despite its rapid warming, and Kathmandu's cooling winter and pre-monsoon despite its warming monsoon. Neither city fits a simple "South Asia is uniformly warming and drying/wetting" narrative. See the full <a href="dhaka-warming-trend.html">Dhaka climate trend report</a> for the complete seasonal breakdown.</p>
+
+            <table>
+                <tr><th>Metric</th><th>Karachi</th><th>Dhaka</th><th>Kathmandu</th></tr>
+                <tr><td>Annual warming rate</td><td>+0.13°C/decade</td><td>~+0.30°C/decade</td><td>~−0.04°C/decade</td></tr>
+                <tr><td>Annual precipitation trend</td><td>+88.7mm/decade</td><td>~−140mm/decade</td><td>~+50mm/decade</td></tr>
+                <tr><td>Fastest-warming season</td><td>Monsoon (+0.20)</td><td>Monsoon (~+0.40)</td><td>Monsoon (~+0.20)</td></tr>
+                <tr><td>Any season cooling?</td><td>No</td><td>No</td><td>Yes &mdash; Winter &amp; Pre-Monsoon</td></tr>
+                <tr><td>Extreme heat days (&ge;40&deg;C)</td><td>0-5/year</td><td>~0/year</td><td>0/year</td></tr>
+            </table>
+
+            <div class="cta-box">
+                <strong>Explore any city yourself</strong>
+                <p style="color:#D8DEE0; margin-bottom:0;">Search any South Asian city and see its own temperature, rainfall, and monsoon trends, built from 30 years of data.</p>
+                <a href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">Open the Interactive Dashboard →</a>
+            </div>
+
+            <h2>Data Source &amp; Methodology</h2>
+            <p>All figures in this report are derived from the <strong>Open-Meteo Historical Weather API</strong>, built on <strong>ERA5 and ERA5-Land reanalysis data</strong> produced by the <strong>European Centre for Medium-Range Weather Forecasts (ECMWF)</strong> through the <strong>Copernicus Climate Change Service</strong>. Trend rates are estimated by reading the linear regression trend line plotted on each chart across the full 1995–2025 period; where a chart did not display a printed decade-rate figure, the value given here is a closely reasoned visual estimate, marked "approximately."</p>
+            <p>Seasonal boundaries follow the standard South Asian meteorological convention: Winter (December–February), Pre-Monsoon/Hot (March–May), Monsoon (June–September), and Post-Monsoon (October–November).</p>
+            <p>As noted above, Kathmandu's complex Himalayan-valley terrain is a genuine limitation for reanalysis data specifically — grid-cell averages at 9-25km resolution may smooth over real local microclimate variation more than they would in flatter terrain, so the cooling trends reported here should be read as a regional-scale signal rather than a precise measurement for any single neighborhood within the valley.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p class="faq-q">Is Kathmandu warming?</p>
+            <p>At the annual level, barely — the 30-year data shows an estimated rate of approximately −0.04°C per decade, essentially flat to very slightly cooling. This makes Kathmandu a clear outlier compared to Karachi, Delhi, Dhaka, and Colombo, all of which show measurable annual warming.</p>
+
+            <p class="faq-q">Which season is actually getting colder in Kathmandu?</p>
+            <p>Both winter (December-February) and pre-monsoon (March-May) show real cooling trends, each at an estimated rate of approximately −0.13°C per decade.</p>
+
+            <p class="faq-q">If Kathmandu isn't warming, does that mean it's not affected by climate change?</p>
+            <p>No — the monsoon season shows a clear warming trend (approximately +0.20°C per decade) alongside rising rainfall, closely matching patterns seen in Karachi and Dhaka. Kathmandu's climate signal is season-specific rather than absent.</p>
+
+            <p class="faq-q">Does Kathmandu experience extreme heat above 40°C?</p>
+            <p>No — the 30-year record shows zero days per year at or above 40°C, consistent with its high-altitude Himalayan valley setting.</p>
+
+            <p class="faq-q">How does Kathmandu compare to Karachi and Dhaka?</p>
+            <p>Kathmandu shows essentially no annual warming, compared to Karachi's steady +0.13°C/decade and Dhaka's rapid ~+0.30°C/decade. All three cities, however, share a similarly fast-warming monsoon season, suggesting that specific seasonal pattern may be a broader regional signal.</p>
+        </article>
+
+        <footer>
+            Data source: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a> (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built by a meteorologist, MPhil Environmental Sciences.
+            <br /><br />
+            <a href="index.html">← Back to South Asia Climate Trends</a>
+        </footer>
+    </div>
+</body>
+</html>
