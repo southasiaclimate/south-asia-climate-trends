@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lahore's Climate Trend: 30 Years of Rising Heat and Extreme Heat Days | South Asia Climate Trends</title>
+    <meta name="description" content="A data-driven look at 30 years of Lahore climate data: rising winter and monsoon temperatures, 30+ extreme heat days a year, and how Punjab's biggest city compares to coastal Karachi. Full seasonal breakdown using ERA5 reanalysis data." />
+    <link rel="canonical" href="https://southasiaclimate.github.io/south-asia-climate-trends/lahore-warming-trend.html" />
+
+    <meta property="og:title" content="Lahore's Climate Trend: 30 Years of Rising Heat and Extreme Heat Days" />
+    <meta property="og:description" content="Rising winter and monsoon temperatures, 30+ extreme heat days a year, and how Punjab's biggest city compares to coastal Karachi." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="images/lahore-annual-mean-temperature.png" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GD8FJCBENG');
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            background: #F6F4EF;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem 1.5rem; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .breadcrumb a { color: #2E5A5E; text-decoration: none; }
+        header.article-head { margin-bottom: 2rem; }
+        .tag-row { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #2E5A5E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+        h1 { font-size: 2.1rem; color: #101B2D; line-height: 1.2; margin: 0 0 0.8rem 0; }
+        .meta { color: #8A8A8A; font-size: 0.9rem; }
+        h2 { color: #101B2D; margin-top: 2.4rem; font-size: 1.5rem; border-bottom: 2px solid #D9A441; padding-bottom: 0.4rem; }
+        h3 { color: #101B2D; margin-top: 1.8rem; font-size: 1.2rem; }
+        h4 { color: #2E5A5E; margin-top: 1.4rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        p { margin: 0.9rem 0; }
+        img { max-width: 100%; border-radius: 10px; border: 1px solid #E6E2D8; margin: 1rem 0; }
+        .key-figure { font-size: 1.6rem; font-weight: 700; color: #101B2D; margin: 0.3rem 0 1rem 0; }
+        ul { padding-left: 1.3rem; }
+        li { margin-bottom: 0.5rem; }
+        .faq-q { font-weight: 600; margin-top: 1.2rem; }
+        .note {
+            background: #FBF4E4;
+            border-left: 3px solid #D9A441;
+            padding: 0.8rem 1rem;
+            font-size: 0.88rem;
+            color: #565656;
+            border-radius: 4px;
+            margin: 1.2rem 0;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: 0.85rem; }
+        th, td { text-align: left; padding: 0.45rem 0.5rem; border-bottom: 1px solid #E6E2D8; }
+        th { font-family: 'IBM Plex Mono', monospace; font-size: 0.64rem; text-transform: uppercase; color: #2E5A5E; }
+        .cta-box {
+            background: linear-gradient(160deg, #101B2D 0%, #2E5A5E 100%);
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin: 2.5rem 0;
+            color: #F6F4EF;
+        }
+        .cta-box a {
+            display: inline-block;
+            background: #D9A441;
+            color: #101B2D;
+            font-weight: 700;
+            padding: 0.7rem 1.3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 0.8rem;
+        }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #8A8A8A; border-top: 1px solid #E6E2D8; padding-top: 1.2rem; }
+        footer a { color: #2E5A5E; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">South Asia Climate Trends</a> / Lahore
+        </div>
+
+        <header class="article-head">
+            <div class="tag-row">Pakistan &middot; Punjab &middot; Heatwave &middot; Monsoon</div>
+            <h1>Lahore's Climate Trend: 30 Years of Rising Heat and Extreme Heat Days</h1>
+            <div class="meta">Published August 7, 2026 &middot; Lahore, Punjab, Pakistan</div>
+        </header>
+
+        <article>
+            <p>Lahore, Pakistan's second-largest city and the cultural heart of Punjab, sits far inland from Karachi's coastal moderation — and the 30-year data shows exactly what that difference in geography produces: a city with substantially more extreme heat, a winter that's warming almost as fast as its monsoon, and a climate profile that sits somewhere between Karachi's coastal pattern and Delhi's continental extremes.</p>
+
+            <p>Using the same methodology applied to <a href="karachi-warming-trend.html">Karachi</a>, this report breaks down 30 years of historical reanalysis weather data (1995–2025) for Lahore, season by season, with a direct comparison between Pakistan's two largest cities.</p>
+
+            <p>All figures below come from ERA5/ERA5-Land reanalysis data (Copernicus/ECMWF), covering 1995 through 2025, visualized through our interactive Climate Trend Dashboard.</p>
+
+            <div class="note">
+                <strong>A note on precision:</strong> figures below are read directly from each chart's trend line, marked "approximately" where no exact rate was printed on the chart itself.
+            </div>
+
+            <h2>Annual Mean Temperature</h2>
+            <img src="images/lahore-annual-mean-temperature.png" alt="Lahore annual mean temperature trend chart, 1995-2025" />
+            <p>Lahore's annual mean temperature swings substantially from year to year, with a clear underlying upward trend. The record's coldest year is 1997, dropping to just <strong>22.25°C</strong>, followed immediately by a sharp jump. Notable peak years — 2002, 2009, and 2010 — all reach approximately <strong>24.6°C</strong>, the warmest points in the entire record, while a cooler stretch from 2011–2015 dips as low as <strong>23.0°C</strong>.</p>
+
+            <h4>Key Figure: Warming Rate</h4>
+            <div class="key-figure">Approximately +0.13°C per decade</div>
+            <p>This matches Karachi's annual warming rate almost exactly (0.13°C/decade) — a genuinely interesting finding given how different the two cities are geographically. Whatever is driving Pakistan's broader annual warming trend appears to affect both a coastal megacity and an inland Punjab city at a similar overall pace, even though — as the seasonal and extreme-heat data below show — the *experience* of that warming differs substantially.</p>
+
+            <h4>Extreme Heat: Days Above 40°C</h4>
+            <img src="images/lahore-extreme-heat-days.png" alt="Lahore days per year with maximum temperature above 40 degrees Celsius" />
+            <p>This is where Lahore's inland exposure shows up most dramatically. Where Karachi rarely exceeds 5 days a year above 40°C, Lahore regularly records <strong>20 to 46 days per year</strong> — an entirely different climate reality. Peak years 2002, 2009, and 2022 all reach approximately <strong>44-46 days</strong>, while milder years like 2008, 2015, and 2023 dip as low as <strong>9-12 days</strong>. There's no single clean trend line here, but a consistently high, noisy baseline averaging roughly <strong>28-30 days per year</strong> across the full record — Lahore's extreme heat isn't a rare event, it's close to a monthly occurrence across the hot season most years.</p>
+
+            <h2>Annual Total Precipitation</h2>
+            <img src="images/lahore-annual-precipitation.png" alt="Lahore annual total precipitation trend chart, 1995-2025" />
+            <p>Lahore's annual rainfall is considerably more stable than Karachi's dramatic, volatile record. Typical annual totals fall in the <strong>400–900mm</strong> range for most of the 30 years, with the trend line staying relatively flat, rising only modestly from around <strong>610mm</strong> in the mid-1990s to roughly <strong>640mm</strong> by 2025. The wettest year on record is 1997, reaching close to <strong>890mm</strong>, while several years — 2001, 2008, and 2021 — dip to some of the driest totals in the record, around <strong>390–430mm</strong>.</p>
+
+            <h4>Key Figure: Precipitation Trend</h4>
+            <div class="key-figure">Approximately +10mm per decade</div>
+            <p>A far more modest increase than Karachi's steep +88.7mm/decade climb. This is a genuinely important contrast: while Karachi's rainfall story is one of dramatic recent intensification, Lahore's has stayed comparatively steady across the same three decades — despite sharing a country and, per the annual temperature figures above, a very similar overall warming rate.</p>
+
+            <h2>Seasonal Trend Breakdown</h2>
+            <p>Breaking the data down by season — Winter (December–February), Pre-Monsoon/Hot (March–May), Monsoon (June–September), and Post-Monsoon (October–November) — reveals a pattern distinct from every other city in this series so far: Lahore's winter warms almost as fast as its monsoon.</p>
+
+            <h3>Winter (Dec-Feb)</h3>
+            <img src="images/lahore-winter-temp.png" alt="Lahore winter season mean temperature trend chart" />
+            <img src="images/lahore-winter-precip.png" alt="Lahore winter season total precipitation trend chart" />
+            <p>Winter temperatures show a clear, sustained rise — from a trend-line baseline near <strong>12.9°C</strong> in the mid-1990s to roughly <strong>13.5°C</strong> by 2025. Standout warm winters appear in 2009 (14.75°C, the record high) and 2016 (14.65°C), while 2019 and 2024 both dip to the coldest point in the record, around <strong>12.05°C</strong>.</p>
+
+            <h4>Key Figures: Winter</h4>
+            <p><strong>Warming rate: approximately +0.20°C per decade</strong><br /><strong>Precipitation trend: approximately +3mm per decade (essentially flat)</strong></p>
+            <p>This is the standout finding of the seasonal breakdown: Lahore's winter is warming almost as fast as its monsoon season, a pattern not seen in any other city studied in this series, where winter has consistently been the slowest-warming or even cooling season. Winter rainfall stays comparatively stable, generally between <strong>30mm and 175mm</strong>, with 2022 recording the wettest winter on record at roughly <strong>175mm</strong>.</p>
+
+            <h3>Pre-Monsoon / Hot (Mar-May)</h3>
+            <img src="images/lahore-pre-monsoon-temp.png" alt="Lahore pre-monsoon season mean temperature trend chart" />
+            <img src="images/lahore-pre-monsoon-precip.png" alt="Lahore pre-monsoon season total precipitation trend chart" />
+            <p>Pre-monsoon temperatures show the mildest trend of any season, staying close to flat around <strong>26.1–26.3°C</strong> across the full 30 years. The record's most extreme point is 2010, spiking to <strong>29.1°C</strong>, the hottest pre-monsoon season on record, while 1997 and 2013 both dip to the coolest points, around <strong>23.8–23.9°C</strong>.</p>
+
+            <h4>Key Figures: Pre-Monsoon</h4>
+            <p><strong>Warming rate: approximately +0.07°C per decade</strong><br /><strong>Precipitation trend: approximately flat, minor increase</strong></p>
+            <p>Pre-monsoon rainfall stays fairly stable around <strong>75–85mm</strong> across most of the record, with 2015 standing out sharply at nearly <strong>197mm</strong> — the wettest pre-monsoon season on record, and more than double a typical year.</p>
+
+            <h3>Monsoon (Jun-Sep)</h3>
+            <img src="images/lahore-monsoon-temp.png" alt="Lahore monsoon season mean temperature trend chart" />
+            <img src="images/lahore-monsoon-precip.png" alt="Lahore monsoon season total precipitation trend chart" />
+            <p>The monsoon season shows Lahore's <strong>fastest warming trend</strong> — rising from around <strong>30.1°C</strong> in the mid-1990s to roughly <strong>30.75°C</strong> by 2025. The record's warmest monsoon season is 2009, reaching <strong>31.4°C</strong>, while 1996 recorded the coolest at <strong>29.25°C</strong>.</p>
+
+            <h4>Key Figures: Monsoon</h4>
+            <p><strong>Warming rate: approximately +0.22°C per decade</strong><br /><strong>Precipitation trend: approximately flat, minor increase</strong></p>
+            <p>This matches the pattern found in nearly every other city in this series: the monsoon season warms fastest. Monsoon rainfall itself stays relatively steady around <strong>430–440mm</strong> for most of the record, with 2025 and 1996 both reaching the highest totals, close to <strong>655–660mm</strong>, and 2020–2021 recording the driest monsoon seasons, around <strong>240–250mm</strong>.</p>
+
+            <h3>Post-Monsoon (Oct-Nov)</h3>
+            <img src="images/lahore-post-monsoon-temp.png" alt="Lahore post-monsoon season mean temperature trend chart" />
+            <img src="images/lahore-post-monsoon-precip.png" alt="Lahore post-monsoon season total precipitation trend chart" />
+            <p>Post-monsoon temperatures show a modest but real rise, from around <strong>21.7°C</strong> in the mid-1990s to roughly <strong>22.0°C</strong> by 2025. The record's low point is a sharp dip to <strong>19.15°C</strong> in 1997, while 2000 and 2016 both reach the warmest points, close to <strong>22.9–23.0°C</strong>.</p>
+
+            <h4>Key Figures: Post-Monsoon</h4>
+            <p><strong>Warming rate: approximately +0.10°C per decade</strong><br /><strong>Precipitation trend: approximately +6mm per decade</strong></p>
+            <p>Post-monsoon rainfall is dominated by one dramatic outlier — 1997, spiking to roughly <strong>101mm</strong>, more than double any other year in this season's record — against an otherwise low, rising baseline that reaches its second-highest point, around <strong>85mm</strong>, in 2023.</p>
+
+            <h2>What This Means for Lahore</h2>
+            <ul>
+                <li><strong>Extreme heat is a defining feature of Lahore's climate, not an occasional event.</strong> With an average of roughly 28-30 days per year above 40°C, heat-health planning needs to treat extended, near-monthly extreme heat as the norm for the hot season — closer to Delhi's exposure than Karachi's.</li>
+                <li><strong>Winter warming this fast is unusual and worth monitoring.</strong> No other city in this series shows winter warming at a pace this close to its monsoon season — the drivers behind this specific pattern would be a valuable area for further local research.</li>
+                <li><strong>Rainfall has stayed comparatively stable, unlike Karachi's dramatic recent intensification.</strong> This means Lahore's water planning challenges are currently more heat-driven than flood-driven, a genuinely different profile from its coastal counterpart.</li>
+                <li><strong>Same country, same overall warming rate, very different lived experience.</strong> Karachi and Lahore share an almost identical annual warming rate, but Lahore's residents face vastly more extreme-heat days — a reminder that a single national or even city-level average can mask very different real-world exposure.</li>
+            </ul>
+
+            <h2>Lahore vs. Karachi: Pakistan's Two Largest Cities</h2>
+            <p>With both of Pakistan's largest cities now analyzed using the same methodology, the comparison is genuinely revealing.</p>
+            <p><a href="karachi-warming-trend.html">Karachi</a> and Lahore warm at almost identical annual rates (0.13°C/decade for both) — but that's where the similarity ends. Karachi's coastal position keeps its extreme-heat days remarkably low (0-5 per year), while inland Lahore regularly faces 20-46 days per year above 40°C. Rainfall tells the opposite contrast: Karachi's precipitation is intensifying dramatically (+88.7mm/decade, driven by an increasingly volatile monsoon), while Lahore's has stayed comparatively steady (+10mm/decade). And where Karachi's winter is its most stable, slowest-changing season, Lahore's winter is warming almost as fast as its monsoon — a genuinely distinct pattern between two cities in the very same country. Read the full <a href="karachi-warming-trend.html">Karachi climate trend report</a> for the complete picture.</p>
+
+            <h2>How Lahore Compares Across the Region</h2>
+            <p>With six South Asian cities now analyzed using the same methodology, Lahore's profile sits in an interesting middle ground — sharing Karachi's overall warming pace, but Delhi's exposure to extreme heat.</p>
+            <table>
+                <tr><th>Metric</th><th>Karachi</th><th>Delhi</th><th>Dhaka</th><th>Colombo</th><th>Kathmandu</th><th>Lahore</th></tr>
+                <tr><td>Annual warming rate</td><td>+0.13</td><td>~+0.15</td><td>~+0.30</td><td>~+0.15</td><td>~\u22120.04</td><td>~+0.13</td></tr>
+                <tr><td>Annual precip trend (mm/dec)</td><td>+88.7</td><td>~+35</td><td>~\u2212140</td><td>~+65</td><td>~+50</td><td>~+10</td></tr>
+                <tr><td>Fastest season</td><td>Monsoon</td><td>Post-Monsoon</td><td>Monsoon</td><td>Monsoon</td><td>Monsoon</td><td>Monsoon</td></tr>
+                <tr><td>Extreme heat days (\u226540\u00b0C)</td><td>0-5/yr</td><td>20-50+/yr</td><td>~0/yr</td><td>0/yr</td><td>0/yr</td><td>20-46/yr</td></tr>
+            </table>
+            <p>All rates in °C/decade unless noted. Lahore is the clearest example yet in this series of a city whose annual-average warming rate alone doesn't tell the real story — its extreme-heat exposure places it much closer to Delhi's risk profile than to Karachi's, despite matching Karachi almost exactly on the headline number.</p>
+
+            <div class="cta-box">
+                <strong>Explore any city yourself</strong>
+                <p style="color:#D8DEE0; margin-bottom:0;">Search any South Asian city and see its own temperature, rainfall, and monsoon trends, built from 30 years of data.</p>
+                <a href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">Open the Interactive Dashboard →</a>
+            </div>
+
+            <h2>Data Source &amp; Methodology</h2>
+            <p>All figures in this report are derived from the <strong>Open-Meteo Historical Weather API</strong>, built on <strong>ERA5 and ERA5-Land reanalysis data</strong> produced by the <strong>European Centre for Medium-Range Weather Forecasts (ECMWF)</strong> through the <strong>Copernicus Climate Change Service</strong>. Trend rates are estimated by reading the linear regression trend line plotted on each chart across the full 1995–2025 period; where a chart did not display a printed decade-rate figure, the value given here is a closely reasoned visual estimate, marked "approximately."</p>
+            <p>Seasonal boundaries follow the standard South Asian meteorological convention: Winter (December–February), Pre-Monsoon/Hot (March–May), Monsoon (June–September), and Post-Monsoon (October–November).</p>
+            <p>As with any reanalysis dataset, figures represent a grid-cell average (roughly 9–25km resolution) rather than a single-point station reading, and may differ from any individual weather station's direct measurements.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p class="faq-q">How many extreme heat days does Lahore have per year?</p>
+            <p>Based on the 1995-2025 record, typically 20-46 days per year with maximum temperatures at or above 40°C, averaging roughly 28-30 days annually — far more than coastal Karachi, and comparable in scale to Delhi's continental exposure.</p>
+
+            <p class="faq-q">Is Lahore warming faster than Karachi?</p>
+            <p>No — both cities show an almost identical annual warming rate of approximately 0.13°C per decade. Where they differ sharply is extreme heat exposure and rainfall trends, not the headline warming pace.</p>
+
+            <p class="faq-q">Is Lahore's winter really warming as fast as its monsoon?</p>
+            <p>Yes, based on this data — winter shows an estimated warming rate of approximately 0.20°C per decade, close to the monsoon season's 0.22°C per decade. This is unusual compared to other South Asian cities studied, where winter is typically the slowest-changing season.</p>
+
+            <p class="faq-q">Is Lahore's rainfall increasing?</p>
+            <p>Only modestly — an estimated 10mm per decade, far below Karachi's steep 88.7mm per decade increase over the same period.</p>
+
+            <p class="faq-q">Which season is warming fastest in Lahore?</p>
+            <p>The monsoon season (June-September), at an estimated 0.22°C per decade — consistent with the pattern found across most other cities in this series.</p>
+        </article>
+
+        <footer>
+            Data source: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a> (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built by a meteorologist, MPhil Environmental Sciences.
+            <br /><br />
+            <a href="index.html">← Back to South Asia Climate Trends</a>
+        </footer>
+    </div>
+</body>
+</html>
