@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mumbai Climate Trends (1995–2025): Rising Heat, Intensifying Monsoons | South Asia Climate Trends</title>
+<meta name="description" content="A 30-year data analysis of Mumbai's climate: annual and seasonal temperature and precipitation trends from 1995-2025, based on ERA5 reanalysis data. Compare Mumbai to Karachi, Delhi, Dhaka, Colombo, Kathmandu, Lahore and Islamabad.">
+<meta name="keywords" content="Mumbai climate trends, Mumbai temperature data, Mumbai rainfall trends, climate of south asia, Mumbai monsoon, South Asia climate change, ERA5 Mumbai">
+<link rel="canonical" href="https://southasiaclimate.github.io/south-asia-climate-trends/mumbai-climate-trends.html">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mumbai Climate Trends (1995–2025): Rising Heat, Intensifying Monsoons">
+<meta property="og:description" content="30 years of ERA5 climate data reveal how Mumbai's seasons are shifting — from record winter warmth to intensifying monsoon extremes.">
+<meta property="og:url" content="https://southasiaclimate.github.io/south-asia-climate-trends/mumbai-climate-trends.html">
+<meta property="og:site_name" content="South Asia Climate Trends">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Mumbai Climate Trends (1995–2025): Rising Heat, Intensifying Monsoons, and a City on the Coastal Frontline",
+  "description": "A 30-year data analysis of Mumbai's climate using ERA5/ERA5-Land reanalysis data, covering annual and seasonal temperature and precipitation trends.",
+  "author": {"@type": "Organization", "name": "South Asia Climate Trends"},
+  "publisher": {"@type": "Organization", "name": "South Asia Climate Trends"},
+  "mainEntityOfPage": "https://southasiaclimate.github.io/south-asia-climate-trends/mumbai-climate-trends.html"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy-950:#070f1b;
+    --navy-900:#0a1929;
+    --navy-800:#0f2437;
+    --navy-700:#16324a;
+    --teal:#2dd4bf;
+    --teal-dim:#1d9c8c;
+    --ochre:#d4a017;
+    --ochre-dim:#a67c14;
+    --text-main:#e6edf3;
+    --text-dim:#93a4b8;
+    --border:#1e3350;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--navy-950);
+    color:var(--text-main);
+    font-family:'IBM Plex Mono', monospace;
+    line-height:1.7;
+    font-size:16px;
+  }
+  a{color:var(--teal);text-decoration:none;border-bottom:1px solid var(--teal-dim);}
+  a:hover{color:var(--ochre);border-color:var(--ochre-dim);}
+
+  header.site-header{
+    border-bottom:1px solid var(--border);
+    padding:18px 24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .brand{font-weight:700;color:var(--teal);letter-spacing:0.5px;font-size:1.05rem;border:none;}
+  .brand:hover{color:var(--teal);border:none;}
+  nav.site-nav a{margin-left:18px;font-size:0.9rem;color:var(--text-dim);border:none;}
+  nav.site-nav a:hover{color:var(--ochre);}
+
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px;}
+
+  .hero{padding:56px 0 28px;border-bottom:1px solid var(--border);}
+  .eyebrow{color:var(--ochre);font-size:0.82rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;}
+  h1{font-size:1.9rem;line-height:1.35;margin:14px 0 10px;color:#fff;}
+  .subtitle{color:var(--text-dim);font-size:1rem;margin-bottom:18px;}
+  .meta-row{display:flex;gap:18px;flex-wrap:wrap;font-size:0.82rem;color:var(--text-dim);}
+  .meta-row span{background:var(--navy-800);border:1px solid var(--border);padding:4px 10px;border-radius:4px;}
+
+  section{padding:34px 0;border-bottom:1px solid var(--border);}
+  h2{font-size:1.35rem;color:var(--teal);margin-bottom:14px;margin-top:0;}
+  h3{font-size:1.08rem;color:var(--ochre);margin:22px 0 8px;}
+  p{color:#dbe4ee;margin:0 0 14px;}
+  ul,ol{color:#dbe4ee;padding-left:22px;}
+  li{margin-bottom:6px;}
+
+  figure{margin:20px 0;background:var(--navy-800);border:1px solid var(--border);border-radius:8px;padding:14px;}
+  figure img{width:100%;height:auto;border-radius:4px;display:block;background:#fff;}
+  figcaption{font-size:0.82rem;color:var(--text-dim);margin-top:10px;text-align:center;}
+
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:20px 0;}
+  .stat-card{background:var(--navy-800);border:1px solid var(--border);border-radius:8px;padding:14px;}
+  .stat-card .num{color:var(--teal);font-size:1.3rem;font-weight:700;display:block;}
+  .stat-card .lbl{color:var(--text-dim);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.5px;}
+
+  table{width:100%;border-collapse:collapse;margin:18px 0;font-size:0.85rem;}
+  th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top;}
+  th{background:var(--navy-800);color:var(--teal);font-weight:600;}
+  td{color:#dbe4ee;}
+  tr:nth-child(even) td{background:var(--navy-900);}
+  .city-current{background:rgba(45,212,191,0.08) !important;}
+
+  .callout{background:rgba(212,160,23,0.08);border-left:3px solid var(--ochre);padding:14px 16px;border-radius:0 6px 6px 0;margin:18px 0;}
+  .callout p{margin:0;color:#e8dcc0;font-size:0.92rem;}
+
+  .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px;}
+  .related-card{background:var(--navy-800);border:1px solid var(--border);border-radius:8px;padding:14px;transition:border-color .15s;}
+  .related-card:hover{border-color:var(--teal-dim);}
+  .related-card a{border:none;color:#fff;font-weight:600;font-size:0.94rem;}
+  .related-card p{margin:6px 0 0;font-size:0.8rem;color:var(--text-dim);}
+
+  details{background:var(--navy-800);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-bottom:10px;}
+  summary{cursor:pointer;color:var(--teal);font-weight:600;font-size:0.95rem;}
+  details p{margin-top:10px;margin-bottom:0;}
+
+  .cta-box{background:linear-gradient(135deg,var(--navy-800),var(--navy-700));border:1px solid var(--teal-dim);border-radius:10px;padding:24px;text-align:center;margin:20px 0;}
+  .cta-box a{display:inline-block;margin-top:10px;background:var(--teal);color:var(--navy-950);border:none;padding:10px 22px;border-radius:6px;font-weight:700;}
+  .cta-box a:hover{background:var(--ochre);}
+
+  footer{padding:30px 24px;text-align:center;color:var(--text-dim);font-size:0.8rem;}
+  footer a{color:var(--text-dim);border:none;margin:0 8px;}
+  footer a:hover{color:var(--teal);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="brand">South Asia Climate Trends</a>
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="https://south-asia-climate-trends.streamlit.app" target="_blank" rel="noopener">Dashboard</a>
+    <a href="privacy-policy.html">Privacy</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow">City Climate Profile · India</div>
+    <h1>Mumbai Climate Trends (1995–2025): Rising Heat, Intensifying Monsoons, and a City on the Coastal Frontline</h1>
+    <p class="subtitle">A 30-year data analysis of temperature and rainfall patterns in Mumbai, Maharashtra, based on ERA5/ERA5-Land reanalysis data — part of our ongoing look at the climate of South Asia.</p>
+    <div class="meta-row">
+      <span>📍 Mumbai, Maharashtra, India</span>
+      <span>📅 Data period: 1995–2025</span>
+      <span>📊 Source: ERA5-Land via Open-Meteo Historical Weather API</span>
+    </div>
+  </div>
+
+  <section>
+    <h2>Overview: A City Getting Hotter and Wetter at the Same Time</h2>
+    <p>Mumbai, India's largest coastal metropolis and financial capital, sits at the meeting point of the Arabian Sea and one of South Asia's most intense monsoon systems. Three decades of ERA5-Land reanalysis data show a city where both halves of the climate equation — heat and rainfall — are moving in the same direction: up.</p>
+    <p>The annual mean temperature has climbed from around 26.5°C in the mid-1990s to a record 27.3°C in 2025, while annual precipitation has nearly doubled in range, from roughly 1,300 mm in 1995 to totals now regularly exceeding 2,300–2,700 mm. What makes Mumbai's record distinctive within the region is not just the direction of these trends, but their unevenness — a sharp, recent acceleration in winter and pre-monsoon heat, layered on top of an already-erratic, intensifying monsoon.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card"><span class="num">+0.25°C</span><span class="lbl">per decade, annual mean warming</span></div>
+      <div class="stat-card"><span class="num">27.3°C</span><span class="lbl">2025 annual mean (record)</span></div>
+      <div class="stat-card"><span class="num">~2,650 mm</span><span class="lbl">2025 annual precipitation</span></div>
+      <div class="stat-card"><span class="num">+0.5°C</span><span class="lbl">per decade, pre-monsoon warming (fastest season)</span></div>
+    </div>
+
+    <figure>
+      <img src="assets/mumbai/annual-mean-temperature-mumbai.png" alt="Annual mean temperature trend for Mumbai 1995-2025, ERA5 data">
+      <figcaption>Annual mean temperature, Mumbai (1995–2025). Source: ERA5-Land via Open-Meteo.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="assets/mumbai/annual-total-precipitation-mumbai.png" alt="Annual total precipitation trend for Mumbai 1995-2025, ERA5 data">
+      <figcaption>Annual total precipitation, Mumbai (1995–2025). Source: ERA5-Land via Open-Meteo.</figcaption>
+    </figure>
+
+    <p>The long-term trend line understates what's happened in just the last three years. Mumbai's annual mean temperature jumped from about 26.4°C in 2022 to 27.1°C in 2024 and 27.3°C in 2025 — nearly a full degree of warming in a span that would normally take three to four decades at the underlying trend rate. Whether this marks a genuine step-change or a short-term run of anomalously warm years is a question only the next several years of data will answer, but it is consistent with a broader pattern of accelerating warmth seen across South Asian cities in this dataset.</p>
+  </section>
+
+  <section>
+    <h2>Season-by-Season Breakdown</h2>
+    <p>Mumbai's climate is shaped by four broad seasons: winter (Dec–Feb), the pre-monsoon hot season (Mar–May), the monsoon (Jun–Sep), and the post-monsoon (Oct–Nov). Each is behaving differently.</p>
+
+    <h3>Winter (December–February): The Season Warming Fastest, Right Now</h3>
+    <p>Mumbai's "winter" rarely feels cold — mean temperatures have historically sat between 23.5°C and 25°C — but this is also the season showing the sharpest recent acceleration. After hovering in a fairly narrow 24–25°C band for two decades, winter mean temperature jumped from about 23.9°C in 2022 to 25.2°C in 2024 and 26.1°C in 2025, a rise of roughly 2.2°C in three years. Winter precipitation remains the region's driest signal overall — mostly near zero — punctuated by isolated anomalous events, such as 1996 (~103 mm) and 2021 (~104 mm), likely tied to unusual western disturbance or cyclonic activity reaching the coast.</p>
+
+    <figure>
+      <img src="assets/mumbai/winter-mean-temperature-mumbai.png" alt="Winter mean temperature trend Mumbai Dec-Feb 1995-2025">
+      <figcaption>Winter (Dec–Feb) mean temperature, Mumbai (1995–2025).</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/mumbai/winter-precipitation-mumbai.png" alt="Winter total precipitation trend Mumbai Dec-Feb 1995-2025">
+      <figcaption>Winter (Dec–Feb) total precipitation, Mumbai (1995–2025).</figcaption>
+    </figure>
+
+    <h3>Pre-Monsoon / Hot Season (March–May): The Steadiest Long-Term Warming Trend</h3>
+    <p>This is where Mumbai's warming signal is most consistent and least noisy. Mean temperatures have climbed from around 27.8°C in the mid-1990s to a record 29.3°C in 2025 — a sustained rise of roughly +0.5°C per decade, the fastest steady seasonal trend in the dataset. Precipitation in this normally dry season has also become more erratic, with an unusually large spike in 2021 (~270 mm) and again in 2025 (~185 mm), likely linked to pre-monsoon thunderstorm clusters or cyclonic disturbances in the Arabian Sea.</p>
+
+    <figure>
+      <img src="assets/mumbai/premonsoon-mean-temperature-mumbai.png" alt="Pre-monsoon mean temperature trend Mumbai Mar-May 1995-2025">
+      <figcaption>Pre-Monsoon/Hot season (Mar–May) mean temperature, Mumbai (1995–2025).</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/mumbai/premonsoon-precipitation-mumbai.png" alt="Pre-monsoon total precipitation trend Mumbai Mar-May 1995-2025">
+      <figcaption>Pre-Monsoon/Hot season (Mar–May) total precipitation, Mumbai (1995–2025).</figcaption>
+    </figure>
+
+    <h3>Monsoon (June–September): More Rain, More Extremes, Muted Heat</h3>
+    <p>The monsoon delivers the overwhelming majority of Mumbai's annual rainfall, and the ERA5 record shows this season intensifying. Total precipitation has risen from roughly 1,500 mm in the mid-1990s to a range now regularly between 2,200 mm and 2,600 mm, with a record 2020 season (~2,620 mm). Mean temperature during the monsoon has moved only slightly, staying close to 26.7–27.0°C — cloud cover and persistent rain appear to be buffering monsoon-season heat even as rainfall totals climb, a pattern distinct from the sharper warming seen in the dry seasons.</p>
+
+    <figure>
+      <img src="assets/mumbai/monsoon-precipitation-mumbai.png" alt="Monsoon total precipitation trend Mumbai Jun-Sep 1995-2025">
+      <figcaption>Monsoon (Jun–Sep) total precipitation, Mumbai (1995–2025).</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/mumbai/monsoon-mean-temperature-mumbai.png" alt="Monsoon mean temperature trend Mumbai Jun-Sep 1995-2025">
+      <figcaption>Monsoon (Jun–Sep) mean temperature, Mumbai (1995–2025).</figcaption>
+    </figure>
+
+    <div class="callout">
+      <p><strong>Why this matters for Mumbai:</strong> a wetter monsoon layered on a city built largely at or near sea level, with limited stormwater capacity, means rising rainfall totals translate directly into higher flood risk — not just more days of rain, but more concentrated, high-intensity rain events of the kind that have repeatedly overwhelmed Mumbai's drainage system in recent monsoons.</p>
+    </div>
+
+    <h3>Post-Monsoon (October–November): A Quiet but Real Upward Drift</h3>
+    <p>The retreating monsoon season shows a modest but visible upward trend in rainfall, from roughly 50 mm in 1995 to totals commonly above 100–150 mm in the last decade, including an extreme outlier in 2019 (~290 mm) — likely associated with a tropical cyclone or deep depression in the Arabian Sea. Mean temperature in this transition season has stayed comparatively stable around 27–27.5°C, though with some volatility, including a spike to 28.5°C in 2014–15 and a cooler dip to 26°C in 2022.</p>
+
+    <figure>
+      <img src="assets/mumbai/postmonsoon-precipitation-mumbai.png" alt="Post-monsoon total precipitation trend Mumbai Oct-Nov 1995-2025">
+      <figcaption>Post-Monsoon (Oct–Nov) total precipitation, Mumbai (1995–2025).</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/mumbai/postmonsoon-mean-temperature-mumbai.png" alt="Post-monsoon mean temperature trend Mumbai Oct-Nov 1995-2025">
+      <figcaption>Post-Monsoon (Oct–Nov) mean temperature, Mumbai (1995–2025).</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Extreme Heat: A New Signal in the Record</h2>
+    <p>Tracking days that cross a defined high-temperature extreme-heat threshold, the 30-year ERA5 record for Mumbai stays essentially flat at zero for almost the entire period — and then registers its only flagged occurrence around 2023–24. A single data point doesn't establish a trend on its own, but its timing lines up with the same 2022–2025 window in which Mumbai's annual, winter, and pre-monsoon means all jumped sharply, reinforcing the picture of a compressed, recent acceleration rather than a smooth 30-year climb.</p>
+    <figure>
+      <img src="assets/mumbai/extreme-heat-days-mumbai.png" alt="Extreme heat days count Mumbai 1995-2025">
+      <figcaption>Extreme-heat-day count, Mumbai (1995–2025).</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>How Mumbai Compares to Other South Asian Cities</h2>
+    <p>Mumbai's profile — a coastal, monsoon-dominated city with modest year-round temperature swings but increasingly volatile rainfall — sits in contrast to the more temperature-extreme, monsoon-light cities we've covered elsewhere in South Asia. The table below summarizes how Mumbai stacks up against the other cities in this series; for full seasonal breakdowns, follow the links to each city's dedicated article.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>City</th>
+          <th>Country</th>
+          <th>Climate Setting</th>
+          <th>Dominant Rain Season</th>
+          <th>Notable Trend</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="city-current">
+          <td><strong>Mumbai</strong></td>
+          <td>India</td>
+          <td>Coastal tropical</td>
+          <td>Monsoon (Jun–Sep, ~85% of annual rain)</td>
+          <td>Fastest sustained warming in pre-monsoon (~+0.5°C/decade); sharp winter warming since 2023; intensifying monsoon extremes</td>
+        </tr>
+        <tr>
+          <td><a href="karachi-climate-trends.html">Karachi</a></td>
+          <td>Pakistan</td>
+          <td>Coastal arid</td>
+          <td>Monsoon (light, erratic)</td>
+          <td>See full <a href="karachi-climate-trends.html">Karachi climate trends</a> for seasonal detail</td>
+        </tr>
+        <tr>
+          <td><a href="delhi-climate-trends.html">Delhi</a></td>
+          <td>India</td>
+          <td>Inland subtropical</td>
+          <td>Monsoon (Jul–Sep)</td>
+          <td>See full <a href="delhi-climate-trends.html">Delhi climate trends</a> for seasonal detail</td>
+        </tr>
+        <tr>
+          <td><a href="dhaka-climate-trends.html">Dhaka</a></td>
+          <td>Bangladesh</td>
+          <td>Deltaic humid</td>
+          <td>Monsoon (heavy)</td>
+          <td>See full <a href="dhaka-climate-trends.html">Dhaka climate trends</a> for seasonal detail</td>
+        </tr>
+        <tr>
+          <td><a href="colombo-climate-trends.html">Colombo</a></td>
+          <td>Sri Lanka</td>
+          <td>Coastal equatorial</td>
+          <td>Two monsoons (bimodal)</td>
+          <td>See full <a href="colombo-climate-trends.html">Colombo climate trends</a> for seasonal detail</td>
+        </tr>
+        <tr>
+          <td><a href="kathmandu-climate-trends.html">Kathmandu</a></td>
+          <td>Nepal</td>
+          <td>Himalayan valley</td>
+          <td>Monsoon (Jun–Sep)</td>
+          <td>See full <a href="kathmandu-climate-trends.html">Kathmandu climate trends</a> for seasonal detail</td>
+        </tr>
+        <tr>
+          <td><a href="lahore-climate-trends.html">Lahore</a></td>
+          <td>Pakistan</td>
+          <td>Inland semi-arid</td>
+          <td>Monsoon + winter western disturbances</td>
+          <td>See full <a href="lahore-climate-trends.html">Lahore climate trends</a> for seasonal detail</td>
+        </tr>
+        <tr>
+          <td><a href="islamabad-climate-trends.html">Islamabad</a></td>
+          <td>Pakistan</td>
+          <td>Sub-Himalayan foothill</td>
+          <td>Monsoon + winter rain</td>
+          <td>Fastest overall city warming recorded in this series (~+0.72°C/decade annual); winter warming fastest at ~+1.23°C/decade</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The contrast is instructive: Islamabad's warming is led by its winter season, while Mumbai's steadiest warming shows up in the pre-monsoon hot season, with winter only recently — and abruptly — catching up. Both cities, however, share a pattern seen across the region: whichever season is warming fastest, the acceleration has been most visible in the last three to five years of the record, not spread evenly across three decades.</p>
+
+    <p>On rainfall, Mumbai's trajectory is distinct from inland cities like Delhi or Lahore because of its direct coastal exposure — Arabian Sea moisture and cyclonic systems can dump large amounts of rain outside the core monsoon window (as seen in the 2019 post-monsoon and 2021 pre-monsoon spikes), a vulnerability shared more closely with Dhaka and Colombo than with the drier inland cities in this series.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>Is Mumbai's climate getting warmer?</summary>
+      <p>Yes. ERA5-Land reanalysis data from 1995–2025 shows Mumbai's annual mean temperature rising from around 26.5°C to a record 27.3°C in 2025, an overall pace of roughly +0.25°C per decade — with a notably sharper rise in the last three years.</p>
+    </details>
+
+    <details>
+      <summary>Which season is warming fastest in Mumbai?</summary>
+      <p>Over the full 30-year record, the pre-monsoon/hot season (March–May) shows the steadiest long-term warming, at roughly +0.5°C per decade, rising from about 27.8°C to 29.3°C. However, winter (Dec–Feb) has warmed most sharply in just the last three years, jumping by more than 2°C between 2022 and 2025.</p>
+    </details>
+
+    <details>
+      <summary>Is Mumbai getting more rainfall?</summary>
+      <p>Yes. Annual total precipitation has risen from around 1,300 mm in the mid-1990s to totals regularly above 2,300–2,700 mm in recent years, driven mainly by an intensifying monsoon season (June–September), which supplies roughly 85% of the city's annual rain.</p>
+    </details>
+
+    <details>
+      <summary>What data source is used for this analysis?</summary>
+      <p>All figures are derived from ERA5 and ERA5-Land reanalysis data, accessed via the Open-Meteo Historical Weather API, covering January 1995 through 2025. This is the same methodology used across all city profiles on South Asia Climate Trends.</p>
+    </details>
+
+    <details>
+      <summary>How does Mumbai compare to other South Asian cities?</summary>
+      <p>Mumbai's coastal, monsoon-dominated profile sets it apart from inland cities like Delhi, Lahore, and Islamabad, which show sharper winter warming and drier annual profiles. Mumbai's own warming is led by the pre-monsoon hot season, while its precipitation trend is the most strongly upward of the region's coastal cities alongside Dhaka and Colombo. See the comparison table above for details, and visit each linked city article for full seasonal breakdowns.</p>
+    </details>
+
+    <details>
+      <summary>Why does Mumbai's monsoon matter so much for the city's climate risk?</summary>
+      <p>Because Mumbai sits largely at or near sea level with dense, aging drainage infrastructure, an intensifying monsoon (rising from ~1,500 mm to over 2,600 mm in peak years) translates directly into higher urban flood risk — not simply more rainy days, but more concentrated high-intensity rain events of the kind that have repeatedly disrupted the city in recent years.</p>
+    </details>
+  </section>
+
+  <section style="border-bottom:none;">
+    <h2>Explore the Full Data</h2>
+    <p>This article summarizes long-term trends. For interactive, year-by-year exploration of Mumbai's climate data — and the other seven cities in this series — visit the live dashboard.</p>
+    <div class="cta-box">
+      <p style="margin:0;color:var(--text-main);font-weight:600;">Explore the interactive South Asia climate dashboard</p>
+      <p style="color:var(--text-dim);font-size:0.85rem;">Built on ERA5/ERA5-Land data via the Open-Meteo Historical Weather API</p>
+      <a href="https://south-asia-climate-trends.streamlit.app" target="_blank" rel="noopener">Open the Dashboard →</a>
+    </div>
+
+    <h3>Related City Climate Profiles</h3>
+    <div class="related-grid">
+      <div class="related-card"><a href="karachi-climate-trends.html">Karachi Climate Trends</a><p>Pakistan's coastal arid megacity</p></div>
+      <div class="related-card"><a href="delhi-climate-trends.html">Delhi Climate Trends</a><p>Inland subtropical extremes</p></div>
+      <div class="related-card"><a href="dhaka-climate-trends.html">Dhaka Climate Trends</a><p>Deltaic monsoon intensity</p></div>
+      <div class="related-card"><a href="colombo-climate-trends.html">Colombo Climate Trends</a><p>Equatorial, two monsoons</p></div>
+      <div class="related-card"><a href="kathmandu-climate-trends.html">Kathmandu Climate Trends</a><p>Himalayan valley climate</p></div>
+      <div class="related-card"><a href="lahore-climate-trends.html">Lahore Climate Trends</a><p>Inland semi-arid Punjab</p></div>
+      <div class="related-card"><a href="islamabad-climate-trends.html">Islamabad Climate Trends</a><p>Fastest winter warming in the series</p></div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 South Asia Climate Trends. Data: ERA5/ERA5-Land reanalysis via Open-Meteo. Independent, non-commercial climate communication project.</p>
+  <p><a href="about.html">About</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="index.html">All Articles</a></p>
+</footer>
+
+</body>
+</html>
