@@ -1,252 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>South Asia Climate Trends — 30+ Years of Temperature & Monsoon Data</title>
-    <meta name="description" content="Interactive climate trend dashboard and data-driven articles tracking 30+ years of temperature, rainfall, and monsoon patterns across South Asia — Pakistan, India, Bangladesh, and more." />
-    <meta name="google-site-verification" content="Ece2qBvMQmE8UNnCbMciBVPciJCcsyNtOBb6MF0QDIo" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>South Asia Climate Trends — 30+ Years of Temperature & Monsoon Data</title>
+<meta name="description" content="Interactive climate trend dashboard and data-driven articles tracking 30+ years of temperature, rainfall, and monsoon patterns across South Asia — Pakistan, India, Bangladesh, and more." />
+<meta name="google-site-verification" content="Ece2qBvMQmE8UNnCbMciBVPciJCcsyNtOBb6MF0QDIo" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-GD8FJCBENG');
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
+:root {
+  --navy: #101B2D;
+  --slate-teal: #2E5A5E;
+  --ochre: #D9A441;
+  --cloud: #F6F4EF;
+  --ink: #1A1A1A;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--cloud);
+  color: var(--ink);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 4rem 1.5rem; }
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-GD8FJCBENG');
-    </script>
+/* Hero */
+.hero {
+  position: relative;
+  background: linear-gradient(160deg, var(--navy) 0%, var(--slate-teal) 100%);
+  border-radius: 18px;
+  padding: 3.5rem 3rem 3rem 3rem;
+  overflow: hidden;
+  margin-bottom: 1.8rem;
+}
+.hero-isobars {
+  position: absolute; top: -20%; right: -10%; width: 65%; height: 140%;
+  opacity: 0.35; pointer-events: none;
+}
+.eyebrow {
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; letter-spacing: 0.14em;
+  color: var(--ochre); text-transform: uppercase; margin-bottom: 0.9rem; position: relative; z-index: 1;
+}
+.hero h1 {
+  font-family: 'Fraunces', serif; font-weight: 700; font-size: 2.6rem; line-height: 1.15;
+  color: var(--cloud); margin: 0 0 1rem 0; position: relative; z-index: 1; max-width: 80%;
+}
+.hero p.sub {
+  font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #D8DEE0; max-width: 62%;
+  line-height: 1.6; position: relative; z-index: 1;
+}
+.stat-row { display: flex; gap: 2.5rem; margin-top: 1.8rem; position: relative; z-index: 1; }
+.stat-num { font-family: 'Fraunces', serif; font-size: 1.7rem; color: var(--ochre); font-weight: 600; }
+.stat-label {
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: #AEB8BA;
+  letter-spacing: 0.05em; text-transform: uppercase;
+}
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
+/* Search box */
+.search-label {
+  font-family: 'IBM Plex Mono', monospace; font-size: 1rem; letter-spacing: 0.08em;
+  color: var(--slate-teal); text-transform: uppercase; margin-bottom: 0.6rem; font-weight: 600;
+}
+.search-container {
+  background: white; border: 2px solid var(--ochre); border-radius: 14px;
+  padding: 1.4rem 1.6rem; margin: 0 0 2rem 0;
+  box-shadow: 0 4px 16px rgba(16, 27, 45, 0.08);
+  display: flex; gap: 0.8rem; align-items: flex-end; flex-wrap: wrap;
+}
+.search-field { flex: 1; min-width: 220px; }
+.search-container input[type="text"] {
+  width: 100%; font-size: 1.15rem; padding: 0.8rem 1rem; height: 3rem;
+  border-radius: 10px; border: 2px solid var(--slate-teal); font-family: 'Inter', sans-serif;
+}
+.search-container input[type="text"]:focus { outline: none; border-color: var(--ochre); box-shadow: 0 0 0 3px rgba(217,164,65,0.25); }
+.search-btn {
+  font-size: 1.05rem; height: 3rem; padding: 0 1.4rem; border-radius: 10px;
+  background: var(--ochre); color: var(--navy); font-weight: 700; border: none; cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+.search-btn:hover { background: #C4922E; color: white; }
 
-        :root {
-            --navy: #101B2D;
-            --slate-teal: #2E5A5E;
-            --ochre: #D9A441;
-            --cloud: #F6F4EF;
-            --ink: #1A1A1A;
-        }
-        * { box-sizing: border-box; }
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background: var(--cloud);
-            color: var(--ink);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 4rem 1.5rem; }
+/* Section heading */
+.section-eyebrow {
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em;
+  color: var(--slate-teal); text-transform: uppercase; margin: 1.6rem 0 1rem 0;
+}
 
-        /* Hero */
-        .hero {
-            position: relative;
-            background: linear-gradient(160deg, var(--navy) 0%, var(--slate-teal) 100%);
-            border-radius: 18px;
-            padding: 3.5rem 3rem 3rem 3rem;
-            overflow: hidden;
-            margin-bottom: 1.8rem;
-        }
-        .hero-isobars {
-            position: absolute; top: -20%; right: -10%; width: 65%; height: 140%;
-            opacity: 0.35; pointer-events: none;
-        }
-        .eyebrow {
-            font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; letter-spacing: 0.14em;
-            color: var(--ochre); text-transform: uppercase; margin-bottom: 0.9rem; position: relative; z-index: 1;
-        }
-        .hero h1 {
-            font-family: 'Fraunces', serif; font-weight: 700; font-size: 2.6rem; line-height: 1.15;
-            color: var(--cloud); margin: 0 0 1rem 0; position: relative; z-index: 1; max-width: 80%;
-        }
-        .hero p.sub {
-            font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #D8DEE0; max-width: 62%;
-            line-height: 1.6; position: relative; z-index: 1;
-        }
-        .stat-row { display: flex; gap: 2.5rem; margin-top: 1.8rem; position: relative; z-index: 1; }
-        .stat-num { font-family: 'Fraunces', serif; font-size: 1.7rem; color: var(--ochre); font-weight: 600; }
-        .stat-label {
-            font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: #AEB8BA;
-            letter-spacing: 0.05em; text-transform: uppercase;
-        }
+/* Nav cards */
+.nav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1rem; }
+.nav-card {
+  background: white; border: 2px solid #E6E2D8; border-top: 5px solid var(--slate-teal);
+  border-radius: 14px; padding: 1.8rem; box-shadow: 0 3px 12px rgba(16,27,45,0.06);
+  transition: all 0.2s ease; text-decoration: none; color: inherit; display: block;
+}
+.nav-card:hover { border-color: var(--ochre); border-top-color: var(--ochre); box-shadow: 0 8px 24px rgba(217,164,65,0.2); transform: translateY(-4px); }
+.nav-card .icon {
+  font-size: 2.2rem; margin-bottom: 0.6rem; display: inline-block; background: var(--cloud);
+  width: 56px; height: 56px; line-height: 56px; text-align: center; border-radius: 12px;
+}
+.nav-card h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.25rem; margin: 0 0 0.5rem 0; }
+.nav-card p { font-family: 'Inter', sans-serif; font-size: 0.92rem; color: #565656; line-height: 1.55; margin: 0; }
 
-        /* Search box */
-        .search-label {
-            font-family: 'IBM Plex Mono', monospace; font-size: 1rem; letter-spacing: 0.08em;
-            color: var(--slate-teal); text-transform: uppercase; margin-bottom: 0.6rem; font-weight: 600;
-        }
-        .search-container {
-            background: white; border: 2px solid var(--ochre); border-radius: 14px;
-            padding: 1.4rem 1.6rem; margin: 0 0 2rem 0;
-            box-shadow: 0 4px 16px rgba(16, 27, 45, 0.08);
-            display: flex; gap: 0.8rem; align-items: flex-end; flex-wrap: wrap;
-        }
-        .search-field { flex: 1; min-width: 220px; }
-        .search-container input[type="text"] {
-            width: 100%; font-size: 1.15rem; padding: 0.8rem 1rem; height: 3rem;
-            border-radius: 10px; border: 2px solid var(--slate-teal); font-family: 'Inter', sans-serif;
-        }
-        .search-container input[type="text"]:focus { outline: none; border-color: var(--ochre); box-shadow: 0 0 0 3px rgba(217,164,65,0.25); }
-        .search-btn {
-            font-size: 1.05rem; height: 3rem; padding: 0 1.4rem; border-radius: 10px;
-            background: var(--ochre); color: var(--navy); font-weight: 700; border: none; cursor: pointer;
-            font-family: 'Inter', sans-serif;
-        }
-        .search-btn:hover { background: #C4922E; color: white; }
+/* Story cards */
+.story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.story-card {
+  background: white; border: 1px solid #E6E2D8; border-radius: 14px; overflow: hidden;
+  text-decoration: none; color: inherit; display: block; transition: border-color 0.15s ease;
+}
+.story-card:hover { border-color: var(--ochre); }
+.story-banner { height: 100px; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; }
+.story-body { padding: 1rem 1.2rem 1.2rem 1.2rem; }
+.story-tag { font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem; color: var(--slate-teal); text-transform: uppercase; letter-spacing: 0.05em; }
+.story-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.05rem; margin: 0.35rem 0 0.4rem 0; line-height: 1.3; }
+.story-meta { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: #9A9A9A; }
 
-        /* Section heading */
-        .section-eyebrow {
-            font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em;
-            color: var(--slate-teal); text-transform: uppercase; margin: 1.6rem 0 1rem 0;
-        }
+.footer-note { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #8A8A8A; margin-top: 2.5rem; }
+.footer-note a { color: var(--slate-teal); }
 
-        /* Nav cards */
-        .nav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1rem; }
-        .nav-card {
-            background: white; border: 2px solid #E6E2D8; border-top: 5px solid var(--slate-teal);
-            border-radius: 14px; padding: 1.8rem; box-shadow: 0 3px 12px rgba(16,27,45,0.06);
-            transition: all 0.2s ease; text-decoration: none; color: inherit; display: block;
-        }
-        .nav-card:hover { border-color: var(--ochre); border-top-color: var(--ochre); box-shadow: 0 8px 24px rgba(217,164,65,0.2); transform: translateY(-4px); }
-        .nav-card .icon {
-            font-size: 2.2rem; margin-bottom: 0.6rem; display: inline-block; background: var(--cloud);
-            width: 56px; height: 56px; line-height: 56px; text-align: center; border-radius: 12px;
-        }
-        .nav-card h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.25rem; margin: 0 0 0.5rem 0; }
-        .nav-card p { font-family: 'Inter', sans-serif; font-size: 0.92rem; color: #565656; line-height: 1.55; margin: 0; }
-
-        /* Story cards */
-        .story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-        .story-card {
-            background: white; border: 1px solid #E6E2D8; border-radius: 14px; overflow: hidden;
-            text-decoration: none; color: inherit; display: block; transition: border-color 0.15s ease;
-        }
-        .story-card:hover { border-color: var(--ochre); }
-        .story-banner { height: 100px; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; }
-        .story-body { padding: 1rem 1.2rem 1.2rem 1.2rem; }
-        .story-tag { font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem; color: var(--slate-teal); text-transform: uppercase; letter-spacing: 0.05em; }
-        .story-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.05rem; margin: 0.35rem 0 0.4rem 0; line-height: 1.3; }
-        .story-meta { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: #9A9A9A; }
-
-        .footer-note { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #8A8A8A; margin-top: 2.5rem; }
-        .footer-note a { color: var(--slate-teal); }
-
-        @media (max-width: 700px) {
-            .hero h1 { max-width: 100%; font-size: 2rem; }
-            .hero p.sub { max-width: 100%; }
-            .nav-grid, .story-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+@media (max-width: 700px) {
+  .hero h1 { max-width: 100%; font-size: 2rem; }
+  .hero p.sub { max-width: 100%; }
+  .nav-grid, .story-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
-    <div class="container">
+<div class="container">
 
-        <!-- Top nav -->
-        <div style="display:flex; justify-content:flex-end; gap:1.2rem; font-family:'IBM Plex Mono', monospace; font-size:0.78rem; margin-bottom:0.8rem;">
-            <a href="about.html" style="color:var(--slate-teal); text-decoration:none;">About</a>
-            <a href="privacy-policy.html" style="color:var(--slate-teal); text-decoration:none;">Privacy Policy</a>
-        </div>
+  <!-- Top nav -->
+  <div style="display:flex; justify-content:flex-end; gap:1.2rem; font-family:'IBM Plex Mono', monospace; font-size:0.78rem; margin-bottom:0.8rem;">
+    <a href="about.html" style="color:var(--slate-teal); text-decoration:none;">About</a>
+    <a href="privacy-policy.html" style="color:var(--slate-teal); text-decoration:none;">Privacy Policy</a>
+  </div>
 
-        <!-- Hero -->
-        <div class="hero">
-            <svg class="hero-isobars" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke="#D9A441" stroke-width="1.4">
-                    <path d="M -20 260 Q 100 200 200 250 T 420 220" opacity="0.9"/>
-                    <path d="M -20 300 Q 100 240 200 290 T 420 260" opacity="0.7"/>
-                    <path d="M -20 340 Q 100 280 200 330 T 420 300" opacity="0.5"/>
-                    <path d="M -20 380 Q 100 320 200 370 T 420 340" opacity="0.3"/>
-                    <path d="M -20 220 Q 100 160 200 210 T 420 180" opacity="0.4"/>
-                </g>
-            </svg>
-            <div class="eyebrow">STATION DATA &middot; 1995&ndash;2025 &middot; SOUTH ASIA</div>
-            <h1>South Asia Climate Trends</h1>
-            <p class="sub">
-                Interactive trend data and reported analysis on how temperature,
-                monsoon rainfall, and extreme heat have shifted across South
-                Asia &mdash; built on reanalysis climate records, written by a
-                meteorologist with an MPhil in Environmental Sciences.
-            </p>
-            <div class="stat-row">
-                <div><div class="stat-num">30+</div><div class="stat-label">Years of data</div></div>
-                <div><div class="stat-num">ERA5</div><div class="stat-label">Reanalysis source</div></div>
-                <div><div class="stat-num">4</div><div class="stat-label">Monsoon seasons tracked</div></div>
-            </div>
-        </div>
-
-        <!-- Search box -->
-        <div class="search-label">🔍 SEARCH A CITY</div>
-        <form class="search-container" action="https://south-asia-climate-trends.streamlit.app/Dashboard" method="get" target="_blank">
-            <div class="search-field">
-                <input type="text" name="city" placeholder="e.g. Delhi, Karachi, Dhaka, Mumbai ..." />
-            </div>
-            <button type="submit" class="search-btn">View trends →</button>
-        </form>
-
-        <!-- Nav cards -->
-        <div class="section-eyebrow">EXPLORE</div>
-        <div class="nav-grid">
-            <a class="nav-card" href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">
-                <div class="icon">📊</div>
-                <h3>Dashboard</h3>
-                <p>Search any city and see its temperature and rainfall trends, seasonal &amp; monsoon breakdowns, and extreme-heat-day counts, charted from three decades of data.</p>
-            </a>
-            <a class="nav-card" href="https://south-asia-climate-trends.streamlit.app/Blog" target="_blank">
-                <div class="icon">📝</div>
-                <h3>Blog</h3>
-                <p>Written analysis on specific places and patterns &mdash; Karachi's rising heat, Delhi's climate trend, Dhaka's shifting rainfall, and more reporting drawn straight from the data.</p>
-            </a>
-        </div>
-
-        <!-- Featured reports -->
-        <div class="section-eyebrow">FEATURED REPORTS</div>
-        <div class="story-grid">
-            <a class="story-card" href="karachi-warming-trend.html">
-                <div class="story-banner" style="background:linear-gradient(135deg,#0b3d1e,#1a6b3a);">🇵🇰</div>
-                <div class="story-body">
-                    <div class="story-tag">Pakistan</div>
-                    <div class="story-title">Karachi's Warming Trend: What 30 Years of Data Show</div>
-                    <div class="story-meta">Jul 23, 2026 &middot; Karachi</div>
-                </div>
-            </a>
-            <a class="story-card" href="delhi-warming-trend.html">
-                <div class="story-banner" style="background:linear-gradient(135deg,#c96a2a,#2a6b4a);">🇮🇳</div>
-                <div class="story-body">
-                    <div class="story-tag">India</div>
-                    <div class="story-title">Delhi's Climate Trend: What 30 Years of Data Show</div>
-                    <div class="story-meta">Jul 31, 2026 &middot; Delhi</div>
-                </div>
-            </a>
-            <a class="story-card" href="dhaka-warming-trend.html">
-                <div class="story-banner" style="background:linear-gradient(135deg,#0b6b3a,#0f9d58);">🇧🇩</div>
-                <div class="story-body">
-                    <div class="story-tag">Bangladesh</div>
-                    <div class="story-title">Dhaka's Climate Trend: Warming Fast, Raining Less</div>
-                    <div class="story-meta">Jul 31, 2026 &middot; Dhaka</div>
-                </div>
-            </a>
-            <a class="story-card" href="colombo-warming-trend.html">
-                <div class="story-banner" style="background:linear-gradient(135deg,#1a6b8a,#2aa6c9);">🇱🇰</div>
-                <div class="story-body">
-                    <div class="story-tag">Sri Lanka</div>
-                    <div class="story-title">Colombo's Climate Trend: South Asia's Wettest Capital</div>
-                    <div class="story-meta">Aug 3, 2026 &middot; Colombo</div>
-                </div>
-            </a>
-            <a class="story-card" href="kathmandu-warming-trend.html">
-                <div class="story-banner" style="background:linear-gradient(135deg,#8a1a2a,#c92a4a);">🇳🇵</div>
-                <div class="story-body">
-                    <div class="story-tag">Nepal</div>
-                    <div class="story-title">Kathmandu's Climate Trend: Not Warming Like Its Neighbors</div>
-                    <div class="story-meta">Aug 5, 2026 &middot; Kathmandu</div>
-                </div>
-            </a>
-        </div>
-
-        <div class="footer-note">
-            DATA SOURCE: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a>
-            (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built on reanalysis climate records, written by a meteorologist with an MPhil in Environmental Sciences.
-        </div>
-        <p style="margin-top:16px;font-size:13px;text-align:center;">
-            <a href="about.html">About</a> &middot; <a href="privacy-policy.html">Privacy Policy</a>
-        </p>
+  <!-- Hero -->
+  <div class="hero">
+    <svg class="hero-isobars" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#D9A441" stroke-width="1.4">
+        <path d="M -20 260 Q 100 200 200 250 T 420 220" opacity="0.9"/>
+        <path d="M -20 300 Q 100 240 200 290 T 420 260" opacity="0.7"/>
+        <path d="M -20 340 Q 100 280 200 330 T 420 300" opacity="0.5"/>
+        <path d="M -20 380 Q 100 320 200 370 T 420 340" opacity="0.3"/>
+        <path d="M -20 220 Q 100 160 200 210 T 420 180" opacity="0.4"/>
+      </g>
+    </svg>
+    <div class="eyebrow">STATION DATA &middot; 1995&ndash;2025 &middot; SOUTH ASIA</div>
+    <h1>South Asia Climate Trends</h1>
+    <p class="sub">
+      Interactive trend data and reported analysis on how temperature,
+      monsoon rainfall, and extreme heat have shifted across South
+      Asia &mdash; built on reanalysis climate records, written by a
+      meteorologist with an MPhil in Environmental Sciences.
+    </p>
+    <div class="stat-row">
+      <div><div class="stat-num">30+</div><div class="stat-label">Years of data</div></div>
+      <div><div class="stat-num">ERA5</div><div class="stat-label">Reanalysis source</div></div>
+      <div><div class="stat-num">8</div><div class="stat-label">Cities covered</div></div>
     </div>
+  </div>
+
+  <!-- Search box -->
+  <div class="search-label">🔍 SEARCH A CITY</div>
+  <form class="search-container" action="https://south-asia-climate-trends.streamlit.app/Dashboard" method="get" target="_blank">
+    <div class="search-field">
+      <input type="text" name="city" placeholder="e.g. Delhi, Karachi, Dhaka, Mumbai ..." />
+    </div>
+    <button type="submit" class="search-btn">View trends →</button>
+  </form>
+
+  <!-- Nav cards -->
+  <div class="section-eyebrow">EXPLORE</div>
+  <div class="nav-grid">
+    <a class="nav-card" href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">
+      <div class="icon">📊</div>
+      <h3>Dashboard</h3>
+      <p>Search any city and see its temperature and rainfall trends, seasonal &amp; monsoon breakdowns, and extreme-heat-day counts, charted from three decades of data.</p>
+    </a>
+    <a class="nav-card" href="https://south-asia-climate-trends.streamlit.app/Blog" target="_blank">
+      <div class="icon">📝</div>
+      <h3>Blog</h3>
+      <p>Written analysis on specific places and patterns &mdash; Karachi's rising heat, Delhi's climate trend, Dhaka's shifting rainfall, and more reporting drawn straight from the data.</p>
+    </a>
+  </div>
+
+  <!-- Featured reports -->
+  <div class="section-eyebrow">FEATURED REPORTS</div>
+  <div class="story-grid">
+
+    <a class="story-card" href="mumbai-climate-trends.html">
+      <div class="story-banner" style="background:linear-gradient(135deg,#0d3b5c,#1f7ab8);">🇮🇳</div>
+      <div class="story-body">
+        <div class="story-tag">India</div>
+        <div class="story-title">Mumbai's Climate Trend: Rising Heat, Intensifying Monsoons</div>
+        <div class="story-meta">Aug 17, 2026 &middot; Mumbai</div>
+      </div>
+    </a>
+
+    <a class="story-card" href="islamabad-warming-trend.html">
+      <div class="story-banner" style="background:linear-gradient(135deg,#0f3d3d,#1f7a6a);">🇵🇰</div>
+      <div class="story-body">
+        <div class="story-tag">Pakistan</div>
+        <div class="story-title">Islamabad's Climate Trend: The Fastest-Warming Winter in South Asia</div>
+        <div class="story-meta">Aug 12, 2026 &middot; Islamabad</div>
+      </div>
+    </a>
+
+    <a class="story-card" href="lahore-warming-trend.html">
+      <div class="story-banner" style="background:linear-gradient(135deg,#1a4d2e,#2f8a4a);">🇵🇰</div>
+      <div class="story-body">
+        <div class="story-tag">Pakistan</div>
+        <div class="story-title">Lahore's Climate Trend: What 30 Years of Data Show</div>
+        <div class="story-meta">Aug 10, 2026 &middot; Lahore</div>
+      </div>
+    </a>
+
+    <a class="story-card" href="kathmandu-warming-trend.html">
+      <div class="story-banner" style="background:linear-gradient(135deg,#8a1a2a,#c92a4a);">🇳🇵</div>
+      <div class="story-body">
+        <div class="story-tag">Nepal</div>
+        <div class="story-title">Kathmandu's Climate Trend: Not Warming Like Its Neighbors</div>
+        <div class="story-meta">Aug 5, 2026 &middot; Kathmandu</div>
+      </div>
+    </a>
+
+    <a class="story-card" href="colombo-warming-trend.html">
+      <div class="story-banner" style="background:linear-gradient(135deg,#1a6b8a,#2aa6c9);">🇱🇰</div>
+      <div class="story-body">
+        <div class="story-tag">Sri Lanka</div>
+        <div class="story-title">Colombo's Climate Trend: South Asia's Wettest Capital</div>
+        <div class="story-meta">Aug 3, 2026 &middot; Colombo</div>
+      </div>
+    </a>
+
+    <a class="story-card" href="dhaka-warming-trend.html">
+      <div class="story-banner" style="background:linear-gradient(135deg,#0b6b3a,#0f9d58);">🇧🇩</div>
+      <div class="story-body">
+        <div class="story-tag">Bangladesh</div>
+        <div class="story-title">Dhaka's Climate Trend: Warming Fast, Raining Less</div>
+        <div class="story-meta">Jul 31, 2026 &middot; Dhaka</div>
+      </div>
+    </a>
+
+    <a class="story-card" href="delhi-warming-trend.html">
+      <div class="story-banner" style="background:linear-gradient(135deg,#c96a2a,#2a6b4a);">🇮🇳</div>
+      <div class="story-body">
+        <div class="story-tag">India</div>
+        <div class="story-title">Delhi's Climate Trend: What 30 Years of Data Show</div>
+        <div class="story-meta">Jul 31, 2026 &middot; Delhi</div>
+      </div>
+    </a>
+
+    <a class="story-card" href="karachi-warming-trend.html">
+      <div class="story-banner" style="background:linear-gradient(135deg,#0b3d1e,#1a6b3a);">🇵🇰</div>
+      <div class="story-body">
+        <div class="story-tag">Pakistan</div>
+        <div class="story-title">Karachi's Warming Trend: What 30 Years of Data Show</div>
+        <div class="story-meta">Jul 23, 2026 &middot; Karachi</div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="footer-note">
+    DATA SOURCE: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a>
+    (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built on reanalysis climate records, written by a meteorologist with an MPhil in Environmental Sciences.
+  </div>
+  <p style="margin-top:16px;font-size:13px;text-align:center;">
+    <a href="about.html">About</a> &middot; <a href="privacy-policy.html">Privacy Policy</a>
+  </p>
+
+</div>
 </body>
 </html>
