@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>South Asia Climate Trend: 12 Data-Backed Findings From 30 Years of City-Level Records | South Asia Climate Trends</title>
+    <meta name="description" content="What is the climate trend in South Asia? 12 findings from 30 years of ERA5 reanalysis data across 8 cities (1995-2025) — warming rates, monsoon shifts, and extreme heat, city by city." />
+    <link rel="canonical" href="https://southasiaclimate.github.io/south-asia-climate-trends/south-asia-climate-trend-report.html" />
+
+    <meta property="og:title" content="South Asia Climate Trend: 12 Data-Backed Findings From 30 Years of City-Level Records" />
+    <meta property="og:description" content="What is the climate trend in South Asia? 12 findings from 30 years of city-level ERA5 data — warming rates, monsoon shifts, and extreme heat, city by city." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/southasiaclimate/south-asia-climate-trends/main/images/islamabad-annual-mean-temperature.png" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is the climate trend in South Asia?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Based on 30 years of ERA5 reanalysis data (1995-2025) across 8 South Asian cities, the region is warming overall, but unevenly — city-level annual warming rates range from roughly -0.04°C per decade in Kathmandu to +0.77°C per decade in Islamabad. Rainfall trends diverge even more sharply, with some cities getting wetter (Mumbai, Karachi) and others drier (Dhaka)."}},
+        {"@type": "Question", "name": "Is South Asia getting warmer?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes, most cities studied show a warming trend, though the pace varies widely by location — from a nearly flat trend in Kathmandu to a steep 0.77°C per decade in Islamabad, the fastest-warming city in this dataset."}},
+        {"@type": "Question", "name": "Which South Asian city is warming fastest?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Islamabad, Pakistan shows the fastest annual warming rate among the 8 cities analyzed, at approximately +0.77°C per decade — roughly six times the rate seen in Karachi or Lahore."}},
+        {"@type": "Question", "name": "Is South Asia's monsoon getting stronger?",
+         "acceptedAnswer": {"@type": "Answer", "text": "It depends on the city. Mumbai shows the steepest monsoon-season rainfall increase in this dataset (roughly +300mm per decade annually), while Dhaka shows declining precipitation despite rising temperatures — indicating no single regional monsoon trend."}},
+        {"@type": "Question", "name": "How much has South Asia warmed in the last 30 years?",
+         "acceptedAnswer": {"@type": "Answer", "text": "This varies enormously by city in the 1995-2025 ERA5 dataset: from an essentially flat trend in Kathmandu to a rise of roughly 2.3°C over 30 years in Islamabad, illustrating why city-level data tells a more accurate story than a single regional average."}}
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GD8FJCBENG');
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            background: #F6F4EF;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem 1.5rem; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .breadcrumb a { color: #2E5A5E; text-decoration: none; }
+        header.article-head { margin-bottom: 2rem; }
+        .tag-row { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #2E5A5E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+        h1 { font-size: 2.1rem; color: #101B2D; line-height: 1.2; margin: 0 0 0.8rem 0; }
+        .meta { color: #8A8A8A; font-size: 0.9rem; }
+        h2 { color: #101B2D; margin-top: 2.4rem; font-size: 1.5rem; border-bottom: 2px solid #D9A441; padding-bottom: 0.4rem; }
+        h3 { color: #101B2D; margin-top: 1.8rem; font-size: 1.2rem; }
+        h4 { color: #2E5A5E; margin-top: 1.4rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        p { margin: 0.9rem 0; }
+        img { max-width: 100%; border-radius: 10px; border: 1px solid #E6E2D8; margin: 1rem 0; }
+        .key-figure { font-size: 1.6rem; font-weight: 700; color: #101B2D; margin: 0.3rem 0 1rem 0; }
+        ul, ol { padding-left: 1.3rem; }
+        li { margin-bottom: 0.5rem; }
+        .faq-q { font-weight: 600; margin-top: 1.2rem; }
+        .finding {
+            background: #FFFFFF;
+            border: 1px solid #E6E2D8;
+            border-left: 4px solid #2E5A5E;
+            border-radius: 6px;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        .finding-num {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.75rem;
+            color: #D9A441;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .finding h3 { margin-top: 0.3rem; font-size: 1.08rem; }
+        .finding p { margin: 0.5rem 0 0; font-size: 0.95rem; }
+        .note {
+            background: #FBF4E4;
+            border-left: 3px solid #D9A441;
+            padding: 0.8rem 1rem;
+            font-size: 0.88rem;
+            color: #565656;
+            border-radius: 4px;
+            margin: 1.2rem 0;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: 0.8rem; }
+        th, td { text-align: left; padding: 0.4rem 0.45rem; border-bottom: 1px solid #E6E2D8; }
+        th { font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; text-transform: uppercase; color: #2E5A5E; }
+        .city-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.7rem; margin: 1.2rem 0; }
+        .city-link {
+            background: #FFFFFF; border: 1px solid #E6E2D8; border-radius: 8px;
+            padding: 0.8rem 1rem; text-decoration: none; color: #101B2D; font-weight: 600; font-size: 0.92rem;
+            display: block;
+        }
+        .city-link:hover { border-color: #D9A441; }
+        .city-link span { display: block; font-weight: 400; color: #8A8A8A; font-size: 0.78rem; margin-top: 0.2rem; }
+        .cta-box {
+            background: linear-gradient(160deg, #101B2D 0%, #2E5A5E 100%);
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin: 2.5rem 0;
+            color: #F6F4EF;
+        }
+        .cta-box a {
+            display: inline-block;
+            background: #D9A441;
+            color: #101B2D;
+            font-weight: 700;
+            padding: 0.7rem 1.3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 0.8rem;
+        }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #8A8A8A; border-top: 1px solid #E6E2D8; padding-top: 1.2rem; }
+        footer a { color: #2E5A5E; }
+        @media (max-width: 600px) { .city-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">South Asia Climate Trends</a> / Regional Report
+        </div>
+
+        <header class="article-head">
+            <div class="tag-row">South Asia &middot; Regional Overview &middot; 8-City Comparison &middot; 30-Year Data</div>
+            <h1>South Asia Climate Trend: 12 Data-Backed Findings From 30 Years of City-Level Records</h1>
+            <div class="meta">Published August 17, 2026 &middot; Cross-Regional Analysis &middot; Updated with each new city report</div>
+        </header>
+
+        <article>
+            <p>Most overviews of the "South Asia climate trend" work from region-wide averages — a single warming figure for the whole subcontinent, often drawn from century-scale or decade-old estimates. That approach hides more than it reveals. A region spanning coastal megacities, Himalayan valleys, and inland plains doesn't warm — or get wetter, or drier — as one unit.</p>
+
+            <p>This report takes a different approach: it's built entirely from our own <strong>city-by-city ERA5/ERA5-Land reanalysis data</strong>, covering 1995–2025 across eight South Asian cities — <a href="karachi-warming-trend.html">Karachi</a>, <a href="delhi-warming-trend.html">Delhi</a>, <a href="dhaka-warming-trend.html">Dhaka</a>, <a href="colombo-warming-trend.html">Colombo</a>, <a href="kathmandu-warming-trend.html">Kathmandu</a>, <a href="lahore-warming-trend.html">Lahore</a>, <a href="islamabad-warming-trend.html">Islamabad</a>, and <a href="mumbai-climate-trends.html">Mumbai</a>. Below are twelve findings that emerge from comparing them directly.</p>
+
+            <div class="note">
+                <strong>A note on data sources:</strong> widely cited regional figures — such as the often-referenced ~0.75°C per century warming estimate for South Asia from mid-2010s cost-of-adaptation studies — are useful for broad policy framing but are now over a decade old and necessarily average across enormous geographic and climatic diversity. The findings below use more recent (1995–2025), higher-resolution, city-specific reanalysis data, and are best read as a complement to — not a replacement for — that regional literature.
+            </div>
+
+            <h2>12 Findings From the Data</h2>
+
+            <div class="finding">
+                <div class="finding-num">Finding 1</div>
+                <h3>South Asia is warming, but nowhere near uniformly</h3>
+                <p>Annual warming rates across the 8 cities in this dataset range from an essentially flat, slightly negative trend in <a href="kathmandu-warming-trend.html">Kathmandu</a> (~&minus;0.04°C/decade) to a steep +0.77°C/decade in <a href="islamabad-warming-trend.html">Islamabad</a> — nearly a twenty-fold spread within one region.</p>
+            </div>
+
+            <div class="finding">
+                <div class="finding-num">Finding 2</div>
+                <h3>Islamabad is the fastest-warming city studied, by a wide margin</h3>
+                <p>At roughly +0.77°C per decade, Islamabad warms about six times faster than Karachi or Lahore (~0.13°C/decade each) and more than double Dhaka's already-fast 0.30°C/decade — likely a combination of regional warming and the city's rapid, recent urbanization.</p>
+            </div>
+
+            <div class="finding">
+                <div class="finding-num">Finding 3</div>
+                <h3>Winter is the region's outlier season — usually stable, except in one city</h3>
+                <p>In every city studied except Islamabad, winter is the slowest-warming or most stable season. In Islamabad alone, winter warms fastest of all four seasons (~+1.05°C/decade) — a genuinely unusual regional pattern worth watching for signs it's spreading.</p>
+            </div>
+
+            <div class="finding">
+                <div class="finding-num">Finding 4</div>
+                <h3>Where winter isn't the story, monsoon and post-monsoon usually are</h3>
+                <p><a href="dhaka-warming-trend.html">Dhaka</a>, <a href="karachi-warming-trend.html">Karachi</a>, <a href="colombo-warming-trend.html">Colombo</a>, <a href="kathmandu-warming-trend.html">Kathmandu</a>, and <a href="lahore-warming-trend.html">Lahore</a> all show their fastest warming during the monsoon; <a href="delhi-warming-trend.html">Delhi</a>'s fastest season is post-monsoon. <a href="mumbai-climate-trends.html">Mumbai</a> is the exception among exceptions, warming fastest in the pre-monsoon hot season.</p>
+            </div>
+
+            <div class="finding">
+                <div class="finding-num">Finding 5</div>
+                <h3>Rainfall trends split the region roughly in half</h3>
+                <p>Mumbai (~+300mm/decade), Karachi (~+88.7mm/decade), Colombo (~+65mm/decade), Islamabad (~+60mm/decade), and Kathmandu (~+50mm/decade) are all getting measurably wetter. Dhaka stands apart, showing a declining precipitation trend (~&minus;140mm/decade) despite being one of the fastest-warming cities in the dataset.</p>
+            </div>
+
+            <div class="finding">
+                <div class="finding-num">Finding 6</div>
+                <h3>Mumbai's rainfall trend is the steepest recorded anywhere in this series</h3>
+                <p>At roughly +300mm per decade, Mumbai's precipitation increase is more than three times Karachi's — the next-highest coastal city — pointing to a directly intensifying Arabian Sea monsoon rather than a region-wide rainfall pattern.</p>
+            </div>
+
+            <div class="finding">
+                <div class="finding-num">Finding 7</div>
+                <h3>Extreme heat above 40°C is concentrated inland, not coastal</h3>
+                <p>Delhi (20–50+ days/year) and Lahore (20–46 days/year) see extreme heat routinely. Coastal or moderated cities — Mumbai, Colombo, Karachi, Dhaka — see it rarely or almost never, even where annual mean warming is comparable.</p>
+            </div>
+
+            <div class="finding">
+                <div class="finding-num">Finding 8</div>
+                <h3>Heat and rainfall trends don't move together</h3>
+                <p>Mumbai is getting hotter <em>and</em> wetter. Dhaka is getting hotter <em>and</em> drier. There is no single "South Asia climate trend" for the heat-water relationship — each city's combination of warming and precipitation change is its own story.</p>
+            </div>
+
+            <div class="finding">
+                <div class="finding-num">Finding 9</div>
+                <h3>Kathmandu is the dataset's genuine outlier — a flat-to-cooling annual trend</h3>
+                <p>Alone among the 8 cities, Kathmandu shows an annual trend near zero (~&minus;0.04°C/decade), even as its monsoon season still warms. Elevation, valley topography, and local land-use effects are plausible contributors that a regional average would completely obscure.</p>
+            </div>
+
+            <div class="finding">
+                <div class="finding-num">Finding 10</div>
+                <h3>Urbanization is a real confound in the fastest-warming cities</h3>
+                <p>Islamabad's outsized warming rate, and to a lesser extent trends in other rapidly built-up cities, likely reflect a mix of genuine regional climate change and local urban heat island effects from decades of construction — a limitation that 9–25km reanalysis grids can only partially resolve.</p>
+            </div>
+
+            <div class="finding">
+                <div class="finding-num">Finding 11</div>
+                <h3>Recent years show sharper jumps than smooth long-term trends suggest</h3>
+                <p>Several cities in this dataset — Mumbai's winter is the clearest example, rising roughly 2.2°C between 2022 and 2025 alone — show multi-year step-changes that a 30-year linear trend line understates. The direction of change and its recent acceleration are often more informative than the average slope alone.</p>
+            </div>
+
+            <div class="finding">
+                <div class="finding-num">Finding 12</div>
+                <h3>"South Asia climate trend" is really eight distinct, data-specific stories</h3>
+                <p>The most defensible summary of this dataset isn't a single number — it's that every city combines its own warming rate, seasonal driver, and rainfall direction differently. Regional averages are useful for policy framing, but city-level data is what actually explains what residents of Karachi, Mumbai, or Kathmandu are experiencing.</p>
+            </div>
+
+            <h2>Full City Comparison Table</h2>
+            <p>All figures are estimated by reading the linear regression trend line on each city's chart across the 1995–2025 period, using the same ERA5/ERA5-Land methodology throughout.</p>
+            <table>
+                <tr><th>Metric</th><th>Karachi</th><th>Delhi</th><th>Dhaka</th><th>Colombo</th><th>Kathmandu</th><th>Lahore</th><th>Islamabad</th><th>Mumbai</th></tr>
+                <tr><td>Annual warming (°C/dec)</td><td>0.13</td><td>~0.15</td><td>~0.30</td><td>~0.15</td><td>~&minus;0.04</td><td>~0.13</td><td>~0.77</td><td>~0.25</td></tr>
+                <tr><td>Annual precip (mm/dec)</td><td>+88.7</td><td>~+35</td><td>~&minus;140</td><td>~+65</td><td>~+50</td><td>~+10</td><td>~+60</td><td>~+300</td></tr>
+                <tr><td>Fastest season</td><td>Monsoon</td><td>Post-Mon.</td><td>Monsoon</td><td>Monsoon</td><td>Monsoon</td><td>Monsoon</td><td>Winter</td><td>Pre-Monsoon</td></tr>
+                <tr><td>Extreme heat (&ge;40&deg;C, days/yr)</td><td>0-5</td><td>20-50+</td><td>~0</td><td>0</td><td>0</td><td>20-46</td><td>0-20 (noisy)</td><td>~0</td></tr>
+            </table>
+
+            <h2>Read the Full City Reports</h2>
+            <p>Each city's full seasonal breakdown, chart set, and methodology notes are published as standalone reports:</p>
+            <div class="city-grid">
+                <a class="city-link" href="mumbai-climate-trends.html">Mumbai<span>Rising heat, intensifying monsoon</span></a>
+                <a class="city-link" href="islamabad-warming-trend.html">Islamabad<span>Steepest warming in the region</span></a>
+                <a class="city-link" href="lahore-warming-trend.html">Lahore<span>30 years of data</span></a>
+                <a class="city-link" href="kathmandu-warming-trend.html">Kathmandu<span>Not warming like its neighbors</span></a>
+                <a class="city-link" href="colombo-warming-trend.html">Colombo<span>South Asia's wettest capital</span></a>
+                <a class="city-link" href="dhaka-warming-trend.html">Dhaka<span>Warming fast, raining less</span></a>
+                <a class="city-link" href="delhi-warming-trend.html">Delhi<span>30 years of data</span></a>
+                <a class="city-link" href="karachi-warming-trend.html">Karachi<span>Warming trend, 30 years of data</span></a>
+            </div>
+
+            <div class="cta-box">
+                <strong>Explore any city yourself</strong>
+                <p style="color:#D8DEE0; margin-bottom:0;">Search any South Asian city and see its own temperature, rainfall, and monsoon trends, built from 30 years of data.</p>
+                <a href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">Open the Interactive Dashboard →</a>
+            </div>
+
+            <h2>Data Source &amp; Methodology</h2>
+            <p>All figures in this report are derived from the <strong>Open-Meteo Historical Weather API</strong>, built on <strong>ERA5 and ERA5-Land reanalysis data</strong> produced by the <strong>European Centre for Medium-Range Weather Forecasts (ECMWF)</strong> through the <strong>Copernicus Climate Change Service</strong>, covering January 1995 through 2025. Trend rates are estimated by reading the linear regression trend line plotted on each city's chart across the full study period.</p>
+            <p>Seasonal boundaries follow the standard South Asian meteorological convention: Winter (December–February), Pre-Monsoon/Hot (March–May), Monsoon (June–September), and Post-Monsoon (October–November). This report will be updated as additional cities are added to the series.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p class="faq-q">What is the climate trend in South Asia?</p>
+            <p>Based on 30 years of ERA5 reanalysis data (1995–2025) across 8 South Asian cities, the region is warming overall, but unevenly — city-level annual warming rates range from roughly &minus;0.04°C per decade in Kathmandu to +0.77°C per decade in Islamabad. Rainfall trends diverge even more sharply, with some cities getting wetter (Mumbai, Karachi) and others drier (Dhaka).</p>
+
+            <p class="faq-q">Is South Asia getting warmer?</p>
+            <p>Yes, most cities studied show a warming trend, though the pace varies widely by location — from a nearly flat trend in Kathmandu to a steep 0.77°C per decade in Islamabad, the fastest-warming city in this dataset.</p>
+
+            <p class="faq-q">Which South Asian city is warming fastest?</p>
+            <p>Islamabad, Pakistan shows the fastest annual warming rate among the 8 cities analyzed, at approximately +0.77°C per decade — roughly six times the rate seen in Karachi or Lahore.</p>
+
+            <p class="faq-q">Is South Asia's monsoon getting stronger?</p>
+            <p>It depends on the city. Mumbai shows the steepest monsoon-season rainfall increase in this dataset (roughly +300mm per decade annually), while Dhaka shows declining precipitation despite rising temperatures — indicating no single regional monsoon trend.</p>
+
+            <p class="faq-q">How much has South Asia warmed in the last 30 years?</p>
+            <p>This varies enormously by city in the 1995–2025 ERA5 dataset: from an essentially flat trend in Kathmandu to a rise of roughly 2.3°C over 30 years in Islamabad, illustrating why city-level data tells a more accurate story than a single regional average.</p>
+        </article>
+
+        <footer>
+            Data source: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a> (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built by a meteorologist, MPhil Environmental Sciences.
+            <br /><br />
+            <a href="index.html">← Back to South Asia Climate Trends</a>
+        </footer>
+    </div>
+</body>
+</html>

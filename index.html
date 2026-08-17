@@ -96,7 +96,7 @@ body {
 }
 
 /* Nav cards */
-.nav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1rem; }
+.nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin-bottom: 1rem; }
 .nav-card {
   background: white; border: 2px solid #E6E2D8; border-top: 5px solid var(--slate-teal);
   border-radius: 14px; padding: 1.8rem; box-shadow: 0 3px 12px rgba(16,27,45,0.06);
@@ -189,6 +189,11 @@ body {
       <div class="icon">📝</div>
       <h3>Blog</h3>
       <p>Written analysis on specific places and patterns &mdash; Karachi's rising heat, Delhi's climate trend, Dhaka's shifting rainfall, and more reporting drawn straight from the data.</p>
+    </a>
+    <a class="nav-card" href="south-asia-climate-trend-report.html">
+      <div class="icon">🌏</div>
+      <h3>South Asia Climate Trend Report</h3>
+      <p>Twelve findings from 30 years of city-level data across all 8 cities in this series &mdash; one place to see how the whole region compares.</p>
     </a>
   </div>
 
