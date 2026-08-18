@@ -13,6 +13,7 @@ so the map is slow only on the very first load after a cache reset.
 
 import sys
 import os
+import time
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -54,13 +55,34 @@ def build_city_trends(cities, start_year, end_year):
     """Fetch + compute annual warming rate and precip trend for every city.
     Cached for a day so re-running the app doesn't re-hit the API for
     cities that haven't changed. `cities` must be a tuple of tuples
-    (city, country, lat, lon, url) — kept hashable for st.cache_data."""
+    (city, country, lat, lon, url) — kept hashable for st.cache_data.
+
+    Fetches sequentially with a small delay and a retry, since hitting
+    Open-Meteo's archive API back-to-back for 8 cities in a row can trip
+    rate limiting or a slow-response timeout partway through the loop.
+    Returns (dataframe, list_of_(city, error_message)_for_any_failures)
+    so failures are visible in the UI instead of silently dropped.
+    """
     rows = []
-    for city, country, lat, lon, url in cities:
-        try:
-            df = fetch_historical_weather(lat, lon, start_year, end_year)
-        except Exception:
-            continue  # skip a city rather than break the whole map on one failed fetch
+    failures = []
+    for i, (city, country, lat, lon, url) in enumerate(cities):
+        if i > 0:
+            time.sleep(1.0)  # be polite to the free API, avoid rate-limit cutoffs
+
+        df = None
+        last_error = None
+        for attempt in range(2):  # one retry on transient failures
+            try:
+                df = fetch_historical_weather(lat, lon, start_year, end_year)
+                break
+            except Exception as e:
+                last_error = e
+                if attempt == 0:
+                    time.sleep(2.0)
+
+        if df is None:
+            failures.append((city, str(last_error)))
+            continue
 
         yearly = df.groupby("year").agg(
             mean_temp=("temperature_2m_mean", "mean"),
@@ -82,7 +104,7 @@ def build_city_trends(cities, start_year, end_year):
             "Latest annual mean temp (°C)": round(yearly["mean_temp"].iloc[-1], 1),
             "Latest annual precip (mm)": round(yearly["total_precip"].iloc[-1]),
         })
-    return pd.DataFrame(rows)
+    return pd.DataFrame(rows), failures
 
 
 st.title("🗺️ South Asia Climate Map")
@@ -98,11 +120,23 @@ metric = st.sidebar.radio(
 )
 color_scale = "RdYlBu_r" if "Warming" in metric else "BrBG"
 
-with st.spinner(f"Computing {START_YEAR}–{END_YEAR} trends for {len(CITIES)} cities..."):
-    df = build_city_trends(CITIES, START_YEAR, END_YEAR)
+with st.spinner(f"Computing {START_YEAR}–{END_YEAR} trends for {len(CITIES)} cities... (first load can take a minute)"):
+    df, failures = build_city_trends(CITIES, START_YEAR, END_YEAR)
+
+if failures:
+    with st.expander(f"⚠️ {len(failures)} of {len(CITIES)} cities failed to load — click for details", expanded=False):
+        for city, err in failures:
+            st.write(f"**{city}:** {err}")
+        st.caption(
+            "Usually a transient rate-limit or timeout from the free Open-Meteo API. "
+            "Try clicking below to clear the cache and reload."
+        )
+        if st.button("🔄 Clear cache and retry"):
+            st.cache_data.clear()
+            st.rerun()
 
 if df.empty:
-    st.error("Couldn't fetch data for any city right now — try refreshing in a moment.")
+    st.error("Couldn't fetch data for any city right now — the free API may be rate-limiting. Try the 'Clear cache and retry' button above in a moment.")
     st.stop()
 
 fig = px.scatter_geo(
