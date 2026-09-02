@@ -72,6 +72,13 @@
   </url>
 
   <url>
+    <loc>https://southasiaclimate.github.io/south-asia-climate-trends/karachi-annual-rainfall.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://southasiaclimate.github.io/south-asia-climate-trends/karachi-warming-trend.html</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karachi Annual Rainfall: 30 Years of Trend Data (1996–2025) | South Asia Climate Trends</title>
+    <meta name="description" content="How much does it rain in Karachi each year, and is it increasing? A 30-year data breakdown of Karachi's annual rainfall trend, wettest/driest years, and season-by-season pattern, using ERA5 reanalysis data." />
+    <link rel="canonical" href="https://southasiaclimate.github.io/south-asia-climate-trends/karachi-annual-rainfall.html" />
+
+    <meta property="og:title" content="Karachi Annual Rainfall: 30 Years of Trend Data (1996–2025)" />
+    <meta property="og:description" content="Karachi's rainfall trend is rising — but not smoothly. A handful of extreme monsoon years, especially 2022, are doing most of the work." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/southasiaclimate/south-asia-climate-trends/main/images/karachi-annual-precipitation.png" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "How much rain does Karachi get per year?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Based on 1996-2025 ERA5 reanalysis data, Karachi's annual rainfall typically falls in the 200-800mm range, though most individual years land well under 250mm — the average is pulled up by a small number of extreme monsoon years."}},
+        {"@type": "Question", "name": "Is Karachi's rainfall increasing?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. The 30-year ERA5 record shows an increasing trend of approximately +88.7mm per decade at the annual level, though the increase is driven mainly by a handful of extreme years rather than a steady year-over-year climb."}},
+        {"@type": "Question", "name": "What is the wettest year on record for Karachi?",
+         "acceptedAnswer": {"@type": "Answer", "text": "2022 is the wettest year in the 1996-2025 ERA5 record by a wide margin, at roughly 830mm — nearly triple a typical year — coinciding with Pakistan's catastrophic 2022 monsoon floods. 2019 is the second-wettest year on record, at roughly 540mm."}},
+        {"@type": "Question", "name": "Which season has the most rain in Karachi?",
+         "acceptedAnswer": {"@type": "Answer", "text": "The monsoon season (June-September) delivers the large majority of Karachi's annual rainfall and drives nearly all of its rising trend; pre-monsoon, post-monsoon, and winter each contribute only marginal, near-flat totals."}},
+        {"@type": "Question", "name": "How does Karachi's rainfall compare to other South Asian cities?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Karachi is one of the driest cities in this series on a typical-year basis, but its rainfall trend (+88.7mm/decade) is rising faster than Delhi's and considerably faster than Dhaka's declining trend — though nowhere near Mumbai's or Colombo's much higher totals and trends."}}
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GD8FJCBENG');
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            background: #F6F4EF;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem 1.5rem; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .breadcrumb a { color: #2E5A5E; text-decoration: none; }
+        header.article-head { margin-bottom: 2rem; }
+        .tag-row { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #2E5A5E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+        h1 { font-size: 2.1rem; color: #101B2D; line-height: 1.2; margin: 0 0 0.8rem 0; }
+        .meta { color: #8A8A8A; font-size: 0.9rem; }
+        h2 { color: #101B2D; margin-top: 2.4rem; font-size: 1.5rem; border-bottom: 2px solid #D9A441; padding-bottom: 0.4rem; }
+        h3 { color: #101B2D; margin-top: 1.8rem; font-size: 1.2rem; }
+        h4 { color: #2E5A5E; margin-top: 1.4rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        p { margin: 0.9rem 0; }
+        img { max-width: 100%; border-radius: 10px; border: 1px solid #E6E2D8; margin: 1rem 0; }
+        .key-figure { font-size: 1.6rem; font-weight: 700; color: #101B2D; margin: 0.3rem 0 1rem 0; }
+        ul { padding-left: 1.3rem; }
+        li { margin-bottom: 0.5rem; }
+        .faq-q { font-weight: 600; margin-top: 1.2rem; }
+        .note {
+            background: #FBF4E4;
+            border-left: 3px solid #D9A441;
+            padding: 0.8rem 1rem;
+            font-size: 0.88rem;
+            color: #565656;
+            border-radius: 4px;
+            margin: 1.2rem 0;
+        }
+        .answer-box {
+            background: #FFFFFF;
+            border: 1px solid #E6E2D8;
+            border-left: 4px solid #2E5A5E;
+            border-radius: 6px;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: 0.82rem; }
+        th, td { text-align: left; padding: 0.4rem 0.45rem; border-bottom: 1px solid #E6E2D8; }
+        th { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; text-transform: uppercase; color: #2E5A5E; }
+        .cta-box {
+            background: linear-gradient(160deg, #101B2D 0%, #2E5A5E 100%);
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin: 2.5rem 0;
+            color: #F6F4EF;
+        }
+        .cta-box a {
+            display: inline-block;
+            background: #D9A441;
+            color: #101B2D;
+            font-weight: 700;
+            padding: 0.7rem 1.3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 0.8rem;
+        }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #8A8A8A; border-top: 1px solid #E6E2D8; padding-top: 1.2rem; }
+        footer a { color: #2E5A5E; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">South Asia Climate Trends</a> / <a href="karachi-warming-trend.html">Karachi</a> / Annual Rainfall
+        </div>
+
+        <header class="article-head">
+            <div class="tag-row">Pakistan &middot; Sindh &middot; Rainfall Deep Dive &middot; 30-Year Data</div>
+            <h1>Karachi Annual Rainfall: 30 Years of Trend Data (1996–2025)</h1>
+            <div class="meta">Published September 1, 2026 &middot; Karachi, Sindh, Pakistan</div>
+        </header>
+
+        <article>
+            <div class="answer-box">
+                <strong>Quick answer:</strong> Karachi's annual rainfall typically falls between <strong>200mm and 800mm</strong>, with a 30-year ERA5 trend line rising from around <strong>30mm</strong> in the mid-1990s to roughly <strong>290mm</strong> by 2025 — an increase of approximately <strong>+88.7mm per decade</strong>. But that trend hides an important nuance: most individual years are far drier than the trend line suggests, and the rise is driven largely by a handful of extreme monsoon years — above all 2022, Karachi's wettest year on record at roughly <strong>830mm</strong>.
+            </div>
+
+            <p>Most answers to "how much rain does Karachi get" cite a single long-term average, usually somewhere in the 150–250mm range based on climatological normals. That figure understates how dramatically variable Karachi's rainfall actually is year to year — and it says nothing about direction of change. This report uses year-by-year <strong>ERA5/ERA5-Land reanalysis data</strong> covering 1996–2025 to answer both questions directly. It's a companion piece to our full <a href="karachi-warming-trend.html">Karachi climate trend report</a>, which also covers temperature and seasonal breakdowns.</p>
+
+            <h2>How Much Does It Rain in Karachi Each Year?</h2>
+            <img src="images/karachi-annual-precipitation.png" alt="Karachi annual total precipitation trend chart, 1995-2025" />
+            <p>Karachi is one of the driest major cities in this series on a typical-year basis. Most years fall well under 250mm — often closer to 50–150mm — but the record is punctuated by a small number of dramatically wetter years that pull the long-term trend line upward. This is a fundamentally different shape than Colombo's rainfall pattern, which rises fairly steadily; Karachi's rise is lumpy and outlier-driven.</p>
+
+            <h4>Key Figure: Typical Annual Range</h4>
+            <div class="key-figure">200mm – 800mm per year</div>
+
+            <h2>Is Karachi's Rainfall Increasing?</h2>
+            <p>Yes — the trend line is unambiguous, climbing from around <strong>30mm</strong> in the mid-1990s to roughly <strong>290mm</strong> by 2025. But this is a case where the trend rate alone can mislead: it's being driven overwhelmingly by extreme wet years rather than a broad-based year-over-year increase.</p>
+
+            <h4>Key Figure: Annual Precipitation Trend</h4>
+            <div class="key-figure">Approximately +88.7mm per decade</div>
+            <p>Compare this to <a href="delhi-warming-trend.html">Delhi</a> (~+35mm/decade, a steadier climb) or <a href="colombo-annual-rainfall.html">Colombo</a> (~+170mm/decade, from a much higher and more consistent baseline). Karachi's number is respectable in isolation, but the underlying pattern — mostly-dry years punctuated by occasional extreme monsoon events — is arguably the more important story than the trend rate itself.</p>
+
+            <h2>Wettest and Driest Years on Record</h2>
+            <table>
+                <tr><th>Year</th><th>Annual Total</th><th>Note</th></tr>
+                <tr><td>2022</td><td>~830mm</td><td>Wettest year on record by a wide margin — coincides with Pakistan's catastrophic 2022 monsoon flooding</td></tr>
+                <tr><td>2019</td><td>~540mm</td><td>Second-wettest year on record</td></tr>
+                <tr><td>2025</td><td>~345mm</td><td>Third-wettest, part of a wetter recent cluster (2023-2025)</td></tr>
+                <tr><td>Mid-1990s (trend baseline)</td><td>~30mm</td><td>Starting point of the ERA5 trend line</td></tr>
+            </table>
+            <p>2022's total is roughly <strong>27 times</strong> the trend-line baseline for that era — an extraordinary outlier even by Karachi's already-variable standards, and consistent with widely reported historic flooding across Pakistan that year. Excluding 2022, 2019, and the 2023–2025 wetter cluster, most of the remaining 30-year record sits at or below 150mm annually.</p>
+
+            <h2>Rainfall by Season</h2>
+            <p>Breaking Karachi's annual total down by season shows just how concentrated its rainfall is in one part of the year.</p>
+            <table>
+                <tr><th>Season</th><th>Typical Range</th><th>Precipitation Trend</th></tr>
+                <tr><td>Winter (Dec–Feb)</td><td>Near-zero in most years</td><td>Karachi's driest season by a wide margin; not separately charted in this report</td></tr>
+                <tr><td>Pre-Monsoon/Hot (Mar–May)</td><td>Near-zero baseline, sporadic spikes to 13–24mm</td><td>Essentially flat (~&minus;1mm/decade)</td></tr>
+                <tr><td>Monsoon (Jun–Sep)</td><td>Baseline rising from ~30mm to ~270mm, peaks near 785mm</td><td>~+80mm/decade — the overwhelming driver of the annual trend</td></tr>
+                <tr><td>Post-Monsoon (Oct–Nov)</td><td>Near-zero baseline, one outlier year near 39mm</td><td>~+2mm/decade (negligible)</td></tr>
+            </table>
+            <p>The monsoon season alone accounts for nearly all of Karachi's annual rainfall increase. Pre-monsoon, post-monsoon, and winter each remain close to flat and contribute only marginal totals in most years — meaning Karachi's rainfall story is really a <em>monsoon intensity</em> story, not a broad seasonal shift.</p>
+
+            <div class="note">
+                <strong>A note on winter rainfall:</strong> this report's chart set didn't include a separate winter precipitation trend for Karachi. Given how consistently near-zero winter rainfall is across the record, its omission doesn't meaningfully affect the annual totals or trend discussed here — but it's worth generating separately if a complete four-season picture is needed.
+            </div>
+
+            <h2>How Karachi Compares to Other South Asian Cities</h2>
+            <table>
+                <tr><th>City</th><th>Annual Precipitation Trend</th><th>Typical Annual Rainfall</th></tr>
+                <tr><td><strong>Karachi</strong></td><td>+88.7mm/decade</td><td>200–800mm</td></tr>
+                <tr><td><a href="delhi-warming-trend.html">Delhi</a></td><td>~+35mm/decade</td><td>450–950mm</td></tr>
+                <tr><td><a href="dhaka-warming-trend.html">Dhaka</a></td><td>~&minus;140mm/decade</td><td>1,300–2,700mm</td></tr>
+                <tr><td><a href="colombo-annual-rainfall.html">Colombo</a></td><td>~+170mm/decade</td><td>2,200–3,000mm</td></tr>
+                <tr><td><a href="mumbai-climate-trends.html">Mumbai</a></td><td>~+300mm/decade</td><td>~2,300–2,750mm</td></tr>
+            </table>
+            <p>Karachi sits at the dry end of this series by a wide margin — even its wettest year on record (2022, ~830mm) falls short of a <em>typical</em> year in Mumbai or Colombo. But its rainfall trend is real and outpaces both Delhi and Dhaka, driven by what looks like increasing monsoon volatility rather than a steady climb. See our full <a href="south-asia-climate-trend-report.html">South Asia climate trend report</a> for how all cities in this series compare across temperature and rainfall together.</p>
+
+            <div class="cta-box">
+                <strong>Explore the year-by-year data yourself</strong>
+                <p style="color:#D8DEE0; margin-bottom:0;">See Karachi's full interactive rainfall and temperature trends, or compare it against any other South Asian city.</p>
+                <a href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">Open the Interactive Dashboard →</a>
+            </div>
+
+            <h2>Data Source &amp; Methodology</h2>
+            <p>All figures in this report are derived from the <strong>Open-Meteo Historical Weather API</strong>, built on <strong>ERA5 and ERA5-Land reanalysis data</strong> produced by the <strong>European Centre for Medium-Range Weather Forecasts (ECMWF)</strong> through the <strong>Copernicus Climate Change Service</strong>, covering January 1996 through 2025. Trend rates are estimated by reading the linear regression trend line plotted on the annual precipitation chart across the full study period. Seasonal boundaries follow the standard South Asian meteorological convention: Winter (December–February), Pre-Monsoon/Hot (March–May), Monsoon (June–September), and Post-Monsoon (October–November).</p>
+            <p>Because Karachi's rainfall is so heavily skewed by a small number of extreme years, a linear trend rate should be read as a general direction rather than a reliable predictor of any single upcoming year's totals — median rainfall in a typical year remains well below the trend line's current value.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p class="faq-q">How much rain does Karachi get per year?</p>
+            <p>Based on 1996–2025 ERA5 reanalysis data, Karachi's annual rainfall typically falls in the 200–800mm range, though most individual years land well under 250mm — the average is pulled up by a small number of extreme monsoon years.</p>
+
+            <p class="faq-q">Is Karachi's rainfall increasing?</p>
+            <p>Yes. The 30-year ERA5 record shows an increasing trend of approximately +88.7mm per decade at the annual level, though the increase is driven mainly by a handful of extreme years rather than a steady year-over-year climb.</p>
+
+            <p class="faq-q">What is the wettest year on record for Karachi?</p>
+            <p>2022 is the wettest year in the 1996–2025 ERA5 record by a wide margin, at roughly 830mm — nearly triple a typical year — coinciding with Pakistan's catastrophic 2022 monsoon floods. 2019 is the second-wettest year on record, at roughly 540mm.</p>
+
+            <p class="faq-q">Which season has the most rain in Karachi?</p>
+            <p>The monsoon season (June–September) delivers the large majority of Karachi's annual rainfall and drives nearly all of its rising trend; pre-monsoon, post-monsoon, and winter each contribute only marginal, near-flat totals.</p>
+
+            <p class="faq-q">How does Karachi's rainfall compare to other South Asian cities?</p>
+            <p>Karachi is one of the driest cities in this series on a typical-year basis, but its rainfall trend (+88.7mm/decade) is rising faster than Delhi's and considerably faster than Dhaka's declining trend — though nowhere near Mumbai's or Colombo's much higher totals and trends.</p>
+
+            <p>See the full <a href="karachi-warming-trend.html">Karachi climate trend report</a> for temperature trends and complete seasonal breakdowns, or the <a href="south-asia-climate-trend-report.html">South Asia climate trend report</a> for how all cities in this series compare.</p>
+        </article>
+
+        <footer>
+            Data source: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a> (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built by a meteorologist, MPhil Environmental Sciences.
+            <br /><br />
+            <a href="karachi-warming-trend.html">← Back to the full Karachi report</a> &middot; <a href="index.html">All Cities</a>
+        </footer>
+    </div>
+</body>
+</html>
