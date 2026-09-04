@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delhi Extreme Heat Days: How Many 40°C+ Days Does the Capital Get? | South Asia Climate Trends</title>
+    <meta name="description" content="How many days a year does Delhi hit 40°C or above, and is it getting worse? A 30-year data breakdown reveals a surprising disconnect: Delhi's record year for extreme heat days isn't its record year for annual warmth." />
+    <link rel="canonical" href="https://southasiaclimate.github.io/south-asia-climate-trends/delhi-extreme-heat-days.html" />
+
+    <meta property="og:title" content="Delhi Extreme Heat Days: How Many 40°C+ Days Does the Capital Get?" />
+    <meta property="og:description" content="Delhi's record year for extreme heat days (2010, ~52 days) isn't its record year for annual warmth (2009 and 2025). 30 years of data on why these two metrics tell different stories." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/southasiaclimate/south-asia-climate-trends/main/images/delhi-extreme-heat-days.png" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "How many days a year does Delhi hit 40 degrees Celsius or above?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Based on 1995-2025 ERA5 reanalysis data, Delhi typically records between 20 and 45 such days per year, with a full range across the 30-year record spanning from as few as 9 days (1997, 2020) to a record 52 days (2010)."}},
+        {"@type": "Question", "name": "Is Delhi's extreme heat getting worse?",
+         "acceptedAnswer": {"@type": "Answer", "text": "It depends what you measure. Delhi's annual mean temperature is clearly rising (~+0.13\u00b0C per decade). But the count of days crossing the 40\u00b0C threshold shows no comparably clear upward trend across the same 30 years \u2014 it's dominated by high year-to-year variability rather than a steady climb."}},
+        {"@type": "Question", "name": "What is Delhi's record year for extreme heat days?",
+         "acceptedAnswer": {"@type": "Answer", "text": "2010, with approximately 52 days at or above 40\u00b0C \u2014 the highest in the 1995-2025 ERA5 record, ahead of 2002 (~50 days) and 2022 (~48 days)."}},
+        {"@type": "Question", "name": "Is Delhi's warmest year also its year with the most extreme heat days?",
+         "acceptedAnswer": {"@type": "Answer", "text": "No \u2014 and this is the most notable finding in the data. Delhi's two warmest years by annual mean temperature (2009 and 2025, both around 25.3\u00b0C) had relatively unremarkable extreme-heat-day counts (42 and 26 days respectively), while 2010, the record year for heat days, had a fairly average annual mean temperature."}},
+        {"@type": "Question", "name": "How does Delhi's extreme heat compare to other South Asian cities?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Delhi is among the most extreme-heat-exposed cities in this series, alongside Lahore, both regularly recording 20 or more days per year above 40\u00b0C \u2014 far more than coastal cities like Mumbai, Colombo, or Karachi, which see such days rarely or almost never."}}
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GD8FJCBENG');
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            background: #F6F4EF;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem 1.5rem; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .breadcrumb a { color: #2E5A5E; text-decoration: none; }
+        header.article-head { margin-bottom: 2rem; }
+        .tag-row { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #2E5A5E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+        h1 { font-size: 2.1rem; color: #101B2D; line-height: 1.2; margin: 0 0 0.8rem 0; }
+        .meta { color: #8A8A8A; font-size: 0.9rem; }
+        h2 { color: #101B2D; margin-top: 2.4rem; font-size: 1.5rem; border-bottom: 2px solid #D9A441; padding-bottom: 0.4rem; }
+        h3 { color: #101B2D; margin-top: 1.8rem; font-size: 1.2rem; }
+        h4 { color: #2E5A5E; margin-top: 1.4rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        p { margin: 0.9rem 0; }
+        img { max-width: 100%; border-radius: 10px; border: 1px solid #E6E2D8; margin: 1rem 0; }
+        .key-figure { font-size: 1.6rem; font-weight: 700; color: #101B2D; margin: 0.3rem 0 1rem 0; }
+        ul { padding-left: 1.3rem; }
+        li { margin-bottom: 0.5rem; }
+        .faq-q { font-weight: 600; margin-top: 1.2rem; }
+        .note {
+            background: #FBF4E4;
+            border-left: 3px solid #D9A441;
+            padding: 0.8rem 1rem;
+            font-size: 0.88rem;
+            color: #565656;
+            border-radius: 4px;
+            margin: 1.2rem 0;
+        }
+        .answer-box {
+            background: #FFFFFF;
+            border: 1px solid #E6E2D8;
+            border-left: 4px solid #2E5A5E;
+            border-radius: 6px;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: 0.82rem; }
+        th, td { text-align: left; padding: 0.4rem 0.45rem; border-bottom: 1px solid #E6E2D8; }
+        th { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; text-transform: uppercase; color: #2E5A5E; }
+        .cta-box {
+            background: linear-gradient(160deg, #101B2D 0%, #2E5A5E 100%);
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin: 2.5rem 0;
+            color: #F6F4EF;
+        }
+        .cta-box a {
+            display: inline-block;
+            background: #D9A441;
+            color: #101B2D;
+            font-weight: 700;
+            padding: 0.7rem 1.3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 0.8rem;
+        }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #8A8A8A; border-top: 1px solid #E6E2D8; padding-top: 1.2rem; }
+        footer a { color: #2E5A5E; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">South Asia Climate Trends</a> / <a href="delhi-warming-trend.html">Delhi</a> / Extreme Heat Days
+        </div>
+
+        <header class="article-head">
+            <div class="tag-row">India &middot; Delhi &middot; Extreme Heat Deep Dive &middot; 30-Year Data</div>
+            <h1>Delhi Extreme Heat Days: How Many 40°C+ Days Does the Capital Get?</h1>
+            <div class="meta">Published September 2, 2026 &middot; Delhi, National Capital Territory, India</div>
+        </header>
+
+        <article>
+            <div class="answer-box">
+                <strong>Quick answer:</strong> Delhi typically records between <strong>20 and 45 days a year</strong> at or above 40°C, with a full 30-year range spanning from as few as <strong>9 days</strong> (1997, 2020) to a record <strong>52 days</strong> in 2010. But the more interesting finding isn't the range — it's that Delhi's record year for extreme heat days (2010) isn't the same as its record year for annual warmth (2009 and 2025). These two ways of measuring "how hot was it" tell noticeably different stories.
+            </div>
+
+            <p>News coverage of Delhi's heat tends to report individual numbers in isolation — a heatwave here, a record daily high there — using inconsistent thresholds from one report to the next (some track ≥40°C, others ≥42°C, others use IMD's official multi-criteria heatwave definition). This report uses a single, consistent threshold (≥40°C) across the full <strong>1995–2025 ERA5/ERA5-Land reanalysis record</strong> to show the actual 30-year pattern, and compares it directly against Delhi's annual mean temperature trend — already covered in our full <a href="delhi-warming-trend.html">Delhi climate trend report</a>.</p>
+
+            <h2>How Many Extreme Heat Days Does Delhi Get?</h2>
+            <img src="images/delhi-extreme-heat-days.png" alt="Delhi extreme heat days (40C or above) per year, 1995-2025" />
+            <p>The chart above shows no smooth trend line — deliberately. Extreme-heat-day counts are highly variable year to year, driven by heatwave clustering, western disturbance timing, and monsoon onset, none of which move in lockstep with the slower multi-decade warming signal in annual averages.</p>
+
+            <h4>Key Figure: Typical Range</h4>
+            <div class="key-figure">20 – 45 days per year</div>
+            <p>The full 30-year range runs wider still, from single-digit years to more than 50 — see the record years below.</p>
+
+            <h2>Record Years — Highest and Lowest</h2>
+            <table>
+                <tr><th>Rank</th><th>Year</th><th>Days ≥40°C</th></tr>
+                <tr><td>1st (record)</td><td>2010</td><td>~52 days</td></tr>
+                <tr><td>2nd</td><td>2002</td><td>~50 days</td></tr>
+                <tr><td>3rd</td><td>2022</td><td>~48 days</td></tr>
+                <tr><td>Tied lowest</td><td>1997 &amp; 2020</td><td>~9 days each</td></tr>
+            </table>
+            <p>2010's total of roughly 52 days means Delhi spent close to <strong>seven weeks</strong> of that year at or above 40°C — more than triple the count in its lowest years.</p>
+
+            <h2>Is It Getting Worse? A More Complicated Answer Than It Looks</h2>
+            <p>Delhi's annual mean temperature is unambiguously rising — our full climate trend report puts it at roughly +0.13°C per decade, climbing from a trend-line baseline near 24.2°C in the mid-1990s to about 24.6°C by 2025. Given that, you'd reasonably expect extreme-heat-day counts to be climbing at a similar steady pace. They aren't.</p>
+            <p>Splitting the 30-year record into three roughly equal periods:</p>
+            <table>
+                <tr><th>Period</th><th>Average Days ≥40°C/Year</th></tr>
+                <tr><td>1995–2004</td><td>~30.0</td></tr>
+                <tr><td>2005–2014</td><td>~30.9</td></tr>
+                <tr><td>2015–2025</td><td>~26.5</td></tr>
+            </table>
+            <p>If anything, the most recent decade-plus shows a slightly <em>lower</em> average than the two decades before it — essentially flat to mildly declining, not accelerating. That doesn't mean Delhi's heat problem is improving; annual mean warmth, humidity, and nighttime temperatures (which drive most heat-health impacts) are separate metrics this chart doesn't capture. It means a simple day-count against a fixed threshold is a noisier, less trend-sensitive indicator than annual mean temperature — a genuinely useful distinction for anyone using "days above 40°C" as a shorthand for "how much has climate change affected this city."</p>
+
+            <h2>The Disconnect: Record Heat-Day Years vs. Record Warm Years</h2>
+            <img src="images/delhi-annual-mean-temperature.png" alt="Delhi annual mean temperature trend chart, 1995-2025" />
+            <p>This is the most counterintuitive finding in the data. Delhi's two warmest years by annual mean temperature are <strong>2009 and 2025</strong>, both around <strong>25.3°C</strong> — but their extreme-heat-day counts were 42 and 26 days respectively, nowhere near the record. Meanwhile <strong>2010</strong>, the record year for extreme heat days (~52), had an annual mean temperature of only about <strong>24.2°C</strong> — close to the middle of the 30-year range, not a standout warm year at all.</p>
+
+            <h4>Key Insight</h4>
+            <div class="key-figure">2010's heat-day record ≠ a record-warm year overall</div>
+            <p>The likely explanation: 2010's extreme heat was probably concentrated in an intense pre-monsoon heatwave stretch, pushing the day-count up sharply without necessarily lifting the annual average once cooler months are factored in. 2009 and 2025, by contrast, appear to have been warm more consistently across the year rather than through a small number of extreme spikes. The practical takeaway: a single "hottest year on record" headline and a single "most extreme-heat-days on record" headline can — and in Delhi's case, do — refer to two completely different years.</p>
+
+            <h2>How Delhi Compares to Other South Asian Cities</h2>
+            <table>
+                <tr><th>City</th><th>Extreme Heat (≥40°C, days/yr)</th></tr>
+                <tr><td><strong>Delhi</strong></td><td>20–45 typical, up to 52 in record years</td></tr>
+                <tr><td><a href="lahore-warming-trend.html">Lahore</a></td><td>20–46</td></tr>
+                <tr><td><a href="islamabad-warming-trend.html">Islamabad</a></td><td>0–20 (noisy)</td></tr>
+                <tr><td><a href="karachi-annual-rainfall.html">Karachi</a></td><td>0–5</td></tr>
+                <tr><td><a href="mumbai-climate-trends.html">Mumbai</a></td><td>~0</td></tr>
+                <tr><td><a href="colombo-warming-trend.html">Colombo</a></td><td>0</td></tr>
+            </table>
+            <p>Delhi and Lahore stand well apart from the rest of this series — both inland, continental cities that regularly cross 20+ extreme heat days a year, compared to near-zero for coastal cities moderated by sea proximity. See our full <a href="south-asia-climate-trend-report.html">South Asia climate trend report</a> for how all cities compare across both temperature and rainfall.</p>
+
+            <div class="cta-box">
+                <strong>Explore the year-by-year data yourself</strong>
+                <p style="color:#D8DEE0; margin-bottom:0;">See Delhi's full interactive temperature and heat trends, or compare it against any other South Asian city.</p>
+                <a href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">Open the Interactive Dashboard →</a>
+            </div>
+
+            <h2>Data Source &amp; Methodology</h2>
+            <p>All figures in this report are derived from the <strong>Open-Meteo Historical Weather API</strong>, built on <strong>ERA5 and ERA5-Land reanalysis data</strong> produced by the <strong>European Centre for Medium-Range Weather Forecasts (ECMWF)</strong> through the <strong>Copernicus Climate Change Service</strong>, covering January 1995 through 2025. "Extreme heat days" are defined as days where the reanalysis daily maximum temperature reaches or exceeds 40°C — the same threshold used consistently across every city in this series, distinct from IMD's official multi-criteria heatwave definition or the varying thresholds (often 42°C+) used in individual news reports.</p>
+            <p>Because day-count-against-threshold statistics are inherently noisier than smooth averages — a single intense heatwave spell can swing a year's total substantially — the period averages above should be read as a general pattern rather than a precise trend rate the way this site's temperature and rainfall trend figures are.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p class="faq-q">How many days a year does Delhi hit 40°C or above?</p>
+            <p>Based on 1995–2025 ERA5 reanalysis data, Delhi typically records between 20 and 45 such days per year, with a full range across the 30-year record spanning from as few as 9 days (1997, 2020) to a record 52 days (2010).</p>
+
+            <p class="faq-q">Is Delhi's extreme heat getting worse?</p>
+            <p>It depends what you measure. Delhi's annual mean temperature is clearly rising (~+0.13°C per decade). But the count of days crossing the 40°C threshold shows no comparably clear upward trend across the same 30 years — it's dominated by high year-to-year variability rather than a steady climb.</p>
+
+            <p class="faq-q">What is Delhi's record year for extreme heat days?</p>
+            <p>2010, with approximately 52 days at or above 40°C — the highest in the 1995–2025 ERA5 record, ahead of 2002 (~50 days) and 2022 (~48 days).</p>
+
+            <p class="faq-q">Is Delhi's warmest year also its year with the most extreme heat days?</p>
+            <p>No — and this is the most notable finding in the data. Delhi's two warmest years by annual mean temperature (2009 and 2025, both around 25.3°C) had relatively unremarkable extreme-heat-day counts (42 and 26 days respectively), while 2010, the record year for heat days, had a fairly average annual mean temperature.</p>
+
+            <p class="faq-q">How does Delhi's extreme heat compare to other South Asian cities?</p>
+            <p>Delhi is among the most extreme-heat-exposed cities in this series, alongside Lahore, both regularly recording 20 or more days per year above 40°C — far more than coastal cities like Mumbai, Colombo, or Karachi, which see such days rarely or almost never.</p>
+
+            <p>See the full <a href="delhi-warming-trend.html">Delhi climate trend report</a> for temperature and rainfall trends across every season, or the <a href="south-asia-climate-trend-report.html">South Asia climate trend report</a> for how all cities in this series compare.</p>
+        </article>
+
+        <footer>
+            Data source: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a> (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built by a meteorologist, MPhil Environmental Sciences.
+            <br /><br />
+            <a href="delhi-warming-trend.html">← Back to the full Delhi report</a> &middot; <a href="index.html">All Cities</a>
+        </footer>
+    </div>
+</body>
+</html>
