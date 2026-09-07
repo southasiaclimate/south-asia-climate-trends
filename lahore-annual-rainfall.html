@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lahore Annual Rainfall: 30 Years of Trend Data (1996–2025) | South Asia Climate Trends</title>
+    <meta name="description" content="How much does it rain in Lahore each year, is it increasing, and why does the city get so hot? A 30-year data breakdown of Lahore's rainfall, temperature, and extreme heat, using ERA5 reanalysis data." />
+    <link rel="canonical" href="https://southasiaclimate.github.io/south-asia-climate-trends/lahore-annual-rainfall.html" />
+
+    <meta property="og:title" content="Lahore Annual Rainfall: 30 Years of Trend Data (1996–2025)" />
+    <meta property="og:description" content="Lahore's rainfall trend is essentially flat, but its heat is real — up to 46 extreme heat days a year and monsoon temperatures topping 31°C. 30 years of data on both." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/southasiaclimate/south-asia-climate-trends/main/images/lahore-annual-precipitation.png" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "How much rain does Lahore get per year?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Based on 1996-2025 ERA5 reanalysis data, Lahore's annual rainfall typically falls between 400mm and 900mm, with a 30-year trend line that is essentially flat, rising only slightly from around 610mm to 640mm."}},
+        {"@type": "Question", "name": "Is Lahore's rainfall increasing?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Only marginally. The 30-year ERA5 record shows an annual trend of approximately +10mm per decade \u2014 one of the flattest rainfall trends of any city in this series, in sharp contrast to Lahore's clearly rising temperature trend."}},
+        {"@type": "Question", "name": "Why is Lahore so hot?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Lahore's inland, continental position means it lacks the coastal moderation that tempers cities like Karachi or Colombo. Monsoon-season mean temperatures regularly exceed 30\u00b0C, pre-monsoon temperatures have hit a record 29.1\u00b0C (2010), and the city records between roughly 9 and 46 extreme heat days (\u226540\u00b0C) per year."}},
+        {"@type": "Question", "name": "What is the wettest year on record for Lahore?",
+         "acceptedAnswer": {"@type": "Answer", "text": "1996 is the wettest year in the 1996-2025 ERA5 record, at roughly 890mm, narrowly ahead of 1995 (~820mm) and 2025 (~860mm)."}},
+        {"@type": "Question", "name": "What was Lahore's lowest winter temperature in the last 10 years?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Looking at winter (Dec-Feb) mean temperatures from 2016-2025, the coldest winter on average was 2024, at approximately 12.05\u00b0C, narrowly colder than 2019 (~12.1\u00b0C). This reflects the seasonal average, not a single coldest recorded day, which would be considerably lower."}}
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GD8FJCBENG');
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            background: #F6F4EF;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem 1.5rem; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .breadcrumb a { color: #2E5A5E; text-decoration: none; }
+        header.article-head { margin-bottom: 2rem; }
+        .tag-row { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #2E5A5E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+        h1 { font-size: 2.1rem; color: #101B2D; line-height: 1.2; margin: 0 0 0.8rem 0; }
+        .meta { color: #8A8A8A; font-size: 0.9rem; }
+        h2 { color: #101B2D; margin-top: 2.4rem; font-size: 1.5rem; border-bottom: 2px solid #D9A441; padding-bottom: 0.4rem; }
+        h3 { color: #101B2D; margin-top: 1.8rem; font-size: 1.2rem; }
+        h4 { color: #2E5A5E; margin-top: 1.4rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        p { margin: 0.9rem 0; }
+        img { max-width: 100%; border-radius: 10px; border: 1px solid #E6E2D8; margin: 1rem 0; }
+        .key-figure { font-size: 1.6rem; font-weight: 700; color: #101B2D; margin: 0.3rem 0 1rem 0; }
+        ul { padding-left: 1.3rem; }
+        li { margin-bottom: 0.5rem; }
+        .faq-q { font-weight: 600; margin-top: 1.2rem; }
+        .note {
+            background: #FBF4E4;
+            border-left: 3px solid #D9A441;
+            padding: 0.8rem 1rem;
+            font-size: 0.88rem;
+            color: #565656;
+            border-radius: 4px;
+            margin: 1.2rem 0;
+        }
+        .answer-box {
+            background: #FFFFFF;
+            border: 1px solid #E6E2D8;
+            border-left: 4px solid #2E5A5E;
+            border-radius: 6px;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: 0.82rem; }
+        th, td { text-align: left; padding: 0.4rem 0.45rem; border-bottom: 1px solid #E6E2D8; }
+        th { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; text-transform: uppercase; color: #2E5A5E; }
+        .cta-box {
+            background: linear-gradient(160deg, #101B2D 0%, #2E5A5E 100%);
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin: 2.5rem 0;
+            color: #F6F4EF;
+        }
+        .cta-box a {
+            display: inline-block;
+            background: #D9A441;
+            color: #101B2D;
+            font-weight: 700;
+            padding: 0.7rem 1.3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 0.8rem;
+        }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #8A8A8A; border-top: 1px solid #E6E2D8; padding-top: 1.2rem; }
+        footer a { color: #2E5A5E; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">South Asia Climate Trends</a> / <a href="lahore-warming-trend.html">Lahore</a> / Annual Rainfall
+        </div>
+
+        <header class="article-head">
+            <div class="tag-row">Pakistan &middot; Punjab &middot; Rainfall &amp; Heat Deep Dive &middot; 30-Year Data</div>
+            <h1>Lahore Annual Rainfall: 30 Years of Trend Data (1996–2025)</h1>
+            <div class="meta">Published September 4, 2026 &middot; Lahore, Punjab, Pakistan</div>
+        </header>
+
+        <article>
+            <div class="answer-box">
+                <strong>Quick answer:</strong> Lahore's annual rainfall typically falls between <strong>400mm and 900mm</strong>, with a 30-year ERA5 trend line that is essentially <strong>flat</strong> — rising only slightly from around <strong>610mm</strong> in the mid-1990s to roughly <strong>640mm</strong> by 2025 (about <strong>+10mm per decade</strong>). That's one of the flattest rainfall trends of any city in this series. Lahore's heat trend tells a very different story: monsoon-season temperatures regularly top 30°C, and the city records up to 46 extreme heat days a year.
+            </div>
+
+            <p>Lahore's rainfall pattern doesn't fit the "steadily increasing" story found in several other cities in this series — it's genuinely flat. But that makes it a useful contrast case, and it lets this report do double duty: covering rainfall in the depth of our other city deep-dives, and addressing why Lahore's heat is so persistent even without a rising rainfall trend to go with it. This is a companion piece to our full <a href="lahore-warming-trend.html">Lahore climate trend report</a>.</p>
+
+            <h2>How Much Does It Rain in Lahore Each Year?</h2>
+            <img src="images/lahore-annual-precipitation.png" alt="Lahore annual total precipitation trend chart, 1995-2025" />
+            <p>Annual totals swing widely from year to year — from under 400mm to nearly 900mm — but show almost no sustained direction over three decades. The trend line barely moves.</p>
+
+            <h4>Key Figure: Annual Precipitation Trend</h4>
+            <div class="key-figure">Approximately +10mm per decade (essentially flat)</div>
+            <p>Compare this to <a href="karachi-annual-rainfall.html">Karachi</a> (+88.7mm/decade) or <a href="colombo-annual-rainfall.html">Colombo</a> (+170mm/decade) — Lahore's rainfall trend is the flattest of any city with a rainfall deep-dive published on this site so far.</p>
+
+            <h2>Wettest and Driest Years on Record</h2>
+            <table>
+                <tr><th>Year</th><th>Annual Total</th><th>Note</th></tr>
+                <tr><td>1996</td><td>~890mm</td><td>Wettest year on record</td></tr>
+                <tr><td>2025</td><td>~860mm</td><td>Third-wettest, part of a wetter recent cluster (2023–2025)</td></tr>
+                <tr><td>1995</td><td>~820mm</td><td>Second-wettest</td></tr>
+                <tr><td>2021</td><td>~385mm</td><td>Driest year on record</td></tr>
+            </table>
+
+            <h2>Rainfall by Season</h2>
+            <table>
+                <tr><th>Season</th><th>Typical Range</th><th>Precipitation Trend</th></tr>
+                <tr><td>Winter (Dec–Feb)</td><td>Not separately charted in this report</td><td>—</td></tr>
+                <tr><td>Pre-Monsoon/Hot (Mar–May)</td><td>25–200mm, highly variable</td><td>Essentially flat</td></tr>
+                <tr><td>Monsoon (Jun–Sep)</td><td>240–660mm</td><td>Essentially flat, slightly declining</td></tr>
+                <tr><td>Post-Monsoon (Oct–Nov)</td><td>Low baseline (~4–37mm), occasional large spikes</td><td>~+5.7mm/decade, the only season with a clear (if modest) increase</td></tr>
+            </table>
+            <p>Unlike Karachi or Mumbai, where the monsoon drives a clear multi-decade rainfall increase, Lahore's monsoon rainfall is essentially flat — highly variable year to year (a low of ~240mm in 2019–2020, a high of ~660mm in 2025) but with no sustained trend. The post-monsoon season shows the only genuine (if modest) upward trend, aided by a cluster of wetter years since 2019.</p>
+
+            <div class="note">
+                <strong>A note on winter rainfall:</strong> this report's chart set didn't include a separate winter precipitation trend for Lahore. Given how much of the region's rainfall pattern is monsoon-dominated, this omission is unlikely to change the overall annual picture, but it's worth generating separately for a complete four-season view.
+            </div>
+
+            <h2>Why Is Lahore So Hot?</h2>
+            <img src="images/lahore-annual-mean-temperature.png" alt="Lahore annual mean temperature trend chart, 1995-2025" />
+            <p>This is a common search question, and the data gives a fairly direct answer: Lahore's heat comes from its <strong>inland, continental position</strong> — without a coastline to moderate temperature swings the way Karachi's or Colombo's proximity to the sea does, Lahore experiences sharper seasonal extremes in both directions.</p>
+            <ul>
+                <li><strong>Monsoon-season heat:</strong> mean temperatures during the monsoon (June–September) regularly exceed 30°C, peaking at approximately <strong>31.4°C in 2009</strong> — even the "rainy season" here stays hot, unlike coastal cities where monsoon cloud cover moderates temperatures more noticeably.</li>
+                <li><strong>Pre-monsoon extremes:</strong> the pre-monsoon/hot season (March–May) hit a record mean of approximately <strong>29.1°C in 2010</strong>, dramatically above any other year in the 30-year record for that season.</li>
+                <li><strong>Frequent extreme heat days:</strong> Lahore records between roughly <strong>9 and 46 days a year</strong> at or above 40°C — among the highest counts of any city in this series, comparable to Delhi.</li>
+                <li><strong>Annual warming trend:</strong> approximately <strong>+0.13°C per decade</strong>, rising from a trend-line baseline near 23.5°C in the mid-1990s to about 23.9°C by 2025 — modest by this series' standards, but layered on top of an already-hot continental baseline.</li>
+            </ul>
+
+            <h4>Key Figure: Extreme Heat Days</h4>
+            <img src="images/lahore-extreme-heat-days.png" alt="Lahore days per year crossing the extreme heat threshold, 1995-2025" />
+            <div class="key-figure">9 – 46 days per year (≥40°C)</div>
+            <p>Record years include 2002 and 2009 (~46 days each) and 2022 (~44 days); the lowest were 2008 and 2023 (~9 days each). As with Delhi's extreme heat data, this count is highly variable year to year rather than following a smooth trend.</p>
+
+            <h2>What Was Lahore's Lowest Temperature in the Last 10 Years?</h2>
+            <p>Looking specifically at winter (December–February) mean temperatures from 2016–2025, the coldest winter on average was <strong>2024</strong>, at approximately <strong>12.05°C</strong> — very narrowly colder than 2019 (~12.1°C). Winter temperatures overall show a real warming trend across the full 30-year record (~+0.2°C/decade, rising from about 12.9°C to 13.5°C), making these two recent cold winters something of an exception to the broader pattern rather than the norm.</p>
+            <div class="note">
+                <strong>An important distinction:</strong> this is the coldest <em>seasonal average</em>, not the single coldest day ever recorded in Lahore. A daily record low would be considerably lower than any seasonal mean shown here — ERA5 reanalysis at this resolution is better suited to seasonal and annual patterns than to pinpointing a single extreme daily record.
+            </div>
+
+            <h2>How Lahore Compares to Other South Asian Cities</h2>
+            <table>
+                <tr><th>City</th><th>Annual Precip Trend</th><th>Annual Warming Rate</th><th>Extreme Heat (≥40°C, days/yr)</th></tr>
+                <tr><td><strong>Lahore</strong></td><td>~+10mm/decade</td><td>~+0.13°C/decade</td><td>9–46</td></tr>
+                <tr><td><a href="delhi-extreme-heat-days.html">Delhi</a></td><td>~+35mm/decade</td><td>~+0.15°C/decade</td><td>9–52</td></tr>
+                <tr><td><a href="karachi-annual-rainfall.html">Karachi</a></td><td>+88.7mm/decade</td><td>~+0.13°C/decade</td><td>0–5</td></tr>
+                <tr><td><a href="islamabad-warming-trend.html">Islamabad</a></td><td>~+60mm/decade</td><td>~+0.77°C/decade</td><td>0–20 (noisy)</td></tr>
+            </table>
+            <p>Lahore and Delhi are the two most extreme-heat-exposed cities in this entire series — both inland, both regularly crossing 40°C dozens of days a year — while sharing similarly modest annual warming rates. See our full <a href="fastest-warming-south-asia-city.html">ranking of all 9 locations by warming rate</a> for the complete picture, or the <a href="south-asia-climate-trend-report.html">South Asia climate trend report</a> for the narrative version.</p>
+
+            <div class="cta-box">
+                <strong>Explore the year-by-year data yourself</strong>
+                <p style="color:#D8DEE0; margin-bottom:0;">See Lahore's full interactive rainfall and temperature trends, or compare it against any other South Asian city.</p>
+                <a href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">Open the Interactive Dashboard →</a>
+            </div>
+
+            <h2>Data Source &amp; Methodology</h2>
+            <p>All figures in this report are derived from the <strong>Open-Meteo Historical Weather API</strong>, built on <strong>ERA5 and ERA5-Land reanalysis data</strong> produced by the <strong>European Centre for Medium-Range Weather Forecasts (ECMWF)</strong> through the <strong>Copernicus Climate Change Service</strong>, covering January 1996 through 2025. Trend rates are estimated by reading the linear regression trend line plotted on each chart across the full study period. "Extreme heat days" are defined as days reaching or exceeding 40°C, the same threshold used consistently across this series. Seasonal boundaries follow the standard South Asian meteorological convention: Winter (December–February), Pre-Monsoon/Hot (March–May), Monsoon (June–September), and Post-Monsoon (October–November).</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p class="faq-q">How much rain does Lahore get per year?</p>
+            <p>Based on 1996–2025 ERA5 reanalysis data, Lahore's annual rainfall typically falls between 400mm and 900mm, with a 30-year trend line that is essentially flat, rising only slightly from around 610mm to 640mm.</p>
+
+            <p class="faq-q">Is Lahore's rainfall increasing?</p>
+            <p>Only marginally. The 30-year ERA5 record shows an annual trend of approximately +10mm per decade — one of the flattest rainfall trends of any city in this series, in sharp contrast to Lahore's clearly rising temperature trend.</p>
+
+            <p class="faq-q">Why is Lahore so hot?</p>
+            <p>Lahore's inland, continental position means it lacks the coastal moderation that tempers cities like Karachi or Colombo. Monsoon-season mean temperatures regularly exceed 30°C, pre-monsoon temperatures have hit a record 29.1°C (2010), and the city records between roughly 9 and 46 extreme heat days (≥40°C) per year.</p>
+
+            <p class="faq-q">What is the wettest year on record for Lahore?</p>
+            <p>1996 is the wettest year in the 1996–2025 ERA5 record, at roughly 890mm, narrowly ahead of 1995 (~820mm) and 2025 (~860mm).</p>
+
+            <p class="faq-q">What was Lahore's lowest winter temperature in the last 10 years?</p>
+            <p>Looking at winter (Dec–Feb) mean temperatures from 2016–2025, the coldest winter on average was 2024, at approximately 12.05°C, narrowly colder than 2019 (~12.1°C). This reflects the seasonal average, not a single coldest recorded day, which would be considerably lower.</p>
+
+            <p>See the full <a href="lahore-warming-trend.html">Lahore climate trend report</a> for complete seasonal breakdowns, or the <a href="south-asia-climate-trend-report.html">South Asia climate trend report</a> for how all cities in this series compare.</p>
+        </article>
+
+        <footer>
+            Data source: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a> (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built by a meteorologist, MPhil Environmental Sciences.
+            <br /><br />
+            <a href="lahore-warming-trend.html">← Back to the full Lahore report</a> &middot; <a href="index.html">All Cities</a>
+        </footer>
+    </div>
+</body>
+</html>
