@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Islamabad Annual Rainfall: 30 Years of Trend Data (1996–2025) | South Asia Climate Trends</title>
+    <meta name="description" content="How much does it rain in Islamabad each year, and is it increasing? A 30-year data breakdown reveals a surprising split: Islamabad's fastest-warming season, winter, is also its only season with declining rainfall." />
+    <link rel="canonical" href="https://southasiaclimate.github.io/south-asia-climate-trends/islamabad-annual-rainfall.html" />
+
+    <meta property="og:title" content="Islamabad Annual Rainfall: 30 Years of Trend Data (1996–2025)" />
+    <meta property="og:description" content="Islamabad's monsoon rainfall is rising fast — but its fastest-warming season, winter, is the one season where rainfall is actually declining." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/southasiaclimate/south-asia-climate-trends/main/images/islamabad-annual-precipitation.png" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "How much rain does Islamabad get per year?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Based on 1996-2025 ERA5 reanalysis data, Islamabad's annual rainfall typically falls between 800mm and 1,300mm, with a 30-year trend line rising from around 900mm to roughly 1,080mm."}},
+        {"@type": "Question", "name": "Is Islamabad's rainfall increasing?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes, at the annual level \u2014 approximately +60mm per decade \u2014 but this is driven almost entirely by the monsoon season (+57mm/decade). Winter rainfall, by contrast, is trending slightly downward even as winter is Islamabad's fastest-warming season."}},
+        {"@type": "Question", "name": "Why is Islamabad's winter rainfall declining while winter temperature rises so fast?",
+         "acceptedAnswer": {"@type": "Answer", "text": "These are two different atmospheric signals that don't have to move together. Winter temperature in Islamabad is rising faster than any other season in this entire series (~+1.23\u00b0C/decade), largely independent of western disturbance activity, which governs winter precipitation and shows a modest declining trend (~-10mm/decade) over the same period."}},
+        {"@type": "Question", "name": "What is the wettest year on record for Islamabad?",
+         "acceptedAnswer": {"@type": "Answer", "text": "2020 is the wettest year in the 1996-2025 ERA5 record, at roughly 1,440mm \u2014 well above any other year in the dataset."}},
+        {"@type": "Question", "name": "Which season drives Islamabad's rising rainfall trend?",
+         "acceptedAnswer": {"@type": "Answer", "text": "The monsoon (June-September), which shows the steepest seasonal precipitation increase (~+57mm/decade) and includes 2025's record monsoon total of roughly 865mm \u2014 nearly matching the entire annual rainfall of a dry year like 2000 or 2009."}}
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GD8FJCBENG');
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            background: #F6F4EF;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem 1.5rem; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .breadcrumb a { color: #2E5A5E; text-decoration: none; }
+        header.article-head { margin-bottom: 2rem; }
+        .tag-row { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #2E5A5E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+        h1 { font-size: 2.1rem; color: #101B2D; line-height: 1.2; margin: 0 0 0.8rem 0; }
+        .meta { color: #8A8A8A; font-size: 0.9rem; }
+        h2 { color: #101B2D; margin-top: 2.4rem; font-size: 1.5rem; border-bottom: 2px solid #D9A441; padding-bottom: 0.4rem; }
+        h3 { color: #101B2D; margin-top: 1.8rem; font-size: 1.2rem; }
+        h4 { color: #2E5A5E; margin-top: 1.4rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        p { margin: 0.9rem 0; }
+        img { max-width: 100%; border-radius: 10px; border: 1px solid #E6E2D8; margin: 1rem 0; }
+        .key-figure { font-size: 1.6rem; font-weight: 700; color: #101B2D; margin: 0.3rem 0 1rem 0; }
+        ul { padding-left: 1.3rem; }
+        li { margin-bottom: 0.5rem; }
+        .faq-q { font-weight: 600; margin-top: 1.2rem; }
+        .note {
+            background: #FBF4E4;
+            border-left: 3px solid #D9A441;
+            padding: 0.8rem 1rem;
+            font-size: 0.88rem;
+            color: #565656;
+            border-radius: 4px;
+            margin: 1.2rem 0;
+        }
+        .answer-box {
+            background: #FFFFFF;
+            border: 1px solid #E6E2D8;
+            border-left: 4px solid #2E5A5E;
+            border-radius: 6px;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: 0.82rem; }
+        th, td { text-align: left; padding: 0.4rem 0.45rem; border-bottom: 1px solid #E6E2D8; }
+        th { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; text-transform: uppercase; color: #2E5A5E; }
+        .cta-box {
+            background: linear-gradient(160deg, #101B2D 0%, #2E5A5E 100%);
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin: 2.5rem 0;
+            color: #F6F4EF;
+        }
+        .cta-box a {
+            display: inline-block;
+            background: #D9A441;
+            color: #101B2D;
+            font-weight: 700;
+            padding: 0.7rem 1.3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 0.8rem;
+        }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #8A8A8A; border-top: 1px solid #E6E2D8; padding-top: 1.2rem; }
+        footer a { color: #2E5A5E; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">South Asia Climate Trends</a> / <a href="islamabad-warming-trend.html">Islamabad</a> / Annual Rainfall
+        </div>
+
+        <header class="article-head">
+            <div class="tag-row">Pakistan &middot; Islamabad Capital Territory &middot; Rainfall Deep Dive &middot; 30-Year Data</div>
+            <h1>Islamabad Annual Rainfall: 30 Years of Trend Data (1996–2025)</h1>
+            <div class="meta">Published September 7, 2026 &middot; Islamabad, Pakistan</div>
+        </header>
+
+        <article>
+            <div class="answer-box">
+                <strong>Quick answer:</strong> Islamabad's annual rainfall typically falls between <strong>800mm and 1,300mm</strong>, with a 30-year ERA5 trend line rising from around <strong>900mm</strong> in the mid-1990s to roughly <strong>1,080mm</strong> by 2025 — about <strong>+60mm per decade</strong>. But that headline number hides a genuine split: the increase is driven almost entirely by the monsoon season, while winter — Islamabad's <a href="islamabad-warming-trend.html">fastest-warming season</a> by a wide margin — is actually seeing rainfall decline slightly.
+            </div>
+
+            <p>Islamabad already holds the distinction of the fastest overall annual warming rate of any lowland city in this series (~+0.77°C/decade), and its winter warming (~+1.23°C/decade) is the fastest of any season measured anywhere in this dataset. Given that, it would be reasonable to assume winter rainfall is rising too. It isn't. This report covers Islamabad's full rainfall picture — the annual trend, the season driving it, and the one season moving in the opposite direction from what the temperature data alone might suggest — as a companion to our full <a href="islamabad-warming-trend.html">Islamabad climate trend report</a>.</p>
+
+            <h2>How Much Does It Rain in Islamabad Each Year?</h2>
+            <img src="images/islamabad-annual-precipitation.png" alt="Islamabad annual total precipitation trend chart, 1995-2025" />
+            <p>Annual totals are among the highest of any city in this series, reflecting Islamabad's position at the foothills of the Himalaya where both monsoon and western disturbance systems contribute rainfall. Totals range from roughly 615mm in the driest years to a record 1,440mm.</p>
+
+            <h4>Key Figure: Annual Precipitation Trend</h4>
+            <div class="key-figure">Approximately +60mm per decade</div>
+            <p>A meaningful increase, though smaller than Mumbai's (+300mm/decade) or Colombo's (+170mm/decade) — see our <a href="south-asia-climate-trend-report.html">South Asia climate trend report</a> for how all cities compare.</p>
+
+            <h2>Wettest and Driest Years on Record</h2>
+            <table>
+                <tr><th>Year(s)</th><th>Annual Total</th><th>Note</th></tr>
+                <tr><td>2020</td><td>~1,440mm</td><td>Wettest year on record, well above any other year</td></tr>
+                <tr><td>1995–1996</td><td>~1,280mm each</td><td>Second-wettest period</td></tr>
+                <tr><td>2000, 2009, 2016</td><td>~615–680mm</td><td>Driest years on record</td></tr>
+            </table>
+
+            <h2>Rainfall by Season — and the Winter Disconnect</h2>
+            <p>Breaking the annual total down by season shows exactly where the increase is coming from, and where it isn't.</p>
+            <table>
+                <tr><th>Season</th><th>Typical Range</th><th>Precipitation Trend</th></tr>
+                <tr><td>Winter (Dec–Feb)</td><td>40–370mm</td><td>~&minus;10mm/decade (declining)</td></tr>
+                <tr><td>Pre-Monsoon/Hot (Mar–May)</td><td>70–460mm</td><td>Essentially flat (~+2mm/decade)</td></tr>
+                <tr><td>Monsoon (Jun–Sep)</td><td>230–865mm</td><td>~+57mm/decade — the dominant driver of the annual trend</td></tr>
+                <tr><td>Post-Monsoon (Oct–Nov)</td><td>5–195mm</td><td>~+5mm/decade (modest)</td></tr>
+            </table>
+
+            <h4>Key Insight</h4>
+            <div class="key-figure">Winter warms fastest — but its rainfall is declining</div>
+            <p>This is the most notable finding in Islamabad's data. Winter (December–February) shows the fastest-warming trend of any season in this entire series (~+1.23°C/decade, according to our full climate trend report), yet winter precipitation is trending slightly <em>downward</em> (~&minus;10mm/decade) over the same 30 years. These are two different atmospheric signals: winter temperature in this region responds strongly to broader regional and global warming, while winter precipitation depends heavily on the frequency and strength of western disturbances — a separate weather system that isn't necessarily tracking the same trend. The practical takeaway: a warmer winter in Islamabad does not necessarily mean a wetter one.</p>
+
+            <p>The monsoon tells the opposite story — it's both a large contributor to Islamabad's total rainfall and the season with the clearest rising trend, punctuated by 2025's record monsoon total of roughly <strong>865mm</strong>, alone nearly matching the entire annual rainfall of a dry year like 2000 or 2009.</p>
+
+            <div class="note">
+                <strong>A note on extreme heat:</strong> Islamabad's extreme-heat-day count (≥40°C) remains low and noisy across the record — mostly 0 to 11 days a year, with a sharp single-year spike to roughly 20 days in 2012. This is consistent with Islamabad's cooler, higher-elevation setting relative to Lahore or Delhi, and doesn't show a clear multi-decade trend either way.
+            </div>
+
+            <h2>How Islamabad Compares to Other South Asian Cities</h2>
+            <table>
+                <tr><th>City</th><th>Annual Precip Trend</th><th>Annual Warming Rate</th><th>Fastest Season (Temp)</th></tr>
+                <tr><td><strong>Islamabad</strong></td><td>~+60mm/decade</td><td>~+0.77°C/decade</td><td>Winter</td></tr>
+                <tr><td><a href="lahore-annual-rainfall.html">Lahore</a></td><td>~+10mm/decade</td><td>~+0.13°C/decade</td><td>Monsoon</td></tr>
+                <tr><td><a href="karachi-annual-rainfall.html">Karachi</a></td><td>+88.7mm/decade</td><td>~+0.13°C/decade</td><td>Monsoon</td></tr>
+                <tr><td><a href="rasuwagadhi-climate-trend.html">Rasuwagadhi</a></td><td>~&minus;367mm/decade</td><td>~+0.90°C/decade</td><td>Winter</td></tr>
+            </table>
+            <p>Islamabad and Rasuwagadhi are the only two locations in this series where winter is the fastest-warming season — an unusual pattern most other cities don't share, where monsoon or post-monsoon typically warms fastest instead. See our full <a href="fastest-warming-south-asia-city.html">warming-rate ranking</a> for how all 9 locations compare.</p>
+
+            <div class="cta-box">
+                <strong>Explore the year-by-year data yourself</strong>
+                <p style="color:#D8DEE0; margin-bottom:0;">See Islamabad's full interactive rainfall and temperature trends, or compare it against any other South Asian city.</p>
+                <a href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">Open the Interactive Dashboard →</a>
+            </div>
+
+            <h2>Data Source &amp; Methodology</h2>
+            <p>All figures in this report are derived from the <strong>Open-Meteo Historical Weather API</strong>, built on <strong>ERA5 and ERA5-Land reanalysis data</strong> produced by the <strong>European Centre for Medium-Range Weather Forecasts (ECMWF)</strong> through the <strong>Copernicus Climate Change Service</strong>, covering January 1996 through 2025. Trend rates are estimated by reading the linear regression trend line plotted on each chart across the full study period. Seasonal boundaries follow the standard South Asian meteorological convention: Winter (December–February), Pre-Monsoon/Hot (March–May), Monsoon (June–September), and Post-Monsoon (October–November). Annual warming-rate figures referenced here are drawn from our full <a href="islamabad-warming-trend.html">Islamabad climate trend report</a>.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p class="faq-q">How much rain does Islamabad get per year?</p>
+            <p>Based on 1996–2025 ERA5 reanalysis data, Islamabad's annual rainfall typically falls between 800mm and 1,300mm, with a 30-year trend line rising from around 900mm to roughly 1,080mm.</p>
+
+            <p class="faq-q">Is Islamabad's rainfall increasing?</p>
+            <p>Yes, at the annual level — approximately +60mm per decade — but this is driven almost entirely by the monsoon season (+57mm/decade). Winter rainfall, by contrast, is trending slightly downward even as winter is Islamabad's fastest-warming season.</p>
+
+            <p class="faq-q">Why is Islamabad's winter rainfall declining while winter temperature rises so fast?</p>
+            <p>These are two different atmospheric signals that don't have to move together. Winter temperature in Islamabad is rising faster than any other season in this entire series (~+1.23°C/decade), largely independent of western disturbance activity, which governs winter precipitation and shows a modest declining trend (~&minus;10mm/decade) over the same period.</p>
+
+            <p class="faq-q">What is the wettest year on record for Islamabad?</p>
+            <p>2020 is the wettest year in the 1996–2025 ERA5 record, at roughly 1,440mm — well above any other year in the dataset.</p>
+
+            <p class="faq-q">Which season drives Islamabad's rising rainfall trend?</p>
+            <p>The monsoon (June–September), which shows the steepest seasonal precipitation increase (~+57mm/decade) and includes 2025's record monsoon total of roughly 865mm — nearly matching the entire annual rainfall of a dry year like 2000 or 2009.</p>
+
+            <p>See the full <a href="islamabad-warming-trend.html">Islamabad climate trend report</a> for temperature trends and complete seasonal breakdowns, or the <a href="south-asia-climate-trend-report.html">South Asia climate trend report</a> for how all cities in this series compare.</p>
+        </article>
+
+        <footer>
+            Data source: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a> (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built by a meteorologist, MPhil Environmental Sciences.
+            <br /><br />
+            <a href="islamabad-warming-trend.html">← Back to the full Islamabad report</a> &middot; <a href="index.html">All Cities</a>
+        </footer>
+    </div>
+</body>
+</html>
