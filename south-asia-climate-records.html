@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>South Asia's Climate Records: Hottest, Coldest, Wettest, and Driest Years, City by City | South Asia Climate Trends</title>
+    <meta name="description" content="Every record year from 30 years of ERA5 climate data across 9 South Asian cities — hottest, coldest, wettest, driest, and most extreme heat days, city by city, all in one place." />
+    <link rel="canonical" href="https://southasiaclimate.github.io/south-asia-climate-trends/south-asia-climate-records.html" />
+
+    <meta property="og:title" content="South Asia's Climate Records: Hottest, Coldest, Wettest, and Driest Years, City by City" />
+    <meta property="og:description" content="Delhi's 2024 monsoon nearly doubled any other year on record. Karachi's 2022 was 27 times its 1990s baseline. Every climate record from this 30-year series, in one place." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/southasiaclimate/south-asia-climate-trends/main/images/mumbai-annual-precipitation.png" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Which South Asian city had the wettest year on record?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Mumbai's 2020 (~2,750mm) and Islamabad's 2020 (~1,440mm) both stand out, but in relative terms, Karachi's 2022 (~830mm, roughly 27 times its 1990s baseline) and Delhi's 2024 (~1,200mm, nearly double any other year) represent the most dramatic single-year departures from normal across this 9-location series."}},
+        {"@type": "Question", "name": "Which South Asian city had the hottest year on record?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Mumbai's 2025 (27.3\u00b0C annual mean) and Dhaka's 2025 (~26.5\u00b0C, its warmest August on record within that year) both set records, alongside Islamabad's 2022 (22.6\u00b0C). Several cities in this series recorded their hottest year on record within the final two years of the 30-year study period."}},
+        {"@type": "Question", "name": "Which South Asian city had the coldest year on record?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Kathmandu's 1997 (17.15\u00b0C annual mean) and Delhi's 1997 (23.0\u00b0C) both stand out as record cold years, alongside Islamabad's coldest winter on record, also 1995 (8.9\u00b0C seasonal mean)."}},
+        {"@type": "Question", "name": "Which South Asian city had the driest year on record?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Lahore's 2021 (~385mm) and Islamabad's shared low years around 2000 and 2009 (~615-670mm) stand out as the most pronounced dry-year records in this series."}},
+        {"@type": "Question", "name": "What is the most extreme single-year climate record in this entire series?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Karachi's 2022 annual rainfall (~830mm against a 1990s baseline near 30mm) is arguably the most extreme relative departure in the dataset \u2014 roughly 27 times the trend-line baseline for that era, coinciding with Pakistan's catastrophic 2022 monsoon floods."}}
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GD8FJCBENG');
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            background: #F6F4EF;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        .container { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem 1.5rem; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .breadcrumb a { color: #2E5A5E; text-decoration: none; }
+        header.article-head { margin-bottom: 2rem; }
+        .tag-row { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #2E5A5E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+        h1 { font-size: 2.1rem; color: #101B2D; line-height: 1.2; margin: 0 0 0.8rem 0; }
+        .meta { color: #8A8A8A; font-size: 0.9rem; }
+        h2 { color: #101B2D; margin-top: 2.4rem; font-size: 1.5rem; border-bottom: 2px solid #D9A441; padding-bottom: 0.4rem; }
+        h3 { color: #101B2D; margin-top: 1.8rem; font-size: 1.2rem; }
+        h4 { color: #2E5A5E; margin-top: 1.4rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        p { margin: 0.9rem 0; }
+        img { max-width: 100%; border-radius: 10px; border: 1px solid #E6E2D8; margin: 1rem 0; }
+        .key-figure { font-size: 1.6rem; font-weight: 700; color: #101B2D; margin: 0.3rem 0 1rem 0; }
+        ul { padding-left: 1.3rem; }
+        li { margin-bottom: 0.5rem; }
+        .faq-q { font-weight: 600; margin-top: 1.2rem; }
+        .note {
+            background: #FBF4E4;
+            border-left: 3px solid #D9A441;
+            padding: 0.8rem 1rem;
+            font-size: 0.88rem;
+            color: #565656;
+            border-radius: 4px;
+            margin: 1.2rem 0;
+        }
+        .answer-box {
+            background: #FFFFFF;
+            border: 1px solid #E6E2D8;
+            border-left: 4px solid #2E5A5E;
+            border-radius: 6px;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: 0.8rem; }
+        th, td { text-align: left; padding: 0.4rem 0.45rem; border-bottom: 1px solid #E6E2D8; }
+        th { font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; text-transform: uppercase; color: #2E5A5E; }
+
+        .record-card {
+            background: #FFFFFF;
+            border: 1px solid #E6E2D8;
+            border-left: 4px solid #D9A441;
+            border-radius: 8px;
+            padding: 1rem 1.2rem;
+            margin: 0.8rem 0;
+        }
+        .record-card .city-name { font-weight: 700; color: #101B2D; }
+        .record-card .record-value { font-family: 'IBM Plex Mono', monospace; color: #2E5A5E; font-weight: 600; }
+
+        .cta-box {
+            background: linear-gradient(160deg, #101B2D 0%, #2E5A5E 100%);
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin: 2.5rem 0;
+            color: #F6F4EF;
+        }
+        .cta-box a {
+            display: inline-block;
+            background: #D9A441;
+            color: #101B2D;
+            font-weight: 700;
+            padding: 0.7rem 1.3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 0.8rem;
+        }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #8A8A8A; border-top: 1px solid #E6E2D8; padding-top: 1.2rem; }
+        footer a { color: #2E5A5E; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">South Asia Climate Trends</a> / Climate Records
+        </div>
+
+        <header class="article-head">
+            <div class="tag-row">Regional &middot; Reference &middot; 9 Locations &middot; 30-Year Data</div>
+            <h1>South Asia's Climate Records: Hottest, Coldest, Wettest, and Driest Years, City by City</h1>
+            <div class="meta">Published September 11, 2026 &middot; Regional Reference</div>
+        </header>
+
+        <article>
+            <div class="answer-box">
+                <strong>Quick summary:</strong> Across 30 years of ERA5 reanalysis data spanning 9 South Asian cities and locations, several records stand out sharply: <strong>Delhi's 2024</strong> monsoon nearly doubled any other year on record; <strong>Karachi's 2022</strong> rainfall was roughly <strong>27 times</strong> its 1990s baseline; and a striking number of temperature records — in Mumbai, Dhaka, and elsewhere — were set within just the <strong>last two years</strong> of the entire 30-year study period.
+            </div>
+
+            <p>This report pulls together every hottest, coldest, wettest, and driest year already documented across our full city-by-city series, in one reference page. Every figure below is sourced from the individual full reports — follow the links throughout for complete seasonal breakdowns and methodology.</p>
+
+            <h2>Records at a Glance</h2>
+            <table>
+                <tr><th>City</th><th>Hottest Year</th><th>Coldest Year</th><th>Wettest Year</th><th>Driest Year</th></tr>
+                <tr><td><a href="karachi-warming-trend.html">Karachi</a></td><td>2024 (~26.75°C)</td><td>1995–97 range</td><td>2022 (~830mm)</td><td>Most years &lt;150mm</td></tr>
+                <tr><td><a href="delhi-warming-trend.html">Delhi</a></td><td>2009 &amp; 2025 (~25.3°C, tied)</td><td>1997 (~23.0°C)</td><td>2024 (~1,200mm)</td><td>2006 &amp; 2013 (~460mm)</td></tr>
+                <tr><td><a href="dhaka-warming-trend.html">Dhaka</a></td><td>2025 (~26.5°C, record)</td><td>Mid-1990s baseline</td><td>Mid-1990s baseline (~2,100mm)</td><td>Recent years (~1,700mm)</td></tr>
+                <tr><td><a href="colombo-warming-trend.html">Colombo</a></td><td>Recent years cluster</td><td>Mid-1990s baseline</td><td>2023 &amp; 2024 (&gt;3,300mm)</td><td>Early record years</td></tr>
+                <tr><td><a href="kathmandu-warming-trend.html">Kathmandu</a></td><td>2010 (19.0°C)</td><td>1997 (17.15°C)</td><td>Variable, no sharp outlier</td><td>2017–2021 cluster (cool)</td></tr>
+                <tr><td><a href="lahore-warming-trend.html">Lahore</a></td><td>Recent years cluster</td><td>2024 winter (~12.05°C)</td><td>1996 (~890mm)</td><td>2021 (~385mm)</td></tr>
+                <tr><td><a href="islamabad-warming-trend.html">Islamabad</a></td><td>2022 (22.6°C)</td><td>1995 winter (8.9°C)</td><td>2020 (~1,440mm)</td><td>2000 &amp; 2009 (~615–670mm)</td></tr>
+                <tr><td><a href="mumbai-climate-trends.html">Mumbai</a></td><td>2025 (27.3°C, record)</td><td>2012 (26.25°C)</td><td>2020 (~2,750mm)</td><td>1995 (~1,300mm)</td></tr>
+                <tr><td><a href="rasuwagadhi-climate-trend.html">Rasuwagadhi</a></td><td>2021 (~17.7°C)</td><td>1997 (~13.6°C)</td><td>1990s–2000s baseline</td><td>2025 monsoon (~620mm)</td></tr>
+            </table>
+
+            <h2>Hottest Years</h2>
+            <div class="record-card">
+                <span class="city-name">Mumbai — 2025:</span> <span class="record-value">27.3°C annual mean</span><br />
+                The warmest year on record, edging out 2024 (27.1°C) — part of a sharp recent acceleration that saw Mumbai's annual mean jump nearly a full degree between 2022 and 2025.
+            </div>
+            <div class="record-card">
+                <span class="city-name">Dhaka — 2025:</span> <span class="record-value">~26.5°C annual mean</span><br />
+                The highest point in Dhaka's entire 30-year record, part of the steadiest, most consistent warming climb of any city in this series.
+            </div>
+            <div class="record-card">
+                <span class="city-name">Delhi — 2009 &amp; 2025 (tied):</span> <span class="record-value">~25.3°C annual mean</span><br />
+                Notably, neither of these years was also Delhi's record year for <a href="delhi-extreme-heat-days.html">extreme heat days</a> — that record belongs to 2010, a genuinely different kind of hot year.
+            </div>
+            <div class="record-card">
+                <span class="city-name">Islamabad — 2022:</span> <span class="record-value">22.6°C annual mean</span><br />
+                Part of a dramatic post-2015 step-up in Islamabad's annual temperatures, with <a href="islamabad-winter-anomaly.html">winter specifically warming faster than any other season anywhere in this series</a>.
+            </div>
+
+            <h2>Coldest Years</h2>
+            <div class="record-card">
+                <span class="city-name">Kathmandu — 1997:</span> <span class="record-value">17.15°C annual mean</span><br />
+                The coldest point in Kathmandu's record — fitting, given Kathmandu is the <a href="kathmandu-not-warming.html">only location in this series without a clear warming trend</a>.
+            </div>
+            <div class="record-card">
+                <span class="city-name">Delhi — 1997:</span> <span class="record-value">23.0°C annual mean</span><br />
+                By a wide margin the coldest year in Delhi's 30-year record.
+            </div>
+            <div class="record-card">
+                <span class="city-name">Islamabad — 1995 (winter):</span> <span class="record-value">8.9°C seasonal mean</span><br />
+                The coldest winter on record — remarkable given the same season now holds Islamabad's <em>fastest</em>-warming trend of any season in this entire series, nearly 5°C warmer by 2025.
+            </div>
+            <div class="record-card">
+                <span class="city-name">Lahore — 2024 (winter, last-decade record):</span> <span class="record-value">~12.05°C seasonal mean</span><br />
+                The coldest winter of the past 10 years, narrowly below 2019 — notable as an exception within Lahore's broader winter warming trend.
+            </div>
+
+            <h2>Wettest Years</h2>
+            <div class="record-card">
+                <span class="city-name">Delhi — 2024:</span> <span class="record-value">~1,200mm annual</span><br />
+                Nearly double most other years in the record, driven by an exceptional ~1,090mm monsoon — itself a 30-year record for that season alone.
+            </div>
+            <div class="record-card">
+                <span class="city-name">Karachi — 2022:</span> <span class="record-value">~830mm annual</span><br />
+                The most dramatic relative departure of any record in this series — roughly <strong>27 times</strong> Karachi's 1990s trend-line baseline, coinciding with Pakistan's catastrophic 2022 monsoon flooding.
+            </div>
+            <div class="record-card">
+                <span class="city-name">Mumbai — 2020:</span> <span class="record-value">~2,750mm annual</span><br />
+                Part of a much steadier, broader-based rainfall increase than Delhi's or Karachi's outlier-driven trends — see our <a href="mumbai-vs-karachi.html">Mumbai vs. Karachi comparison</a> for why that distinction matters.
+            </div>
+            <div class="record-card">
+                <span class="city-name">Colombo — 2023 &amp; 2024:</span> <span class="record-value">Both above 3,300mm</span><br />
+                Consistent with Colombo's position as the wettest city in this entire series on a typical-year basis — see our <a href="colombo-annual-rainfall.html">Colombo annual rainfall report</a>.
+            </div>
+            <div class="record-card">
+                <span class="city-name">Islamabad — 2020:</span> <span class="record-value">~1,440mm annual</span><br />
+                The clear outlier in Islamabad's record, well above any other year.
+            </div>
+
+            <h2>Driest Years</h2>
+            <div class="record-card">
+                <span class="city-name">Lahore — 2021:</span> <span class="record-value">~385mm annual</span><br />
+                The driest year in Lahore's record, against a rainfall trend that's essentially flat (~+10mm/decade) over 30 years — see our <a href="lahore-annual-rainfall.html">Lahore annual rainfall report</a>.
+            </div>
+            <div class="record-card">
+                <span class="city-name">Islamabad — 2000 &amp; 2009:</span> <span class="record-value">~615–670mm annual</span><br />
+                Both roughly half the record year (2020)'s total.
+            </div>
+            <div class="record-card">
+                <span class="city-name">Delhi — 2006 &amp; 2013:</span> <span class="record-value">~460mm annual</span><br />
+                Tied for the driest years in Delhi's record.
+            </div>
+            <div class="record-card">
+                <span class="city-name">Rasuwagadhi — 2025 (monsoon):</span> <span class="record-value">~620mm</span><br />
+                By far the lowest monsoon total on record for Rasuwagadhi, part of the steepest rainfall decline documented anywhere in this series (~&minus;367mm/decade annually).
+            </div>
+
+            <h2>Extreme Heat Day Records</h2>
+            <table>
+                <tr><th>City</th><th>Record Year</th><th>Days ≥40°C</th></tr>
+                <tr><td><a href="delhi-extreme-heat-days.html">Delhi</a></td><td>2010</td><td>~52 days (highest in series)</td></tr>
+                <tr><td>Lahore</td><td>2002 &amp; 2009 (tied)</td><td>~46 days</td></tr>
+                <tr><td>Islamabad</td><td>2012</td><td>20 days</td></tr>
+                <tr><td>Karachi</td><td>Multiple clustered years</td><td>3–5 days</td></tr>
+                <tr><td>Mumbai, Colombo, Dhaka</td><td>Essentially none</td><td>~0 days</td></tr>
+            </table>
+            <p>Delhi's 2010 record is genuinely striking on its own terms: as our <a href="delhi-extreme-heat-days.html">extreme heat report</a> found, 2010 wasn't even Delhi's hottest year by annual average — proof that "most extreme heat days" and "hottest year overall" can be entirely different records.</p>
+
+            <div class="note">
+                <strong>A pattern worth noting:</strong> a disproportionate number of the records above — Mumbai's, Dhaka's, and Delhi's hottest years, several rainfall records — were set within just the final two to three years of this 30-year dataset (2023–2025). Whether this reflects accelerating climate trends, short-term natural variability, or both, is a question best answered as more years of data accumulate — but it's a pattern consistent across multiple, independently analyzed cities.
+            </div>
+
+            <h2>Explore Every Full Report</h2>
+            <ul>
+                <li><a href="karachi-warming-trend.html">Karachi</a> · <a href="karachi-annual-rainfall.html">Karachi rainfall</a></li>
+                <li><a href="delhi-warming-trend.html">Delhi</a> · <a href="delhi-annual-rainfall.html">Delhi rainfall</a> · <a href="delhi-extreme-heat-days.html">Delhi extreme heat</a></li>
+                <li><a href="dhaka-warming-trend.html">Dhaka</a></li>
+                <li><a href="colombo-warming-trend.html">Colombo</a> · <a href="colombo-annual-rainfall.html">Colombo rainfall</a></li>
+                <li><a href="kathmandu-warming-trend.html">Kathmandu</a> · <a href="kathmandu-not-warming.html">Why Kathmandu isn't warming</a></li>
+                <li><a href="lahore-warming-trend.html">Lahore</a> · <a href="lahore-annual-rainfall.html">Lahore rainfall &amp; heat</a></li>
+                <li><a href="islamabad-warming-trend.html">Islamabad</a> · <a href="islamabad-annual-rainfall.html">Islamabad rainfall</a> · <a href="islamabad-winter-anomaly.html">Islamabad's winter anomaly</a></li>
+                <li><a href="mumbai-climate-trends.html">Mumbai</a></li>
+                <li><a href="rasuwagadhi-climate-trend.html">Rasuwagadhi</a></li>
+            </ul>
+            <p>See also our <a href="fastest-warming-south-asia-city.html">warming-rate ranking</a>, <a href="dhaka-vs-karachi.html">Dhaka vs. Karachi</a> and <a href="mumbai-vs-karachi.html">Mumbai vs. Karachi</a> comparisons, and the <a href="south-asia-climate-trend-report.html">South Asia climate trend report</a> for the full narrative picture.</p>
+
+            <div class="cta-box">
+                <strong>Explore the year-by-year data yourself</strong>
+                <p style="color:#D8DEE0; margin-bottom:0;">See any city's complete record, or compare multiple cities side by side.</p>
+                <a href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">Open the Interactive Dashboard →</a>
+            </div>
+
+            <h2>Data Source &amp; Methodology</h2>
+            <p>All records in this report are compiled from our individual city reports, each built on the <strong>Open-Meteo Historical Weather API</strong> using <strong>ERA5 and ERA5-Land reanalysis data</strong> from the <strong>European Centre for Medium-Range Weather Forecasts (ECMWF)</strong> via the <strong>Copernicus Climate Change Service</strong>, covering January 1995/96 through 2025 (Rasuwagadhi's underlying dataset spans a slightly longer window). Individual record values should be read alongside each city's full report for seasonal context and methodology notes — this page is a reference index, not a substitute for the underlying analysis.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p class="faq-q">Which South Asian city had the wettest year on record?</p>
+            <p>Mumbai's 2020 (~2,750mm) and Islamabad's 2020 (~1,440mm) both stand out, but in relative terms, Karachi's 2022 (~830mm, roughly 27 times its 1990s baseline) and Delhi's 2024 (~1,200mm, nearly double any other year) represent the most dramatic single-year departures from normal across this 9-location series.</p>
+
+            <p class="faq-q">Which South Asian city had the hottest year on record?</p>
+            <p>Mumbai's 2025 (27.3°C annual mean) and Dhaka's 2025 (~26.5°C) both set records, alongside Islamabad's 2022 (22.6°C). Several cities in this series recorded their hottest year on record within the final two years of the 30-year study period.</p>
+
+            <p class="faq-q">Which South Asian city had the coldest year on record?</p>
+            <p>Kathmandu's 1997 (17.15°C annual mean) and Delhi's 1997 (23.0°C) both stand out as record cold years, alongside Islamabad's coldest winter on record, also 1995 (8.9°C seasonal mean).</p>
+
+            <p class="faq-q">Which South Asian city had the driest year on record?</p>
+            <p>Lahore's 2021 (~385mm) and Islamabad's shared low years around 2000 and 2009 (~615–670mm) stand out as the most pronounced dry-year records in this series.</p>
+
+            <p class="faq-q">What is the most extreme single-year climate record in this entire series?</p>
+            <p>Karachi's 2022 annual rainfall (~830mm against a 1990s baseline near 30mm) is arguably the most extreme relative departure in the dataset — roughly 27 times the trend-line baseline for that era, coinciding with Pakistan's catastrophic 2022 monsoon floods.</p>
+        </article>
+
+        <footer>
+            Data source: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a> (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built by a meteorologist, MPhil Environmental Sciences.
+            <br /><br />
+            <a href="index.html">← Back to South Asia Climate Trends</a>
+        </footer>
+    </div>
+</body>
+</html>
