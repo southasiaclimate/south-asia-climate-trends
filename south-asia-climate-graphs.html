@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>South Asia Climate Graphs: Temperature & Rainfall Charts for Every City | South Asia Climate Trends</title>
+    <meta name="description" content="Annual temperature and rainfall climate graphs for Mumbai, Delhi, Karachi, Dhaka, Colombo, Kathmandu, Lahore, Islamabad, and Rasuwagadhi — 30 years of ERA5 data, charted city by city." />
+    <link rel="canonical" href="https://southasiaclimate.github.io/south-asia-climate-trends/south-asia-climate-graphs.html" />
+
+    <meta property="og:title" content="South Asia Climate Graphs: Temperature & Rainfall Charts for Every City" />
+    <meta property="og:description" content="30 years of annual temperature and rainfall climate graphs for every city in this series, in one place." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/southasiaclimate/south-asia-climate-trends/main/images/mumbai-annual-mean-temperature.png" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Where can I find a climate graph of Mumbai?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Mumbai's annual temperature and rainfall climate graphs, covering 1995-2025, are available on this page and in our full Mumbai climate trend report, both built on ERA5 reanalysis data."}},
+        {"@type": "Question", "name": "Where can I find a climate graph of Delhi?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Delhi's annual temperature and rainfall climate graphs, covering 1995-2025, are available on this page and in our full Delhi climate trend report, both built on ERA5 reanalysis data."}},
+        {"@type": "Question", "name": "What does a climate graph show?",
+         "acceptedAnswer": {"@type": "Answer", "text": "A climate graph typically shows how a location's temperature and rainfall have changed over time, often with a trend line indicating the long-term direction. The graphs on this page show annual mean temperature and annual total precipitation for each city from 1995/96 through 2025, based on ERA5 reanalysis data."}},
+        {"@type": "Question", "name": "What data source is used for these climate graphs?",
+         "acceptedAnswer": {"@type": "Answer", "text": "All graphs are built from the Open-Meteo Historical Weather API, using ERA5 and ERA5-Land reanalysis data produced by the European Centre for Medium-Range Weather Forecasts (ECMWF) through the Copernicus Climate Change Service."}}
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GD8FJCBENG');
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            background: #F6F4EF;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        .container { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem 1.5rem; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .breadcrumb a { color: #2E5A5E; text-decoration: none; }
+        header.article-head { margin-bottom: 2rem; }
+        .tag-row { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #2E5A5E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+        h1 { font-size: 2.1rem; color: #101B2D; line-height: 1.2; margin: 0 0 0.8rem 0; }
+        .meta { color: #8A8A8A; font-size: 0.9rem; }
+        h2 { color: #101B2D; margin-top: 2.6rem; font-size: 1.5rem; border-bottom: 2px solid #D9A441; padding-bottom: 0.4rem; }
+        h3 { color: #101B2D; margin-top: 1.8rem; font-size: 1.15rem; }
+        h4 { color: #2E5A5E; margin-top: 1.2rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        p { margin: 0.9rem 0; }
+        img { max-width: 100%; border-radius: 10px; border: 1px solid #E6E2D8; margin: 0.6rem 0; }
+        .chart-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 0.8rem 0 1.2rem; }
+        .faq-q { font-weight: 600; margin-top: 1.2rem; }
+        .note {
+            background: #FBF4E4;
+            border-left: 3px solid #D9A441;
+            padding: 0.8rem 1rem;
+            font-size: 0.88rem;
+            color: #565656;
+            border-radius: 4px;
+            margin: 1.2rem 0;
+        }
+        .toc {
+            background: #FFFFFF;
+            border: 1px solid #E6E2D8;
+            border-radius: 10px;
+            padding: 1rem 1.4rem;
+            margin: 1.2rem 0;
+            font-size: 0.9rem;
+        }
+        .toc a { color: #2E5A5E; text-decoration: none; }
+        .toc a:hover { color: #D9A441; }
+        .toc ul { columns: 2; padding-left: 1.1rem; }
+        .cta-box {
+            background: linear-gradient(160deg, #101B2D 0%, #2E5A5E 100%);
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin: 2.5rem 0;
+            color: #F6F4EF;
+        }
+        .cta-box a {
+            display: inline-block;
+            background: #D9A441;
+            color: #101B2D;
+            font-weight: 700;
+            padding: 0.7rem 1.3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 0.8rem;
+        }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #8A8A8A; border-top: 1px solid #E6E2D8; padding-top: 1.2rem; }
+        footer a { color: #2E5A5E; }
+        @media (max-width: 600px) { .chart-pair { grid-template-columns: 1fr; } .toc ul { columns: 1; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">South Asia Climate Trends</a> / Climate Graphs
+        </div>
+
+        <header class="article-head">
+            <div class="tag-row">Regional &middot; Reference &middot; 9 Locations &middot; 30-Year Data</div>
+            <h1>South Asia Climate Graphs: Temperature &amp; Rainfall Charts for Every City</h1>
+            <div class="meta">Published September 13, 2026 &middot; Regional Reference</div>
+        </header>
+
+        <article>
+            <p>A collection of annual temperature and rainfall climate graphs for every city and location covered in this series — one clear chart pair per place, built from 30 years of ERA5 reanalysis data (1995/96–2025). Click through to any city's full report for seasonal breakdowns, extreme heat data, and detailed analysis.</p>
+
+            <div class="toc">
+                <strong>Jump to a city's climate graph:</strong>
+                <ul>
+                    <li><a href="#mumbai">Mumbai</a></li>
+                    <li><a href="#delhi">Delhi</a></li>
+                    <li><a href="#karachi">Karachi</a></li>
+                    <li><a href="#dhaka">Dhaka</a></li>
+                    <li><a href="#colombo">Colombo</a></li>
+                    <li><a href="#kathmandu">Kathmandu</a></li>
+                    <li><a href="#lahore">Lahore</a></li>
+                    <li><a href="#islamabad">Islamabad</a></li>
+                    <li><a href="#rasuwagadhi">Rasuwagadhi</a></li>
+                </ul>
+            </div>
+
+            <h2 id="mumbai">Mumbai Climate Graph</h2>
+            <div class="chart-pair">
+                <img src="images/mumbai-annual-mean-temperature.png" alt="Mumbai climate graph annual mean temperature 1995-2025" />
+                <img src="images/mumbai-annual-precipitation.png" alt="Mumbai climate graph annual total precipitation 1995-2025" />
+            </div>
+            <p>Mumbai's temperature graph shows a sharp recent acceleration, especially since 2023; its rainfall graph shows the steepest sustained increase of any city in this series (~+300mm/decade). Full breakdown: <a href="mumbai-climate-trends.html">Mumbai climate trend report</a>.</p>
+
+            <h2 id="delhi">Delhi Climate Graph</h2>
+            <div class="chart-pair">
+                <img src="images/delhi-annual-mean-temperature.png" alt="Delhi climate graph annual mean temperature 1995-2025" />
+                <img src="images/delhi-annual-precipitation.png" alt="Delhi climate graph annual total precipitation 1995-2025" />
+            </div>
+            <p>Delhi's rainfall graph shows a dramatic 2024 spike — nearly double any other year on record. Full breakdown: <a href="delhi-warming-trend.html">Delhi climate trend report</a>, <a href="delhi-annual-rainfall.html">Delhi rainfall</a>, <a href="delhi-extreme-heat-days.html">Delhi extreme heat</a>.</p>
+
+            <h2 id="karachi">Karachi Climate Graph</h2>
+            <div class="chart-pair">
+                <img src="images/karachi-annual-mean-temperature.png" alt="Karachi climate graph annual mean temperature 1995-2025" />
+                <img src="images/karachi-annual-precipitation.png" alt="Karachi climate graph annual total precipitation 1995-2025" />
+            </div>
+            <p>Karachi's rainfall graph is dominated by a single extreme year — 2022, roughly 27 times the 1990s baseline. Full breakdown: <a href="karachi-warming-trend.html">Karachi climate trend report</a>, <a href="karachi-annual-rainfall.html">Karachi rainfall</a>.</p>
+
+            <h2 id="dhaka">Dhaka Climate Graph</h2>
+            <div class="chart-pair">
+                <img src="images/dhaka-annual-mean-temperature.png" alt="Dhaka climate graph annual mean temperature 1995-2025" />
+                <img src="images/dhaka-annual-precipitation.png" alt="Dhaka climate graph annual total precipitation 1995-2025" />
+            </div>
+            <p>Dhaka shows the steadiest warming climb of any city in this series, paired with a declining rainfall trend — hotter and drier at the same time. Full breakdown: <a href="dhaka-warming-trend.html">Dhaka climate trend report</a>.</p>
+
+            <h2 id="colombo">Colombo Climate Graph</h2>
+            <div class="chart-pair">
+                <img src="images/colombo-annual-mean-temperature.png" alt="Colombo climate graph annual mean temperature 1995-2025" />
+                <img src="images/colombo-annual-precipitation.png" alt="Colombo climate graph annual total precipitation 1995-2025" />
+            </div>
+            <p>Colombo is the wettest city in this entire series on a typical-year basis, with 2023 and 2024 both topping 3,300mm. Full breakdown: <a href="colombo-warming-trend.html">Colombo climate trend report</a>, <a href="colombo-annual-rainfall.html">Colombo rainfall</a>.</p>
+
+            <h2 id="kathmandu">Kathmandu Climate Graph</h2>
+            <div class="chart-pair">
+                <img src="images/kathmandu-annual-mean-temperature.png" alt="Kathmandu climate graph annual mean temperature 1995-2025" />
+                <img src="images/kathmandu-annual-precipitation.png" alt="Kathmandu climate graph annual total precipitation 1995-2025" />
+            </div>
+            <p>Kathmandu's temperature graph is the outlier of this series — essentially flat, unlike every other city studied. Full breakdown: <a href="kathmandu-warming-trend.html">Kathmandu climate trend report</a>, <a href="kathmandu-not-warming.html">why Kathmandu isn't warming</a>.</p>
+
+            <h2 id="lahore">Lahore Climate Graph</h2>
+            <div class="chart-pair">
+                <img src="images/lahore-annual-mean-temperature.png" alt="Lahore climate graph annual mean temperature 1995-2025" />
+                <img src="images/lahore-annual-precipitation.png" alt="Lahore climate graph annual total precipitation 1995-2025" />
+            </div>
+            <p>Lahore's rainfall graph is nearly flat over 30 years, even as its extreme-heat-day count remains among the highest in this series. Full breakdown: <a href="lahore-warming-trend.html">Lahore climate trend report</a>, <a href="lahore-annual-rainfall.html">Lahore rainfall &amp; heat</a>.</p>
+
+            <h2 id="islamabad">Islamabad Climate Graph</h2>
+            <div class="chart-pair">
+                <img src="images/islamabad-annual-mean-temperature.png" alt="Islamabad climate graph annual mean temperature 1995-2025" />
+                <img src="images/islamabad-annual-precipitation.png" alt="Islamabad climate graph annual total precipitation 1995-2025" />
+            </div>
+            <p>Islamabad's temperature graph shows the fastest warming of any lowland city in this series, led by an unusually steep winter trend. Full breakdown: <a href="islamabad-warming-trend.html">Islamabad climate trend report</a>, <a href="islamabad-annual-rainfall.html">Islamabad rainfall</a>, <a href="islamabad-winter-anomaly.html">Islamabad's winter anomaly</a>.</p>
+
+            <h2 id="rasuwagadhi">Rasuwagadhi Climate Graph</h2>
+            <div class="chart-pair">
+                <img src="images/rasuwagadhi-annual-mean-temperature.png" alt="Rasuwagadhi climate graph annual mean temperature 1995-2025" />
+                <img src="images/rasuwagadhi-annual-precipitation.png" alt="Rasuwagadhi climate graph annual total precipitation 1995-2025" />
+            </div>
+            <p>Rasuwagadhi's graphs show the most extreme trends in this entire series — the fastest warming rate alongside the steepest rainfall decline. Full breakdown: <a href="rasuwagadhi-climate-trend.html">Rasuwagadhi climate trend report</a>.</p>
+
+            <div class="note">
+                <strong>Want the full seasonal picture?</strong> Each city's linked report breaks these annual graphs down further into Winter, Pre-Monsoon, Monsoon, and Post-Monsoon charts, with trend rates and record years explained.
+            </div>
+
+            <div class="cta-box">
+                <strong>Explore any graph interactively</strong>
+                <p style="color:#D8DEE0; margin-bottom:0;">Zoom, compare, and pull exact values for any city or season on our live dashboard.</p>
+                <a href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">Open the Interactive Dashboard →</a>
+            </div>
+
+            <h2>Related Reports</h2>
+            <p>See our <a href="south-asia-climate-records.html">Climate Records roundup</a> for hottest/coldest/wettest/driest years, the <a href="fastest-warming-south-asia-city.html">warming-rate ranking</a>, the <a href="south-asia-climate-trend-report.html">South Asia climate trend report</a>, or our <a href="dhaka-vs-karachi.html">Dhaka vs. Karachi</a> and <a href="mumbai-vs-karachi.html">Mumbai vs. Karachi</a> comparisons.</p>
+
+            <h2>Data Source &amp; Methodology</h2>
+            <p>All graphs are built from the <strong>Open-Meteo Historical Weather API</strong>, using <strong>ERA5 and ERA5-Land reanalysis data</strong> from the <strong>European Centre for Medium-Range Weather Forecasts (ECMWF)</strong> via the <strong>Copernicus Climate Change Service</strong>, covering January 1995/96 through 2025 (Rasuwagadhi's underlying dataset spans a slightly longer window). Dashed lines on each chart represent the linear regression trend.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p class="faq-q">Where can I find a climate graph of Mumbai?</p>
+            <p>Mumbai's annual temperature and rainfall climate graphs, covering 1995–2025, are available on this page and in our full Mumbai climate trend report, both built on ERA5 reanalysis data.</p>
+
+            <p class="faq-q">Where can I find a climate graph of Delhi?</p>
+            <p>Delhi's annual temperature and rainfall climate graphs, covering 1995–2025, are available on this page and in our full Delhi climate trend report, both built on ERA5 reanalysis data.</p>
+
+            <p class="faq-q">What does a climate graph show?</p>
+            <p>A climate graph typically shows how a location's temperature and rainfall have changed over time, often with a trend line indicating the long-term direction. The graphs on this page show annual mean temperature and annual total precipitation for each city from 1995/96 through 2025, based on ERA5 reanalysis data.</p>
+
+            <p class="faq-q">What data source is used for these climate graphs?</p>
+            <p>All graphs are built from the Open-Meteo Historical Weather API, using ERA5 and ERA5-Land reanalysis data produced by the European Centre for Medium-Range Weather Forecasts (ECMWF) through the Copernicus Climate Change Service.</p>
+        </article>
+
+        <footer>
+            Data source: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a> (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built by a meteorologist, MPhil Environmental Sciences.
+            <br /><br />
+            <a href="index.html">← Back to South Asia Climate Trends</a>
+        </footer>
+    </div>
+</body>
+</html>
