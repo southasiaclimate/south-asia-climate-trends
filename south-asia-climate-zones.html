@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>South Asia's Climate Zones: What Type of Climate Does Each City Have? | South Asia Climate Trends</title>
+    <meta name="description" content="Köppen climate classification for Mumbai, Delhi, Karachi, Dhaka, Colombo, Kathmandu, Lahore, and Islamabad — is Colombo tropical monsoon or tropical rainforest? What climate zone is Delhi in? Plus how each is actually trending." />
+    <link rel="canonical" href="https://southasiaclimate.github.io/south-asia-climate-trends/south-asia-climate-zones.html" />
+
+    <meta property="og:title" content="South Asia's Climate Zones: What Type of Climate Does Each City Have?" />
+    <meta property="og:description" content="From Karachi's hot desert to Colombo's tropical rainforest, here's the Köppen classification for every city in this series — and how each one is actually changing." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/southasiaclimate/south-asia-climate-trends/main/images/mumbai-annual-mean-temperature.png" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What climate zone is Delhi in?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Delhi sits near the boundary of two Koppen classifications: most modern sources classify it as Cwa (humid subtropical, monsoon-influenced, dry winter), while some climate-normal databases classify it as BSh (hot semi-arid) given its relatively low annual rainfall (~700-800mm) for a 'C' group climate. Both are commonly cited; Delhi is genuinely borderline between the two categories."}},
+        {"@type": "Question", "name": "Is Colombo a tropical monsoon or tropical rainforest climate?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Tropical rainforest (Af), by most current classifications. Colombo receives at least 60mm of rain in every single month of the year with no genuine dry season, which is the defining criterion for Af rather than Am (tropical monsoon, which requires at least one markedly drier month). Some older or informal sources describe Colombo as 'tropical monsoon' loosely, referring to its monsoon-influenced rainfall pattern rather than the strict Koppen Am category."}},
+        {"@type": "Question", "name": "What is the climate of South Asia?",
+         "acceptedAnswer": {"@type": "Answer", "text": "South Asia spans an unusually wide range of Koppen climate zones for one region \u2014 from Karachi's hot desert (BWh) and Lahore's hot semi-arid (BSh) climate, through Delhi and Islamabad's humid subtropical (Cwa) zones, to Dhaka's tropical savanna (Aw), Mumbai's tropical monsoon (Am), Colombo's tropical rainforest (Af), and Kathmandu's subtropical highland (Cwb) climate shaped by elevation."}},
+        {"@type": "Question", "name": "What climate zone is Karachi in?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Karachi has a hot desert climate (Koppen BWh) \u2014 low annual rainfall (typically under 250mm in most years) and consistently high temperatures, moderated somewhat by its coastal position on the Arabian Sea."}},
+        {"@type": "Question", "name": "Do Koppen climate zones account for climate change?",
+         "acceptedAnswer": {"@type": "Answer", "text": "No \u2014 Koppen classifications are based on multi-decade historical averages and represent a static snapshot, not a trend. A city's classification can shift over time as its climate changes, but the standard Koppen maps don't show that shift directly. That's the gap this site's own 30-year ERA5 trend data is built to fill \u2014 showing not just what climate zone a city is in, but how its temperature and rainfall are actually moving within that zone."}}
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GD8FJCBENG');
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            background: #F6F4EF;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        .container { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem 1.5rem; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .breadcrumb a { color: #2E5A5E; text-decoration: none; }
+        header.article-head { margin-bottom: 2rem; }
+        .tag-row { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #2E5A5E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+        h1 { font-size: 2.1rem; color: #101B2D; line-height: 1.2; margin: 0 0 0.8rem 0; }
+        .meta { color: #8A8A8A; font-size: 0.9rem; }
+        h2 { color: #101B2D; margin-top: 2.4rem; font-size: 1.5rem; border-bottom: 2px solid #D9A441; padding-bottom: 0.4rem; }
+        h3 { color: #101B2D; margin-top: 1.8rem; font-size: 1.15rem; }
+        h4 { color: #2E5A5E; margin-top: 1.2rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        p { margin: 0.9rem 0; }
+        img { max-width: 100%; border-radius: 10px; border: 1px solid #E6E2D8; margin: 0.6rem 0; }
+        .key-figure { font-size: 1.6rem; font-weight: 700; color: #101B2D; margin: 0.3rem 0 1rem 0; }
+        ul { padding-left: 1.3rem; }
+        li { margin-bottom: 0.5rem; }
+        .faq-q { font-weight: 600; margin-top: 1.2rem; }
+        .note {
+            background: #FBF4E4;
+            border-left: 3px solid #D9A441;
+            padding: 0.8rem 1rem;
+            font-size: 0.88rem;
+            color: #565656;
+            border-radius: 4px;
+            margin: 1.2rem 0;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: 0.82rem; }
+        th, td { text-align: left; padding: 0.4rem 0.45rem; border-bottom: 1px solid #E6E2D8; }
+        th { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; text-transform: uppercase; color: #2E5A5E; }
+
+        .zone-card {
+            background: #FFFFFF;
+            border: 1px solid #E6E2D8;
+            border-left: 4px solid #D9A441;
+            border-radius: 8px;
+            padding: 1rem 1.2rem;
+            margin: 0.8rem 0;
+        }
+        .zone-code {
+            display: inline-block;
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 700;
+            font-size: 0.95rem;
+            background: #101B2D;
+            color: #F6F4EF;
+            padding: 0.15rem 0.55rem;
+            border-radius: 4px;
+            margin-right: 0.4rem;
+        }
+        .zone-card h3 { margin-top: 0; margin-bottom: 0.4rem; display: inline; }
+
+        .cta-box {
+            background: linear-gradient(160deg, #101B2D 0%, #2E5A5E 100%);
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin: 2.5rem 0;
+            color: #F6F4EF;
+        }
+        .cta-box a {
+            display: inline-block;
+            background: #D9A441;
+            color: #101B2D;
+            font-weight: 700;
+            padding: 0.7rem 1.3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 0.8rem;
+        }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #8A8A8A; border-top: 1px solid #E6E2D8; padding-top: 1.2rem; }
+        footer a { color: #2E5A5E; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">South Asia Climate Trends</a> / Climate Zones
+        </div>
+
+        <header class="article-head">
+            <div class="tag-row">Regional &middot; Reference &middot; Köppen Classification</div>
+            <h1>South Asia's Climate Zones: What Type of Climate Does Each City Have?</h1>
+            <div class="meta">Published September 13, 2026 &middot; Regional Reference</div>
+        </header>
+
+        <article>
+            <p>South Asia packs an unusually wide range of climate types into one region — from true desert to tropical rainforest to subtropical highland, often within a few hundred kilometers of each other. This report uses the <strong>Köppen-Geiger climate classification</strong>, the world's most widely used system for categorizing climate types based on temperature and rainfall patterns, to place each city in this series into its correct zone — including resolving a couple of genuinely disputed cases.</p>
+
+            <div class="note">
+                <strong>An important distinction:</strong> Köppen classifications are based on long-term historical averages — they describe a city's baseline climate <em>type</em>, not how it's changing. That's exactly the gap our own 30-year ERA5 trend data fills: this page tells you what zone each city sits in; our full city reports show you how each one is actually moving within — or toward the edge of — that zone.
+            </div>
+
+            <h2>Climate Zones at a Glance</h2>
+            <table>
+                <tr><th>City</th><th>Köppen Code</th><th>Classification</th></tr>
+                <tr><td><a href="karachi-warming-trend.html">Karachi</a></td><td>BWh</td><td>Hot desert</td></tr>
+                <tr><td><a href="lahore-warming-trend.html">Lahore</a></td><td>BSh</td><td>Hot semi-arid (steppe)</td></tr>
+                <tr><td><a href="delhi-warming-trend.html">Delhi</a></td><td>Cwa / BSh (borderline)</td><td>Humid subtropical, monsoon-influenced</td></tr>
+                <tr><td><a href="islamabad-warming-trend.html">Islamabad</a></td><td>Cwa</td><td>Humid subtropical, monsoon-influenced</td></tr>
+                <tr><td><a href="dhaka-warming-trend.html">Dhaka</a></td><td>Aw</td><td>Tropical savanna</td></tr>
+                <tr><td><a href="mumbai-climate-trends.html">Mumbai</a></td><td>Am</td><td>Tropical monsoon</td></tr>
+                <tr><td><a href="colombo-warming-trend.html">Colombo</a></td><td>Af</td><td>Tropical rainforest (no dry season)</td></tr>
+                <tr><td><a href="kathmandu-warming-trend.html">Kathmandu</a></td><td>Cwb</td><td>Subtropical highland, elevation-shaped</td></tr>
+                <tr><td><a href="rasuwagadhi-climate-trend.html">Rasuwagadhi</a></td><td>Cwb / Dwc-adjacent</td><td>Himalayan highland (exact subtype elevation-sensitive)</td></tr>
+            </table>
+
+            <h2>City by City</h2>
+
+            <div class="zone-card">
+                <span class="zone-code">BWh</span><h3>Karachi — Hot Desert</h3>
+                <p>Low annual rainfall (typically under 250mm in most years) paired with consistently high temperatures year-round, moderated somewhat by Karachi's coastal position on the Arabian Sea. See our full <a href="karachi-warming-trend.html">Karachi climate trend report</a> and <a href="karachi-annual-rainfall.html">rainfall deep-dive</a> — where an extreme outlier year like 2022 (~830mm) shows just how dramatically a desert climate can depart from its own norm.</p>
+            </div>
+
+            <div class="zone-card">
+                <span class="zone-code">BSh</span><h3>Lahore — Hot Semi-Arid (Steppe)</h3>
+                <p>More rainfall than a true desert climate but still dry overall, with hot summers and a pronounced dry season. See our <a href="lahore-annual-rainfall.html">Lahore rainfall &amp; heat report</a> for how this plays out in practice — including why the city runs so hot even with a nearly flat 30-year rainfall trend.</p>
+            </div>
+
+            <div class="zone-card">
+                <span class="zone-code">Cwa / BSh</span><h3>Delhi — Humid Subtropical (Borderline)</h3>
+                <p>Delhi is a genuinely disputed case. Most modern academic sources classify it Cwa (humid subtropical, monsoon-influenced, dry winter), defined by having at least one month averaging above 22°C and enough summer rainfall to avoid the "B" (dry) group. But several climate-normal databases classify it BSh (hot semi-arid) instead, given Delhi's relatively modest annual rainfall (~700–800mm) sits close to the threshold between the two categories. Both classifications are commonly cited — Delhi sits right on the line. See our <a href="delhi-warming-trend.html">Delhi climate trend report</a>, <a href="delhi-annual-rainfall.html">rainfall report</a>, and <a href="delhi-extreme-heat-days.html">extreme heat report</a>.</p>
+            </div>
+
+            <div class="zone-card">
+                <span class="zone-code">Cwa</span><h3>Islamabad — Humid Subtropical</h3>
+                <p>Similar classification to Delhi, but with meaningfully higher rainfall thanks to its position at the Himalayan foothills, catching both monsoon and western disturbance systems. See our <a href="islamabad-warming-trend.html">Islamabad climate trend report</a> and our explainer on its <a href="islamabad-winter-anomaly.html">unusual winter warming anomaly</a>.</p>
+            </div>
+
+            <div class="zone-card">
+                <span class="zone-code">Aw</span><h3>Dhaka — Tropical Savanna</h3>
+                <p>Warm year-round with a pronounced wet monsoon season and a genuine dry season — the classic tropical savanna pattern. See our full <a href="dhaka-warming-trend.html">Dhaka climate trend report</a>, and our <a href="dhaka-vs-karachi.html">Dhaka vs. Karachi comparison</a> for how this tropical climate's trends actually diverge from Karachi's desert one.</p>
+            </div>
+
+            <div class="zone-card">
+                <span class="zone-code">Am</span><h3>Mumbai — Tropical Monsoon</h3>
+                <p>Warm temperatures year-round with a short, genuine dry season and an intense wet monsoon delivering the large majority of annual rainfall — textbook Am. See our full <a href="mumbai-climate-trends.html">Mumbai climate trend report</a> and <a href="mumbai-vs-karachi.html">Mumbai vs. Karachi comparison</a>.</p>
+            </div>
+
+            <div class="zone-card">
+                <span class="zone-code">Af</span><h3>Colombo — Tropical Rainforest (Not "Tropical Monsoon")</h3>
+                <p>This is worth clarifying directly: Colombo is classified <strong>Af (tropical rainforest)</strong>, not Am (tropical monsoon), by most current sources. The distinction comes down to one technical criterion — Af requires every single month to receive at least 60mm of rain, with no genuine dry season, while Am requires at least one markedly drier month. Colombo meets the Af threshold: even its driest month typically clears 60mm. Some informal or older sources describe Colombo loosely as "tropical monsoon" because its rainfall pattern is monsoon-influenced in timing — but under the strict Köppen system, Af is the correct classification. See our full <a href="colombo-warming-trend.html">Colombo climate trend report</a> and <a href="colombo-annual-rainfall.html">rainfall deep-dive</a>, where Colombo is confirmed as the wettest city in this entire series on a typical-year basis.</p>
+            </div>
+
+            <div class="zone-card">
+                <span class="zone-code">Cwb</span><h3>Kathmandu — Subtropical Highland</h3>
+                <p>Kathmandu's ~1,400m elevation cools it well below what its latitude alone would suggest, producing a mild, temperate highland climate rather than the subtropical heat found in nearby lowland cities. Fittingly, Kathmandu is also the only location in this series without a clear warming trend — see our explainer on <a href="kathmandu-not-warming.html">why Kathmandu isn't warming like its neighbors</a>.</p>
+            </div>
+
+            <div class="zone-card">
+                <span class="zone-code">Cwb-adjacent</span><h3>Rasuwagadhi — Himalayan Highland</h3>
+                <p>At roughly 1,880m — meaningfully higher than Kathmandu — Rasuwagadhi's exact Köppen subtype is more elevation-sensitive and less standard to pin down precisely than the lowland cities in this series; it sits somewhere in the cool highland range bordering true mountain/subarctic classifications. What the data shows clearly, regardless of exact classification: <a href="rasuwagadhi-climate-trend.html">the fastest warming rate and steepest rainfall decline of any location in this entire series</a>.</p>
+            </div>
+
+            <h2>Why Classification Alone Isn't the Full Story</h2>
+            <p>A Köppen zone tells you what a city's climate has typically looked like, averaged over many decades — it doesn't tell you whether that climate is shifting, or how fast. Karachi is still classified as a hot desert climate, for instance, but our own data shows its rainfall trend rising at +88.7mm per decade, disproportionately driven by extreme years like 2022. Delhi's borderline Cwa/BSh classification is itself a hint that small shifts in rainfall could nudge its classification in either direction over time. This is exactly the kind of change a static climate-zone map won't show you, but 30 years of year-by-year reanalysis data will.</p>
+
+            <div class="cta-box">
+                <strong>See how each zone is actually trending</strong>
+                <p style="color:#D8DEE0; margin-bottom:0;">Explore 30 years of real temperature and rainfall data for any city in this series.</p>
+                <a href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">Open the Interactive Dashboard →</a>
+            </div>
+
+            <h2>Related Reports</h2>
+            <p>See our <a href="south-asia-climate-graphs.html">Climate Graphs hub</a> for visual charts of every city, the <a href="south-asia-climate-records.html">Climate Records roundup</a>, the <a href="fastest-warming-south-asia-city.html">warming-rate ranking</a>, or the <a href="south-asia-climate-trend-report.html">South Asia climate trend report</a> for the full narrative picture.</p>
+
+            <h2>Data Source &amp; Methodology</h2>
+            <p>Köppen-Geiger classifications referenced in this report follow the standard system first published by Wladimir Köppen and widely used in climate science and geography. Classification boundaries are based on long-term (multi-decade) climate normals rather than this site's own 30-year ERA5 dataset, though the two are consistent with each other. Trend figures linked throughout are drawn from our own analysis using the <strong>Open-Meteo Historical Weather API</strong>, built on <strong>ERA5 and ERA5-Land reanalysis data</strong> from the <strong>European Centre for Medium-Range Weather Forecasts (ECMWF)</strong> via the <strong>Copernicus Climate Change Service</strong>, covering 1995/96 through 2025.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p class="faq-q">What climate zone is Delhi in?</p>
+            <p>Delhi sits near the boundary of two Köppen classifications: most modern sources classify it as Cwa (humid subtropical, monsoon-influenced, dry winter), while some climate-normal databases classify it as BSh (hot semi-arid) given its relatively low annual rainfall (~700–800mm) for a "C" group climate. Both are commonly cited; Delhi is genuinely borderline between the two categories.</p>
+
+            <p class="faq-q">Is Colombo a tropical monsoon or tropical rainforest climate?</p>
+            <p>Tropical rainforest (Af), by most current classifications. Colombo receives at least 60mm of rain in every single month of the year with no genuine dry season, which is the defining criterion for Af rather than Am (tropical monsoon, which requires at least one markedly drier month). Some older or informal sources describe Colombo as "tropical monsoon" loosely, referring to its monsoon-influenced rainfall pattern rather than the strict Köppen Am category.</p>
+
+            <p class="faq-q">What is the climate of South Asia?</p>
+            <p>South Asia spans an unusually wide range of Köppen climate zones for one region — from Karachi's hot desert (BWh) and Lahore's hot semi-arid (BSh) climate, through Delhi and Islamabad's humid subtropical (Cwa) zones, to Dhaka's tropical savanna (Aw), Mumbai's tropical monsoon (Am), Colombo's tropical rainforest (Af), and Kathmandu's subtropical highland (Cwb) climate shaped by elevation.</p>
+
+            <p class="faq-q">What climate zone is Karachi in?</p>
+            <p>Karachi has a hot desert climate (Köppen BWh) — low annual rainfall (typically under 250mm in most years) and consistently high temperatures, moderated somewhat by its coastal position on the Arabian Sea.</p>
+
+            <p class="faq-q">Do Köppen climate zones account for climate change?</p>
+            <p>No — Köppen classifications are based on multi-decade historical averages and represent a static snapshot, not a trend. A city's classification can shift over time as its climate changes, but the standard Köppen maps don't show that shift directly. That's the gap this site's own 30-year ERA5 trend data is built to fill — showing not just what climate zone a city is in, but how its temperature and rainfall are actually moving within that zone.</p>
+
+            <p>See any city's full report — linked throughout this page — for the complete 30-year trend behind its classification.</p>
+        </article>
+
+        <footer>
+            Data source: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a> (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built by a meteorologist, MPhil Environmental Sciences.
+            <br /><br />
+            <a href="index.html">← Back to South Asia Climate Trends</a>
+        </footer>
+    </div>
+</body>
+</html>
