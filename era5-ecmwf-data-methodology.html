@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How We Get Our Climate Data: ERA5, ECMWF & Open-Meteo Explained | South Asia Climate Trends</title>
+    <meta name="description" content="What is ERA5? How does ECMWF reanalysis data work, and how can you access it yourself for free — including via GitHub and the Open-Meteo API? The full data pipeline behind every report on this site, with working code." />
+    <link rel="canonical" href="https://southasiaclimate.github.io/south-asia-climate-trends/era5-ecmwf-data-methodology.html" />
+
+    <meta property="og:title" content="How We Get Our Climate Data: ERA5, ECMWF & Open-Meteo Explained" />
+    <meta property="og:description" content="The full data pipeline behind every report on this site — what ERA5 actually is, how to access it for free, and working Python code to pull it yourself." />
+    <meta property="og:type" content="article" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is ERA5?",
+         "acceptedAnswer": {"@type": "Answer", "text": "ERA5 is the fifth-generation atmospheric reanalysis produced by the European Centre for Medium-Range Weather Forecasts (ECMWF), combining satellite and ground-station observations with a numerical weather model to produce a consistent, gap-free historical climate record from 1940 to near-present, at roughly 31km resolution globally (ERA5-Land refines this to about 9km over land)."}},
+        {"@type": "Question", "name": "Is there an ECMWF GitHub for accessing ERA5 data?",
+         "acceptedAnswer": {"@type": "Answer", "text": "ECMWF doesn't host ERA5 data directly on GitHub, but several GitHub-hosted tools and repositories provide access or wrappers around it \u2014 including ECMWF's own cfgrib and ecmwf-opendata Python packages, the AWS Open Data Registry's ERA5 listing, and community tools like KrigR (R) for downloading and downscaling ERA5/ERA5-Land data. This site itself uses the Open-Meteo Historical Weather API, a free wrapper around ERA5/ERA5-Land that avoids needing direct Copernicus Climate Data Store API credentials."}},
+        {"@type": "Question", "name": "Is ERA5 data free to access?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. ERA5 is freely available through the Copernicus Climate Data Store (CDS) with a free account, and also through simplified third-party APIs like Open-Meteo, which this site uses, requiring no API key or account for historical weather queries."}},
+        {"@type": "Question", "name": "How accurate is ERA5 reanalysis data compared to ground weather stations?",
+         "acceptedAnswer": {"@type": "Answer", "text": "ERA5 is generally very accurate for large-scale, flat terrain, but its accuracy decreases in areas of complex topography \u2014 mountain valleys, coastlines, and cities with strong local microclimate effects \u2014 because its grid resolution (roughly 9-31km) can't fully resolve features smaller than that. This site flags this limitation explicitly for locations like Rasuwagadhi, in complex Himalayan terrain."}},
+        {"@type": "Question", "name": "What is the difference between ERA5 and ERA5-Land?",
+         "acceptedAnswer": {"@type": "Answer", "text": "ERA5-Land is a higher-resolution (~9km vs ~31km) version of ERA5 focused specifically on land surface variables like temperature and precipitation, produced by running ECMWF's land-surface model at finer resolution using ERA5's atmospheric data as input. This site uses ERA5-Land where available for improved local accuracy."}}
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GD8FJCBENG');
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            background: #F6F4EF;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        .container { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem 1.5rem; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .breadcrumb a { color: #2E5A5E; text-decoration: none; }
+        header.article-head { margin-bottom: 2rem; }
+        .tag-row { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #2E5A5E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+        h1 { font-size: 2.1rem; color: #101B2D; line-height: 1.2; margin: 0 0 0.8rem 0; }
+        .meta { color: #8A8A8A; font-size: 0.9rem; }
+        h2 { color: #101B2D; margin-top: 2.4rem; font-size: 1.5rem; border-bottom: 2px solid #D9A441; padding-bottom: 0.4rem; }
+        h3 { color: #101B2D; margin-top: 1.8rem; font-size: 1.15rem; }
+        h4 { color: #2E5A5E; margin-top: 1.2rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        p { margin: 0.9rem 0; }
+        ul, ol { padding-left: 1.3rem; }
+        li { margin-bottom: 0.5rem; }
+        .faq-q { font-weight: 600; margin-top: 1.2rem; }
+        .note {
+            background: #FBF4E4;
+            border-left: 3px solid #D9A441;
+            padding: 0.8rem 1rem;
+            font-size: 0.88rem;
+            color: #565656;
+            border-radius: 4px;
+            margin: 1.2rem 0;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: 0.82rem; }
+        th, td { text-align: left; padding: 0.4rem 0.45rem; border-bottom: 1px solid #E6E2D8; }
+        th { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; text-transform: uppercase; color: #2E5A5E; }
+        pre {
+            background: #101B2D;
+            color: #E6EDF3;
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.8rem;
+            line-height: 1.5;
+        }
+        code {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        p code, li code {
+            background: #F0EDE7;
+            color: #101B2D;
+            padding: 0.1rem 0.35rem;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+        .pipeline-step {
+            background: #FFFFFF;
+            border: 1px solid #E6E2D8;
+            border-radius: 10px;
+            padding: 1rem 1.3rem;
+            margin: 0.8rem 0;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .pipeline-num {
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 700;
+            color: #D9A441;
+            font-size: 1.3rem;
+            min-width: 1.8rem;
+        }
+        .cta-box {
+            background: linear-gradient(160deg, #101B2D 0%, #2E5A5E 100%);
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin: 2.5rem 0;
+            color: #F6F4EF;
+        }
+        .cta-box a {
+            display: inline-block;
+            background: #D9A441;
+            color: #101B2D;
+            font-weight: 700;
+            padding: 0.7rem 1.3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 0.8rem;
+        }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #8A8A8A; border-top: 1px solid #E6E2D8; padding-top: 1.2rem; }
+        footer a { color: #2E5A5E; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">South Asia Climate Trends</a> / Data &amp; Methodology
+        </div>
+
+        <header class="article-head">
+            <div class="tag-row">Methodology &middot; Technical &middot; Data Transparency</div>
+            <h1>How We Get Our Climate Data: ERA5, ECMWF &amp; Open-Meteo Explained</h1>
+            <div class="meta">Published September 14, 2026 &middot; Methodology</div>
+        </header>
+
+        <article>
+            <p>Every trend, chart, and figure on this site — across all 9 cities and locations — comes from the same underlying data pipeline. This page explains what that pipeline actually is, in plain language, and for anyone who wants to pull the same data themselves, includes working code and links to the real tools involved.</p>
+
+            <h2>What Is ERA5?</h2>
+            <p><strong>ERA5</strong> is the fifth-generation atmospheric <em>reanalysis</em> produced by the <strong>European Centre for Medium-Range Weather Forecasts (ECMWF)</strong>. "Reanalysis" means it isn't raw observation data — it's what you get when you combine millions of real observations (satellites, weather stations, ships, balloons) with a physics-based numerical weather model, run backward through history, to produce a single, consistent, gap-free climate record. ERA5 covers 1940 to near-present, at roughly <strong>31km</strong> horizontal resolution globally.</p>
+            <p><strong>ERA5-Land</strong>, which this site uses wherever available, is a refined version focused specifically on land-surface variables — temperature, precipitation, soil moisture — at a much finer <strong>~9km</strong> resolution, produced by rerunning ECMWF's land-surface model at higher resolution using ERA5's atmospheric fields as input.</p>
+
+            <h2>Who Produces and Funds It?</h2>
+            <p>ERA5 is produced by ECMWF and distributed through the <strong>Copernicus Climate Change Service (C3S)</strong>, the European Union's Earth observation program. It's publicly funded, scientifically peer-reviewed, and used as a foundational dataset across climate science, agriculture, energy, insurance, and — as this site demonstrates — independent climate journalism.</p>
+
+            <h2>The Data Pipeline Behind This Site</h2>
+            <div class="pipeline-step">
+                <div class="pipeline-num">1</div>
+                <div><strong>ECMWF produces ERA5/ERA5-Land</strong> — the raw reanalysis, distributed via the Copernicus Climate Data Store (CDS).</div>
+            </div>
+            <div class="pipeline-step">
+                <div class="pipeline-num">2</div>
+                <div><strong>Open-Meteo</strong> ingests this data and provides it through a free, simplified <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Historical Weather API</a> — no account or API key required for the volumes used on this site, which is why it's the practical entry point we use rather than querying the CDS directly.</div>
+            </div>
+            <div class="pipeline-step">
+                <div class="pipeline-num">3</div>
+                <div><strong>Python</strong> queries that API for each city's coordinates, pulling daily temperature and precipitation values across the full 1995/96–2025 study window.</div>
+            </div>
+            <div class="pipeline-step">
+                <div class="pipeline-num">4</div>
+                <div><strong>Aggregation &amp; trend analysis</strong> — daily values are grouped into years and seasons (following standard South Asian meteorological conventions), then a linear regression trend line is fitted to show the 30-year direction.</div>
+            </div>
+            <div class="pipeline-step">
+                <div class="pipeline-num">5</div>
+                <div><strong>Publication</strong> — the resulting charts and figures become the reports across this site, each with its own methodology note.</div>
+            </div>
+
+            <h2>How to Access This Data Yourself</h2>
+            <p>ERA5 is genuinely free and open. If you want to pull it yourself, here's what's actually involved:</p>
+
+            <h3>Option 1: Open-Meteo (what this site uses)</h3>
+            <p>The simplest route — no account needed for historical queries. Here's a minimal working example in Python, close to what powers this site's own dashboard:</p>
+            <pre><code>import requests
+import pandas as pd
+
+def fetch_historical_weather(lat, lon, start_year, end_year):
+    url = "https://archive-api.open-meteo.com/v1/archive"
+    params = {
+        "latitude": lat,
+        "longitude": lon,
+        "start_date": f"{start_year}-01-01",
+        "end_date": f"{end_year}-12-31",
+        "daily": ["temperature_2m_mean", "precipitation_sum"],
+        "timezone": "auto"
+    }
+    response = requests.get(url, params=params)
+    data = response.json()["daily"]
+    df = pd.DataFrame(data)
+    df["time"] = pd.to_datetime(df["time"])
+    df["year"] = df["time"].dt.year
+    return df
+
+# Example: Karachi, Pakistan
+df = fetch_historical_weather(24.8607, 67.0011, 1996, 2025)
+print(df.head())</code></pre>
+
+            <h3>Option 2: Copernicus Climate Data Store (direct source)</h3>
+            <p>For full control over variables, resolution, and format, ECMWF's own <a href="https://cds.climate.copernicus.eu/" target="_blank">Climate Data Store</a> is the authoritative source — free with registration, accessed via their <code>cdsapi</code> Python package.</p>
+
+            <h3>GitHub Resources for ERA5</h3>
+            <p>ECMWF doesn't host the dataset itself on GitHub, but several genuinely useful GitHub-hosted tools exist for working with it:</p>
+            <ul>
+                <li><strong><a href="https://registry.opendata.aws/ecmwf-era5/" target="_blank">AWS Open Data Registry — ERA5</a></strong>: cloud-hosted ERA5 data with example notebooks for direct access without downloading full files.</li>
+                <li><strong><a href="https://github.com/topics/era5" target="_blank">github.com/topics/era5</a></strong>: a broad index of open-source projects, scripts, and research code built on ERA5, spanning meteorology, machine learning, and climate hazard research.</li>
+                <li><strong>ECMWF's own tooling</strong>: packages like <code>cfgrib</code> (for reading ERA5's native GRIB format in Python) and <code>ecmwf-opendata</code> are maintained by ECMWF for programmatic access.</li>
+            </ul>
+
+            <div class="note">
+                <strong>Why this site doesn't query the CDS directly:</strong> the Copernicus Climate Data Store is the authoritative source, but its API requires registration, has request queuing for large downloads, and returns data in formats (GRIB/NetCDF) that need additional processing before they're chart-ready. Open-Meteo handles that conversion and serves the same underlying ERA5/ERA5-Land data through a simple REST API — the right tradeoff for a site publishing accessible climate journalism rather than raw scientific datasets.
+            </div>
+
+            <h2>Limitations Worth Knowing</h2>
+            <ul>
+                <li><strong>Resolution limits in complex terrain.</strong> ERA5-Land's ~9km grid cells can't fully resolve valley-specific microclimates — a caveat we flag explicitly in our <a href="rasuwagadhi-climate-trend.html">Rasuwagadhi report</a>, where narrow Himalayan gorge terrain sits well below that grid scale.</li>
+                <li><strong>Reanalysis vs. direct observation.</strong> ERA5 is a model-assisted product, not a raw station record — it can differ from a specific weather station's own historical log, particularly in data-sparse regions or before the satellite era.</li>
+                <li><strong>Urban effects are only partially captured.</strong> Local urban heat island effects, as discussed in our <a href="islamabad-winter-anomaly.html">Islamabad winter warming piece</a>, aren't fully separable from broader regional signals at this resolution.</li>
+            </ul>
+
+            <div class="cta-box">
+                <strong>See this data in action</strong>
+                <p style="color:#D8DEE0; margin-bottom:0;">Every chart on this site is built from the pipeline described above — explore it for any city.</p>
+                <a href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">Open the Interactive Dashboard →</a>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p class="faq-q">What is ERA5?</p>
+            <p>ERA5 is the fifth-generation atmospheric reanalysis produced by the European Centre for Medium-Range Weather Forecasts (ECMWF), combining satellite and ground-station observations with a numerical weather model to produce a consistent, gap-free historical climate record from 1940 to near-present, at roughly 31km resolution globally (ERA5-Land refines this to about 9km over land).</p>
+
+            <p class="faq-q">Is there an ECMWF GitHub for accessing ERA5 data?</p>
+            <p>ECMWF doesn't host ERA5 data directly on GitHub, but several GitHub-hosted tools and repositories provide access or wrappers around it — including ECMWF's own <code>cfgrib</code> and <code>ecmwf-opendata</code> Python packages, the AWS Open Data Registry's ERA5 listing, and community tools like KrigR (R) for downloading and downscaling ERA5/ERA5-Land data. This site itself uses the Open-Meteo Historical Weather API, a free wrapper around ERA5/ERA5-Land that avoids needing direct Copernicus Climate Data Store API credentials.</p>
+
+            <p class="faq-q">Is ERA5 data free to access?</p>
+            <p>Yes. ERA5 is freely available through the Copernicus Climate Data Store (CDS) with a free account, and also through simplified third-party APIs like Open-Meteo, which this site uses, requiring no API key or account for historical weather queries.</p>
+
+            <p class="faq-q">How accurate is ERA5 reanalysis data compared to ground weather stations?</p>
+            <p>ERA5 is generally very accurate for large-scale, flat terrain, but its accuracy decreases in areas of complex topography — mountain valleys, coastlines, and cities with strong local microclimate effects — because its grid resolution (roughly 9–31km) can't fully resolve features smaller than that. This site flags this limitation explicitly for locations like Rasuwagadhi, in complex Himalayan terrain.</p>
+
+            <p class="faq-q">What is the difference between ERA5 and ERA5-Land?</p>
+            <p>ERA5-Land is a higher-resolution (~9km vs ~31km) version of ERA5 focused specifically on land surface variables like temperature and precipitation, produced by running ECMWF's land-surface model at finer resolution using ERA5's atmospheric data as input. This site uses ERA5-Land where available for improved local accuracy.</p>
+
+            <p>Every report on this site — see our full <a href="index.html">city index</a> — is built using exactly this pipeline.</p>
+        </article>
+
+        <footer>
+            Data source: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a> (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built by a meteorologist, MPhil Environmental Sciences.
+            <br /><br />
+            <a href="index.html">← Back to South Asia Climate Trends</a>
+        </footer>
+    </div>
+</body>
+</html>
