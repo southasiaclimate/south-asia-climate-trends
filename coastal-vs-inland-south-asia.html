@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coastal vs. Inland: How Location Shapes Climate Trends Across South Asia | South Asia Climate Trends</title>
+    <meta name="description" content="Do coastal cities warm slower than inland ones? Does elevation speed warming up? 30 years of data from 9 South Asian locations, grouped by coastal, delta, inland plains, and highland — and what the pattern does and doesn't show." />
+    <link rel="canonical" href="https://southasiaclimate.github.io/south-asia-climate-trends/coastal-vs-inland-south-asia.html" />
+
+    <meta property="og:title" content="Coastal vs. Inland: How Location Shapes Climate Trends Across South Asia" />
+    <meta property="og:description" content="All three coastal cities are getting wetter. Both inland plains cities have the flattest rainfall trends and the most extreme heat. The fastest warming is in the highlands." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/southasiaclimate/south-asia-climate-trends/main/images/coastal-vs-inland-trends.png" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Do coastal cities in South Asia warm slower than inland cities?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Not consistently. In this 9-location dataset, the three coastal cities (Karachi, Mumbai, Colombo) warm at +0.13 to +0.25\u00b0C per decade, similar to the two inland plains cities (Delhi and Lahore, +0.13 to +0.15\u00b0C per decade). The clearer difference is in extremes: coastal cities see almost no days at or above 40\u00b0C, while Delhi and Lahore record up to 52 and 46 such days a year."}},
+        {"@type": "Question", "name": "Which type of location is getting wetter in South Asia?",
+         "acceptedAnswer": {"@type": "Answer", "text": "All three coastal cities in this series show rising annual rainfall (+88.7 to +300mm per decade), while the two inland plains cities show the flattest trends (+10 to +35mm per decade). Dhaka, a delta city, and Rasuwagadhi, a high-altitude location, are the two exceptions with declining rainfall."}},
+        {"@type": "Question", "name": "Does higher elevation mean faster warming in South Asia?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Often, but not always. Rasuwagadhi (~1,880m) and Islamabad (foothills) show the fastest warming in this series, but Kathmandu (~1,400m) is the only location with a flat-to-negative trend, so elevation alone doesn't predict the direction."}},
+        {"@type": "Question", "name": "Is this enough data to draw firm conclusions about coastal versus inland climate?",
+         "acceptedAnswer": {"@type": "Answer", "text": "No. With only 2 to 3 locations per group, the patterns are suggestive rather than conclusive. They describe what this dataset shows, and would need more locations per category to be tested properly."}}
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD8FJCBENG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GD8FJCBENG');
+    </script>
+
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif; background: #F6F4EF; color: #1A1A1A; margin: 0; padding: 0; line-height: 1.7; }
+        .container { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem 1.5rem; }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .breadcrumb a { color: #2E5A5E; text-decoration: none; }
+        header.article-head { margin-bottom: 2rem; }
+        .tag-row { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #2E5A5E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+        h1 { font-size: 2.1rem; color: #101B2D; line-height: 1.2; margin: 0 0 0.8rem 0; }
+        .meta { color: #8A8A8A; font-size: 0.9rem; }
+        h2 { color: #101B2D; margin-top: 2.4rem; font-size: 1.5rem; border-bottom: 2px solid #D9A441; padding-bottom: 0.4rem; }
+        h3 { color: #101B2D; margin-top: 1.8rem; font-size: 1.15rem; }
+        p { margin: 0.9rem 0; }
+        img { max-width: 100%; border-radius: 10px; border: 1px solid #E6E2D8; margin: 1rem 0; }
+        ul { padding-left: 1.3rem; }
+        li { margin-bottom: 0.5rem; }
+        .faq-q { font-weight: 600; margin-top: 1.2rem; }
+        .note { background: #FBF4E4; border-left: 3px solid #D9A441; padding: 0.8rem 1rem; font-size: 0.88rem; color: #565656; border-radius: 4px; margin: 1.2rem 0; }
+        .answer-box { background: #FFFFFF; border: 1px solid #E6E2D8; border-left: 4px solid #2E5A5E; border-radius: 6px; padding: 1rem 1.2rem; margin: 1.2rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: 0.8rem; }
+        th, td { text-align: left; padding: 0.4rem 0.45rem; border-bottom: 1px solid #E6E2D8; }
+        th { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; text-transform: uppercase; color: #2E5A5E; }
+        .cta-box { background: linear-gradient(160deg, #101B2D 0%, #2E5A5E 100%); border-radius: 14px; padding: 1.6rem 1.8rem; margin: 2.5rem 0; color: #F6F4EF; }
+        .cta-box a { display: inline-block; background: #D9A441; color: #101B2D; font-weight: 700; padding: 0.7rem 1.3rem; border-radius: 8px; text-decoration: none; margin-top: 0.8rem; }
+        footer { margin-top: 3rem; font-size: 0.85rem; color: #8A8A8A; border-top: 1px solid #E6E2D8; padding-top: 1.2rem; }
+        footer a { color: #2E5A5E; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">South Asia Climate Trends</a> / Coastal vs. Inland
+        </div>
+
+        <header class="article-head">
+            <div class="tag-row">Regional &middot; Synthesis &middot; 9 Locations &middot; 30-Year Data</div>
+            <h1>Coastal vs. Inland: How Location Shapes Climate Trends Across South Asia</h1>
+            <div class="meta">Published September 15, 2026 &middot; Regional Analysis</div>
+        </header>
+
+        <article>
+            <div class="answer-box">
+                <strong>Quick answer:</strong> Location type shows up most clearly in <strong>rainfall and extremes</strong>, less in average warming. All three coastal cities are getting wetter. Both inland plains cities have the flattest rainfall trends and by far the most extreme-heat days. The fastest warming is in the highlands and foothills, but highland location alone doesn't guarantee it: Kathmandu is the exception.
+            </div>
+
+            <p>Each city report on this site tells one place's story. This piece steps back and groups all nine locations by setting: coastal, delta, inland plains, and highland or foothill, using only figures already published in the individual reports. It asks whether where a place sits explains how its climate is changing.</p>
+
+            <img src="images/coastal-vs-inland-trends.png" alt="Bar charts of annual warming rate and annual rainfall trend for nine South Asian locations, colored by coastal, delta, inland plains, and highland setting" />
+
+            <h2>The Four Groups</h2>
+            <table>
+                <tr><th>Group</th><th>Locations</th><th>Warming (°C/decade)</th><th>Rainfall trend (mm/decade)</th><th>Extreme heat (≥40°C days/yr)</th></tr>
+                <tr><td>Coastal</td><td><a href="karachi-warming-trend.html">Karachi</a>, <a href="mumbai-climate-trends.html">Mumbai</a>, <a href="colombo-warming-trend.html">Colombo</a></td><td>+0.13 to +0.25</td><td>+88.7 to +300</td><td>~0 to 5</td></tr>
+                <tr><td>Delta</td><td><a href="dhaka-warming-trend.html">Dhaka</a></td><td>+0.30</td><td>&minus;140</td><td>~0</td></tr>
+                <tr><td>Inland plains</td><td><a href="delhi-warming-trend.html">Delhi</a>, <a href="lahore-warming-trend.html">Lahore</a></td><td>+0.13 to +0.15</td><td>+10 to +35</td><td>9 to 52</td></tr>
+                <tr><td>Highland / foothill</td><td><a href="islamabad-warming-trend.html">Islamabad</a>, <a href="kathmandu-warming-trend.html">Kathmandu</a>, <a href="rasuwagadhi-climate-trend.html">Rasuwagadhi</a></td><td>&minus;0.04 to +0.90</td><td>&minus;367 to +60</td><td>0 to 20</td></tr>
+            </table>
+
+            <h2>What the Pattern Shows</h2>
+
+            <h3>1. Coastal cities are all getting wetter</h3>
+            <p>Karachi, Mumbai, and Colombo all show rising annual rainfall, from +88.7mm/decade in Karachi to +300mm/decade in Mumbai. But the character differs: Mumbai's increase is broad and sustained, while Karachi's is driven by a handful of extreme years (see <a href="mumbai-vs-karachi.html">Mumbai vs. Karachi</a>). Their warming rates are moderate and fairly close together.</p>
+
+            <h3>2. Inland plains: flat rainfall, extreme heat</h3>
+            <p>Delhi and Lahore have the two flattest rainfall trends among the lowland cities (+35 and +10mm/decade) and are the only locations regularly crossing 40°C dozens of days a year (Delhi up to ~52, Lahore up to ~46). Their annual warming rates (+0.15 and +0.13°C/decade) are modest, which is the useful lesson: <strong>a modest average trend can coexist with severe extremes</strong>, as our <a href="delhi-extreme-heat-days.html">Delhi extreme heat report</a> showed.</p>
+
+            <h3>3. Highlands warm fastest, but not uniformly</h3>
+            <p>Rasuwagadhi (+0.90°C/decade) and Islamabad (+0.77) top the <a href="fastest-warming-south-asia-city.html">warming-rate ranking</a>, and both show winter as their fastest-warming season. Kathmandu, at similar elevation to the foothill group, is the opposite: essentially flat overall, with two seasons cooling (see <a href="kathmandu-not-warming.html">why Kathmandu isn't warming</a>). Rainfall in the highlands splits too: Rasuwagadhi has the steepest decline in the series while Islamabad and Kathmandu are rising.</p>
+
+            <h3>4. The delta is its own case</h3>
+            <p>Dhaka warms faster than every coastal and inland-plains city while its rainfall declines, the only lowland city with that combination. It doesn't fit neatly into either coastal or inland categories, which is why it sits in its own group here.</p>
+
+            <div class="note">
+                <strong>An important caveat:</strong> each group has only 1 to 3 locations. These patterns describe what this particular dataset shows; they're suggestive, not statistically established rules about coastal or inland climates in general. Testing them properly would need many more locations per category. Trend rates are also read from regression lines on ERA5 reanalysis data, with extra uncertainty in complex terrain (see our <a href="era5-ecmwf-data-methodology.html">methodology page</a>).
+            </div>
+
+            <h2>What This Means</h2>
+            <ul>
+                <li><strong>Average warming is a poor predictor of risk on its own.</strong> Delhi and Lahore sit mid-table on warming but lead on extremes.</li>
+                <li><strong>"Coastal" describes temperature moderation better than rainfall behavior.</strong> The three coastal cities share low extreme heat, but their rainfall regimes differ sharply (see the <a href="south-asia-climate-zones.html">climate zones reference</a>: desert, tropical monsoon, and tropical rainforest).</li>
+                <li><strong>Highland trends need local study.</strong> Two neighboring elevation bands in Nepal produce opposite warming stories.</li>
+            </ul>
+
+            <div class="cta-box">
+                <strong>Compare any two locations yourself</strong>
+                <p style="color:#D8DEE0; margin-bottom:0;">Explore the underlying year-by-year data on the interactive dashboard.</p>
+                <a href="https://south-asia-climate-trends.streamlit.app/Dashboard" target="_blank">Open the Interactive Dashboard →</a>
+            </div>
+
+            <h2>Related Reports</h2>
+            <p><a href="south-asia-climate-records.html">Climate records</a> &middot; <a href="south-asia-climate-graphs.html">Climate graphs for every city</a> &middot; <a href="dhaka-vs-karachi.html">Dhaka vs. Karachi</a> &middot; <a href="south-asia-climate-trend-report.html">South Asia climate trend report</a></p>
+
+            <h2>Data Source &amp; Methodology</h2>
+            <p>All figures come from the individual city reports on this site, built on the <strong>Open-Meteo Historical Weather API</strong> using <strong>ERA5 and ERA5-Land reanalysis data</strong> (ECMWF, via the Copernicus Climate Change Service), covering 1995/96 through 2025. Trend rates are estimated from linear regression lines on each city's charts. The grouping into coastal, delta, inland plains, and highland is this report's own simplification for comparison.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p class="faq-q">Do coastal cities in South Asia warm slower than inland cities?</p>
+            <p>Not consistently. In this 9-location dataset, the three coastal cities warm at +0.13 to +0.25°C per decade, similar to the two inland plains cities (+0.13 to +0.15°C per decade). The clearer difference is in extremes: coastal cities see almost no days at or above 40°C, while Delhi and Lahore record up to 52 and 46 such days a year.</p>
+
+            <p class="faq-q">Which type of location is getting wetter in South Asia?</p>
+            <p>All three coastal cities show rising annual rainfall (+88.7 to +300mm per decade), while the two inland plains cities show the flattest trends (+10 to +35mm per decade). Dhaka, a delta city, and Rasuwagadhi, a high-altitude location, are the two exceptions with declining rainfall.</p>
+
+            <p class="faq-q">Does higher elevation mean faster warming in South Asia?</p>
+            <p>Often, but not always. Rasuwagadhi (~1,880m) and Islamabad (foothills) show the fastest warming in this series, but Kathmandu (~1,400m) is the only location with a flat-to-negative trend, so elevation alone doesn't predict the direction.</p>
+
+            <p class="faq-q">Is this enough data to draw firm conclusions about coastal versus inland climate?</p>
+            <p>No. With only 2 to 3 locations per group, the patterns are suggestive rather than conclusive. They describe what this dataset shows, and would need more locations per category to be tested properly.</p>
+        </article>
+
+        <footer>
+            Data source: <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank">Open-Meteo Historical Weather API</a> (ERA5 / ERA5-Land reanalysis, Copernicus/ECMWF) &middot; Built by a meteorologist, MPhil Environmental Sciences.
+            <br /><br />
+            <a href="index.html">← Back to South Asia Climate Trends</a>
+        </footer>
+    </div>
+</body>
+</html>
